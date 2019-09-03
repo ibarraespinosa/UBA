@@ -1,0 +1,47 @@
+--- 
+title: "Seminário Latinoamericano: Instrumentos y metodologias para un observatório de Clima y su impacto en la salud humana "
+author: "Sergio Ibarra-Espinosa"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+github-repo: ibarraespinosa/UBA
+description: "Emisiones/Calidad del Aire /sf/stars/raster."
+---
+
+# Curso de R, contaminacion atmosferica y mas {-}
+
+Este curso online contendra las sisgueinetes informaciones
+
+- Sistemas de informacion con dartos de salud en Chile (gracias Paty Matus)
+- Impacto de las emisiones antropogenicas en la salud y clima
+- R desde Excel
+- Leer y procesar vectores espaciales con **sf**
+- Leer y procesar informacion en grillas espaciales (raster) con stars y stars
+
+## Aprender Git  {-}
+
+Para aprender GIT puedes ver:
+
+- https://git-scm.com/book/es/v1/Empezando
+- https://learngitbranching.js.org/
+- https://try.github.io/
+
+## Clonar este contenido  {-}
+
+Para clonar este contenido haz:
+
+```{bash eval=FALSE}
+git clone https://github.com/ibarraespinosa/UBA.git
+```
+
+
+```{r include=FALSE}
+# automatically create a bib database for R packages
+knitr::write_bib(c(
+  .packages(), 'vein', 'eixport'
+), 'packages.bib')
+```

@@ -1,4 +1,60 @@
-# Introduction {#intro}
+# Sistemas de informacion con dartos de salud en Chile (gracias Paty Matus) {#intro}
+
+
+- Sistema de información en salud existentes
+- Enfasis en las fuentes de información y las escala temporal/espacial que manejan
+- Series de tiempo disponible por fuente
+- Instituciones a cargo de la captura, procesamiento y análisis
+- Disponibilidad de los datos e indicadores que producen
+- Otros
+
+## Sistema de información en salud existentes en Chile
+
+**[Encuesta Nacional de Salud (ENS)](http://www.encuestas.uc.cl/ens/index.html)**
+
+La ENS es una encuesta realizada por el Ministerio de Salud para identificar cuales son las 
+enfermedades que sufren y los tratamientos que reciben todas las personas con mas de 15 años 
+que viven en Chile. De esta forma es posible es posible realizar diagnosticos,
+identificar problemas y formular politicas planes y proyectos para mejor la salud de las personas.
+
+- *Organismo	responsable*:	Ministerio	de	Salud,	Departamento	de	Epidemiología	
+Gobierno	de	Chile.	
+- *Organismo	ejecutor*: Pontificia	Universidad	Católica	de	Chile	(PUC).	
+- *Población	objetivo*: Personas	de	15	años	y	más,	chilenas	o	extranjeras	que	residen	habitualmente	en	viviendas	particulares	ocupadas,	localizadas	en	zonas	urbanas	y	rurales	de	las	quince	regiones	de	Chile.	
+- *Representatividad*: Nacional,	regional	y	Urbano/Rural.	
+- *Modo	de	aplicación*: Entrevista	personal	en	hogar	(Sistema	de	captura	electrónica:	Tablet),	aplicada	por	encuestador	y	profesional	enfermera	de	acuerdo	al	tipo	de	cuestionario.	
+- *Período	de	trabajo	de	campo*: Agosto	2016	a	marzo	2017	
+- *Tamaño	muestral*: 6.233	encuestados,	de	los	cuales	5.520	cuentan	con	exámenes	de	laboratorio	de	acuerdo	a	protocolo. 37,1% hombres, 62,9% mujeres.	
+- *Error	muestral*: Error	absoluto	de	muestreo	de	2,6%	a	nivel	nacional,	raíz	del	efecto	de	diseño	de	1,797, estimaciones	con	95%	de	confianza	y	error	relativo	inferior	a	30%.	
+
+Algunos resultados:
+
+- Consumo de tabaco: 66,7% no fuma, 33,$ fuma.
+- Consumo riesgoso de alcohol 11,7%, 20,5% hombres, 3,3% mujeres.
+- Sedentarismo: 86,7%, 83,3% hombre, 90.0% mujeres.
+- Estado nutricional: 1,3% enfraquecido, 24,5% normal, 39,8% sobrepeso, 31,2% obeso, 3,2% obeso morbido.
+- Sospecha de hipertension: 27,6%.
+- Sospecha de diabetes: 12,3%.
+- Autoreporte de infarto agudo al miocardio: 3,3%.
+- Autoreporte de ataque cerebro vascular: 2,6%.
+
+
+Fuentes:
+
+- https://www.minsal.cl/wp-content/uploads/2017/11/ENS-2016-17_PRIMEROS-RESULTADOS.pdf
+- https://www.minsal.cl/wp-content/uploads/2018/01/2-Resultados-ENS_MINSAL_31_01_2018.pdf
+- http://www.encuestas.uc.cl/ens/index.html
+
+
+Egresos hospitalarios 2001 – 2016
+
+Natalidad 2011
+
+Mortalidad 1994 – 2016
+
+Casen 2009-2016
+
+
 
 You can label chapter and section titles using `{#label}` after them, e.g., we can reference Chapter \@ref(intro). If you do not manually label them, there will be automatic labels anyway, e.g., Chapter \@ref(methods).
 

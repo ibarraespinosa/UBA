@@ -8,9 +8,7 @@
 - Disponibilidad de los datos e indicadores que producen
 - Otros
 
-## Sistema de información en salud existentes en Chile
-
-**[Encuesta Nacional de Salud (ENS)](http://www.encuestas.uc.cl/ens/index.html)**
+## [Encuesta Nacional de Salud (ENS)](http://www.encuestas.uc.cl/ens/index.html)
 
 La ENS es una encuesta realizada por el Ministerio de Salud para identificar cuales son las 
 enfermedades que sufren y los tratamientos que reciben todas las personas con mas de 15 años 
@@ -44,6 +42,20 @@ Fuentes:
 - https://www.minsal.cl/wp-content/uploads/2017/11/ENS-2016-17_PRIMEROS-RESULTADOS.pdf
 - https://www.minsal.cl/wp-content/uploads/2018/01/2-Resultados-ENS_MINSAL_31_01_2018.pdf
 - http://www.encuestas.uc.cl/ens/index.html
+
+**[Departamento de Estadisticas e Informaciones de Salud](http://www.deis.cl/)**
+
+- Resúmenes estadísticos mensuales ([REM](http://www.deis.cl/bases-de-datos-rem/)). Vea el [manual](http://estadisticas.ssosorno.cl/estadisticas/2017/manuales/2017-2018-Manual-Series-REM-V1.1.pdf)
+- [Defunciones](http://www.deis.cl/bases-de-datos-defunciones/)
+- [Egresos](http://www.deis.cl/descargar-bases-de-datos-2/?page_id=3487)
+- [Nacimientos](http://www.deis.cl/descargar-bases-de-datos-2/?page_id=3493)
+- [Atenciones de urgencia](http://www.deis.cl/descargar-bases-de-datos-2/?page_id=3499)
+- [Enfermedades de notificacion obligatoria](http://www.deis.cl/descargar-bases-de-datos-2/?page_id=3784)
+- [Enfermedades transmitidas por alimentos](http://www.deis.cl/estadisticas-eta/)
+- [Tuberculosis](http://www.deis.cl/?page_id=3946)
+
+## [Encuesta de caracterizacion socioeconomica (CASEN)](http://observatorio.ministeriodesarrollosocial.gob.cl/casen-multidimensional/casen/casen_2017.php)
+"La Encuesta de Caracterización Socioeconómica Nacional (Casen) del Ministerio de Desarrollo Social es una encuesta a hogares, de carácter multipropósito, es decir, que abarca diversos temas como educación, trabajo, ingresos, salud, entre otros; además es una encuesta transversal, por lo tanto, incluye a todo el espectro de la población del país."
 
 
 Egresos hospitalarios 2001 – 2016

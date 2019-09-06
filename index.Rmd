@@ -19,8 +19,8 @@ Este curso online contendra las sisgueinetes informaciones
 - Sistemas de informacion con dartos de salud en Chile (gracias Paty Matus)
 - Impacto de las emisiones antropogenicas en la salud y clima
 - R desde Excel
-- Leer y procesar vectores espaciales con **sf**
-- Leer y procesar informacion en grillas espaciales (raster) con stars y stars
+- Leer y procesar vectores espaciales con **sf** [@sf]
+- Leer y procesar informacion en grillas espaciales (raster) con stars[@stars] y raster[@raster]
 
 ## Aprender Git  {-}
 

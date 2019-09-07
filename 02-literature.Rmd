@@ -1,3 +1,43 @@
-# Literature
+# Impacto de las emisiones antropogenicas en la salud y clima {#emis}
 
-Here is a review of existing methods.
+
+
+## Contaminacion atmosferica
+
+La ciencia de la contaminacion atmosferica, si bien reciente, ha sido desarrollada debido a los avances de en la comprension
+de la meteorologia. 
+
+Problemas relacionados con la contaminacion atmosferica han sido descritos en obras literarias y cartas a lo largo de 
+la historia. Por ejemplo, el primer caso reportado sobre los efectos de la contaminacion atmosférica en la salud es sobre Gaius Plinius Secundus (AD 23-AD 79), quien fallecio debido a los efectos de la **emisiones** del volcan Vesuvius [@art]. 
+
+
+[INSERTAR FOTO DE PLINIUS]
+
+
+Sin embargo han sido los grandes episodios de contaminacion los que han gatillado su estudio y gestion por parte de los tomadores de decisiones. Entre ellos se pueden mensionar el desastre de Londres 1952 y la acidifacion de los lagos escandinavos.
+
+### El desastre de Londres 1952
+
+[INSERTAR FOTO]
+
+
+## Acidicacion de los gases escandinavos
+
+[INSERTAR FOTO]
+
+## Como se producen las altas concentraciones de contaminantes
+
+
+## Capa de mezcla
+
+## 
+
+
+
+## Emisiones y sus fuentes
+
+## Efectos de la contaminacion atmosferica en la salud
+
+## Forzantes climaticos
+
+

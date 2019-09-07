@@ -1,4 +1,4 @@
-# Sistemas de informacion con dartos de salud en Chile (gracias Paty Matus) {#intro}
+# Sistemas de informacion con datos de salud en Chile {#intro}
 
 
 - Sistema de información en salud existentes
@@ -43,7 +43,7 @@ Fuentes:
 - https://www.minsal.cl/wp-content/uploads/2018/01/2-Resultados-ENS_MINSAL_31_01_2018.pdf
 - http://www.encuestas.uc.cl/ens/index.html
 
-**[Departamento de Estadisticas e Informaciones de Salud](http://www.deis.cl/)**
+## [Departamento de Estadisticas e Informaciones de Salud](http://www.deis.cl/)
 
 - Resúmenes estadísticos mensuales ([REM](http://www.deis.cl/bases-de-datos-rem/)). Vea el [manual](http://estadisticas.ssosorno.cl/estadisticas/2017/manuales/2017-2018-Manual-Series-REM-V1.1.pdf)
 - [Defunciones](http://www.deis.cl/bases-de-datos-defunciones/)
@@ -56,6 +56,25 @@ Fuentes:
 
 ## [Encuesta de caracterizacion socioeconomica (CASEN)](http://observatorio.ministeriodesarrollosocial.gob.cl/casen-multidimensional/casen/casen_2017.php)
 "La Encuesta de Caracterización Socioeconómica Nacional (Casen) del Ministerio de Desarrollo Social es una encuesta a hogares, de carácter multipropósito, es decir, que abarca diversos temas como educación, trabajo, ingresos, salud, entre otros; además es una encuesta transversal, por lo tanto, incluye a todo el espectro de la población del país."
+
+## Estadisticas generales
+
+- [Instituto Nacional de Estadisticas](www.ine.cl)
+
+## CEPAL STAT
+
+- [Estadisticos e indicadores](http://estadisticas.cepal.org/cepalstat/WEB_CEPALSTAT/estadisticasIndicadores.asp)
+- [Perfiles Nacionales](http://estadisticas.cepal.org/cepalstat/WEB_CEPALSTAT/estadisticasIndicadores.asp)
+- [Publicaciones y estadisticas](http://estadisticas.cepal.org/cepalstat/WEB_CEPALSTAT/PublicacionesEstadisticas.asp)
+
+## Banco Interamericano de Desarrollo
+
+- [Educacion](http://www.iadb.org/en/research-and-data//tables,6882.html?indicator=2)
+- [Mercado Laboral](http://www.iadb.org/en/research-and-data//tables,6882.html?indicator=2)
+- [Ingreso](http://www.iadb.org/es/investigacion-y-datos//tablas,6882.html?indicator=4)
+- [Pobreza](http://www.iadb.org/es/investigacion-y-datos//pobreza,7526.html)
+- [Demografia](http://www.iadb.org/es/investigacion-y-datos//tablas,6882.html?indicator=1)
+
 
 
 Egresos hospitalarios 2001 – 2016

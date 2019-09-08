@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2019/dev/Debian) (preloaded format=xelatex 2019.8.22)  8 SEP 2019 15:06
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2019/dev/Debian) (preloaded format=xelatex 2019.8.22)  8 SEP 2019 15:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -871,22 +871,58 @@ ENICAS EN LA SALUD Y CLIMA
  []
 
 [14] [15]
+File: figs/so2lon.png Graphic file (type bmp)
+<figs/so2lon.png>
+
+Overfull \hbox (442.70831pt too wide) in paragraph at lines 459--459
+[][] 
+ []
+
+File: figs/so2lon2.png Graphic file (type bmp)
+<figs/so2lon2.png>
+
+Overfull \hbox (444.88483pt too wide) in paragraph at lines 463--463
+[][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 Overfull \hbox (91.53012pt too wide) has occurred while \output is active
 \TU/lmr/m/n/10 16 \TU/lmr/m/sl/10 CHAPTER 2.  IMPACTO DE LAS EMISIONES ANTROPOG
 ENICAS EN LA SALUD Y CLIMA
  []
 
-[16]
-Chapter 3.
-[17
+[16] [17]
+Overfull \hbox (91.53012pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 18 \TU/lmr/m/sl/10 CHAPTER 2.  IMPACTO DE LAS EMISIONES ANTROPOG
+ENICAS EN LA SALUD Y CLIMA
+ []
+
+[18]
+Overfull \hbox (66.74231pt too wide) has occurred while \output is active
+\TU/lmr/m/sl/10 2.2.  COMO SE PRODUCEN LAS ALTAS CONCENTRACIONES DE CONTAMINANT
+ES \TU/lmr/m/n/10 19
+ []
+
+[19]
+Overfull \hbox (91.53012pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 20 \TU/lmr/m/sl/10 CHAPTER 2.  IMPACTO DE LAS EMISIONES ANTROPOG
+ENICAS EN LA SALUD Y CLIMA
+ []
+
+[20
 
 ]
+Chapter 3.
+[21]
 Overfull \hbox (215.91125pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 18 \TU/lmr/m/sl/10 CHAPTER 3.  TALLER VECTORES: APLICACIÓN DE SO
+\TU/lmr/m/n/10 22 \TU/lmr/m/sl/10 CHAPTER 3.  TALLER VECTORES: APLICACIÓN DE SO
 FTWARE DE INFORMACIÓN GEOGRÁFICA Y MODELADO
  []
 
-[18
+[22
 
 ]
 Chapter 4.
@@ -895,37 +931,37 @@ File: figs/cube1.png Graphic file (type bmp)
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[19]
+[23]
 File: figs/cube2.png Graphic file (type bmp)
 <figs/cube2.png>
 
 Overfull \hbox (377.85576pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 20 \TU/lmr/m/sl/10 CHAPTER 4.  TALLER RASTER Y CUBOS DE DATOS VE
+\TU/lmr/m/n/10 24 \TU/lmr/m/sl/10 CHAPTER 4.  TALLER RASTER Y CUBOS DE DATOS VE
 CTORIALES: APLICACIÓN DE SOFTWARE DE INFORMACIÓN GEOGRÁFICA Y MODELADO
  []
 
-[20]
+[24]
 Chapter 5.
-(./bookdown-demo.bbl [21
+(./bookdown-demo.bbl [25
 
-] [22
+] [26
 
 ]
-Underfull \hbox (badness 1742) in paragraph at lines 42--46
+Underfull \hbox (badness 1742) in paragraph at lines 48--52
 []\TU/lmr/m/n/10 Pebesma, E. (2019).  \TU/lmr/m/it/10 stars: Spatiotemporal Arr
 ays, Raster and Vec-
  []
 
-[23])
+[27])
 
 Package natbib Warning: There were undefined citations.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 496.
-[24]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 496.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 512.
+[28]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 512.
 (./bookdown-demo.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 496.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 496.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 512.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 512.
 Package rerunfilecheck Info: File `bookdown-demo.out' has not changed.
 (rerunfilecheck)             Checksum: 4631C2A225B30B1D37077CDF19155729.
 
@@ -933,12 +969,12 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 23995 strings out of 492912
- 448374 string characters out of 6134893
- 579870 words of memory out of 5000000
- 27794 multiletter control sequences out of 15000+600000
+ 24012 strings out of 492912
+ 448694 string characters out of 6134893
+ 580218 words of memory out of 5000000
+ 27809 multiletter control sequences out of 15000+600000
  545073 words of font info for 56 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 45i,8n,54p,810b,448s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 45i,8n,54p,810b,450s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on bookdown-demo.pdf (24 pages).
+Output written on bookdown-demo.pdf (28 pages).

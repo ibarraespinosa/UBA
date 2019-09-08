@@ -22,7 +22,7 @@ Sin embargo han sido los grandes episodios de contaminacion los que han gatillad
 
 ### El desastre de Londres 1952
 
-Altas concentraciones de contaminantes fueron ocurrieron entre el 5 y 9 de Diciembre de 1952 en Londres, Inglaterra. Para comparacion, vea el monumento "Columna de Nelson" en condiciones normales[@nelson1], y el dia de la llamada"Gran Nieba de Londres"[@nelson2]
+Altas concentraciones de contaminantes fueron ocurrieron entre el 5 y 9 de Diciembre de 1952 en Londres, Inglaterra. Para comparacion, vea el monumento "Columna de Nelson" en condiciones normales[@nelson1], y el dia de la llamada "Gran Niebla de Londres"[@nelson2]
 
 ```{r echo = FALSE, fig.cap="Columna de Nelson, Dominio Publico", out.height= "90%", out.width="90%"}
 knitr::include_graphics(path = "figs/800px-Nelson's_Column,_Trafalgar_Square,_London.jpeg")
@@ -34,7 +34,23 @@ knitr::include_graphics(path = "figs/Nelson's_Column_during_the_Great_Smog_of_19
 ```
 
 
+#### Consecuencias
 
+A pesar que durante la fecha, las autoridades no consideraron el efecto de la contaminacion, este evento si causoo gran impacto en la comunidad [@l1952]. Estudios posteriores cuantificaron un impacto en **12.000 muertos** asociados a este episodio de contaminacion [@bell2001reassessment]. 
+
+
+
+```{r echo = FALSE, fig.cap="Mortalidad semanal y concentraciones de SO2 en Lobres 1952 (Bell and Davis, 2001)"}
+knitr::include_graphics(path = "figs/so2lon.png")
+```
+
+
+```{r echo = FALSE, fig.cap="Mortalidad semanal y concentraciones de SO2 en Lobres 1952 (Bell and Davis, 2001)"}
+knitr::include_graphics(path = "figs/so2lon2.png")
+```
+
+*comentarios?*
+#### Causas
 
 ### Acidicacion de los gases escandinavos
 

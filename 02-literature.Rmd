@@ -29,6 +29,10 @@ knitr::include_graphics(path = "figs/800px-Nelson's_Column,_Trafalgar_Square,_Lo
 ```
 
 
+```{r echo = FALSE, fig.cap="Columna de Nelson durante la Gran Niebla de 1952, Dominio Publico"}
+knitr::include_graphics(path = "figs/Nelson's_Column_during_the_Great_Smog_of_1952.jpg")
+```
+
 [INSERTAR FOTO]
 
 

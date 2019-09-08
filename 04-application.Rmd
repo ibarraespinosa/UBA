@@ -1,4 +1,6 @@
-# Taller RASTER Y CUBOS DE DATOS VECTORIALES: Aplicación de software de información geográfica y modelado
+# Taller RASTER Y CUBOS DE DATOS VECTORIALES: Aplicación de software de información geográfica y modelado 
+
+Amanda Rehbein
 
 
 Raster son informacion espaciales en una grilla espacial. Por ejemplo, vea las siguientes figuras:

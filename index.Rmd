@@ -10,6 +10,8 @@ biblio-style: apalike
 link-citations: yes
 github-repo: ibarraespinosa/UBA
 description: "Emisiones/Calidad del Aire /sf/stars/raster."
+header-includes:
+   - \usepackage{url}
 ---
 
 # Curso de R, contaminacion atmosferica y mas {-}

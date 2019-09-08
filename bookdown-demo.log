@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2019/dev/Debian) (preloaded format=xelatex 2019.8.22)  7 SEP 2019 21:02
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2019/dev/Debian) (preloaded format=xelatex 2019.8.22)  7 SEP 2019 21:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -823,6 +823,9 @@ DE SALUD EN CHILE
  []
 
 [8]
+
+LaTeX Warning: Reference `methods' on page 9 undefined on input line 350.
+
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
 (Font)              Font shape `TU/lmtt/b/n' tried instead on input line 356.
 File: bookdown-demo_files/figure-latex/nice-fig-1.pdf Graphic file (type pdf)
@@ -858,15 +861,35 @@ ENICAS EN LA SALUD Y CLIMA
 Chapter 3.
 [15
 
-] [16
+]
+Overfull \hbox (215.91125pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 16 \TU/lmr/m/sl/10 CHAPTER 3.  TALLER VECTORES: APLICACIÓN DE SO
+FTWARE DE INFORMACIÓN GEOGRÁFICA Y MODELADO
+ []
+
+[16
 
 ]
 Chapter 4.
-[17] [18
+File: figs/cube1.png Graphic file (type bmp)
+<figs/cube1.png>
 
-]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[17]
+File: figs/cube2.png Graphic file (type bmp)
+<figs/cube2.png>
+
+Overfull \hbox (377.85576pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 18 \TU/lmr/m/sl/10 CHAPTER 4.  TALLER RASTER Y CUBOS DE DATOS VE
+CTORIALES: APLICACIÓN DE SOFTWARE DE INFORMACIÓN GEOGRÁFICA Y MODELADO
+ []
+
+[18]
 Chapter 5.
-(./bookdown-demo.bbl [19] [20
+(./bookdown-demo.bbl [19
+
+] [20
 
 ]
 Underfull \hbox (badness 1742) in paragraph at lines 15--19
@@ -885,13 +908,16 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 486.
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 486.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 486.
 Package rerunfilecheck Info: File `bookdown-demo.out' has not changed.
-(rerunfilecheck)             Checksum: 365293F314FFB36F0F2448CC1006BA2B.
+(rerunfilecheck)             Checksum: 73F33F3970C718A593F565106F35CA29.
+
+LaTeX Warning: There were undefined references.
+
  ) 
 Here is how much of TeX's memory you used:
- 23943 strings out of 492912
- 446831 string characters out of 6134893
- 579561 words of memory out of 5000000
- 27759 multiletter control sequences out of 15000+600000
+ 23951 strings out of 492912
+ 447098 string characters out of 6134893
+ 579656 words of memory out of 5000000
+ 27763 multiletter control sequences out of 15000+600000
  545073 words of font info for 56 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  45i,8n,54p,810b,446s stack positions out of 5000i,500n,10000p,200000b,80000s

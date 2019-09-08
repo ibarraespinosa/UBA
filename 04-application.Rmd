@@ -1,7 +1,19 @@
-# Applications
+# Taller RASTER Y CUBOS DE DATOS VECTORIALES: Aplicación de software de información geográfica y modelado
 
-Some _significant_ applications are demonstrated in this chapter.
 
-## Example one
+Raster son informacion espaciales en una grilla espacial. Por ejemplo, vea las siguientes figuras:
 
-## Example two
+
+![](figs/cube1.png)
+
+
+![](figs/cube2.png)
+
+
+Ejemplos con R
+
+
+```{r eval= FALSE}
+
+```
+

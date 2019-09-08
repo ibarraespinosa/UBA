@@ -21,7 +21,7 @@ La atmosfera es una delgada capa sobre la tierra, 50% de su masa esta 5.6 km est
 
 
 
-## Contaminacion atmosferica
+## Contaminacion atmosferica - Introduccion
 
 **"La contaminación del aire es un determinante importante de la salud. La OMS estima que en 2012 alrededor de 1 de cada 8 muertes se atribuyeron a la exposición a la contaminación del aire, lo que lo convierte en el mayor factor de riesgo ambiental para la mala salud."**[@oms]
 
@@ -69,7 +69,7 @@ knitr::include_graphics(path = "figs/so2lon2.png")
 
 *comentarios?*
 
-### CLRTAP
+#### CLRTAP
 
 ```{r echo = FALSE}
 message("Tarea / Tema de casa / Homework:")
@@ -77,7 +77,7 @@ message("Tarea / Tema de casa / Homework:")
 print("Investique que es, causas, consequencias y poltiica ambiental asociada a CLRTAP")
 ```
 
-### Contaminantes 
+## Contaminantes atmosfericos
 
 Las emisiones liberadas a la atmosfera impactan la salud, meteorologia y clima en diferentes escalas como se ve en la sigueinte figura. 
 
@@ -97,12 +97,34 @@ Los contaminantes atmosfericos suelen ser clasificados como:
 - Primarios: emitidos directamente en la atmosfera. Ejemplo: CO.
 - Secundarios: formados en la atmosfera. Ejemplo: O3.
 
+Respecto del ozono es necesario mencionar que existen dos tipos, el estratosferico (bueno) y y el troposferico (malo),
+como es expicado por @brasseur2017modeling.
+
+El ciclo deo ozono troposferico comienza con la fotolisis de lamolecula de ox[igeno devido a radiacion solar de longitud de onda minimo 242 nm. Posteriormente, un atomo de oxigeno se combina con otra molecula de oxigeno para formar ozono. La molecula M (cuerpo inerte, como $N_2$ o $O_2$)  estabiliza la molecula de $O_3$ recien formada.
+
+\begin{equation}
+O_2 + hv(\lambda < 242 nm) -> O + O 
+(\#eq:1)
+\end{equation}
+
+\begin{equation}
+O + O_2 + M -> O_3 + M 
+(\#eq:2)
+\end{equation}
+
+El Ozono luego ed fololizado a un atomo de oxigeno y una molecula de oxigeno ante radiacion menor a 1180 nm, liberando energia cinetica [@o3].
+
+
+\begin{equation}
+O_3 + hv(\lambda < 1180 nm) -> O + O_2 + energia cinetica 
+(\#eq:2)
+\end{equation}
+
+
+
+## Como se producen las altas concentraciones de contaminantes
 
 ## Forzantes climaticos
-
-
-### Como se producen las altas concentraciones de contaminantes
-
 
 
 ## Emisiones y sus fuentes

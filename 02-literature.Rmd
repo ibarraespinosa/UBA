@@ -24,7 +24,7 @@ Sin embargo han sido los grandes episodios de contaminacion los que han gatillad
 
 Altas concentraciones de contaminantes fueron ocurrieron entre el 5 y 9 de Diciembre de 1952 en Londres, Inglaterra. Para comparacion, vea el monumento "Columna de Nelson" en condiciones normales[@nelson1], y el dia de la llamada"Gran Nieba de Londres"[@nelson2]
 
-```{r echo = FALSE, fig.cap="Columna de Nelson, Dominio Publico"}
+```{r echo = FALSE, fig.cap="Columna de Nelson, Dominio Publico", out.height= "90%", out.width="90%"}
 knitr::include_graphics(path = "figs/800px-Nelson's_Column,_Trafalgar_Square,_London.jpeg")
 ```
 
@@ -33,7 +33,7 @@ knitr::include_graphics(path = "figs/800px-Nelson's_Column,_Trafalgar_Square,_Lo
 knitr::include_graphics(path = "figs/Nelson's_Column_during_the_Great_Smog_of_1952.jpg")
 ```
 
-[INSERTAR FOTO]
+
 
 
 ### Acidicacion de los gases escandinavos

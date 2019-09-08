@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2019/dev/Debian) (preloaded format=xelatex 2019.8.22)  8 SEP 2019 13:23
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2019/dev/Debian) (preloaded format=xelatex 2019.8.22)  8 SEP 2019 13:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -854,6 +854,9 @@ Chapter 2.
 File: figs/1280px-Joseph_Wright_of_Derby_-_Vesuvius_from_Portici.jpg Graphic fi
 le (type bmp)
 <figs/1280px-Joseph_Wright_of_Derby_-_Vesuvius_from_Portici.jpg>
+
+Underfull \vbox (badness 1874) has occurred while \output is active []
+
 [13]
 Overfull \hbox (91.53012pt too wide) has occurred while \output is active
 \TU/lmr/m/n/10 14 \TU/lmr/m/sl/10 CHAPTER 2.  IMPACTO DE LAS EMISIONES ANTROPOG
@@ -910,12 +913,12 @@ ays, Raster and Vec-
 
 Package natbib Warning: There were undefined citations.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 496.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 492.
 [23]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 496.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 492.
 (./bookdown-demo.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 496.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 496.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 492.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 492.
 Package rerunfilecheck Info: File `bookdown-demo.out' has not changed.
 (rerunfilecheck)             Checksum: 73F33F3970C718A593F565106F35CA29.
 

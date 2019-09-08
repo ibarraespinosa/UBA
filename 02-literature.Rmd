@@ -50,13 +50,36 @@ knitr::include_graphics(path = "figs/so2lon2.png")
 ```
 
 *comentarios?*
-#### Causas
 
-### Acidicacion de los gases escandinavos
+### CLRTAP
 
-[INSERTAR FOTO]
+```{r echo = FALSE}
+message("Tarea / Tema de casa / Homework:")
 
-## Como se producen las altas concentraciones de contaminantes
+print("Investique que es, causas, consequencias y poltiica ambiental asociada a CLRTAP")
+```
+
+### Contaminantes 
+
+Las emisiones liberadas a la atmosfera impactan la salud, meteorologia y clima en diferentes escalas como se ve en la sigueinte figura. 
+
+```{r echo = FALSE, fig.cap="Esquema de impacto de emisiones (Ibarra, 2017)"}
+knitr::include_graphics(path = "figs/esquema.png")
+```
+
+Por lo tanto para entender las emisiones necesitamos respnder las siguientes preguntas:
+
+- **Que?**
+- **Como?**
+- **Cuando?**
+- **Donde?**
+
+Los contaminantes atmosfericos suelen ser clasificados como:
+
+- Primarios:
+- Secundarios: 
+
+### Como se producen las altas concentraciones de contaminantes
 
 
 

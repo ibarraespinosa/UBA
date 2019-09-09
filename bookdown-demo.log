@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2019/dev/Debian) (preloaded format=xelatex 2019.8.22)  8 SEP 2019 23:42
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2019/dev/Debian) (preloaded format=xelatex 2019.8.22)  9 SEP 2019 00:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -862,15 +862,15 @@ File: figs/Nelson's_Column_during_the_Great_Smog_of_1952.jpg Graphic file (type
  bmp)
 <figs/Nelson's_Column_during_the_Great_Smog_of_1952.jpg>
 
-Overfull \hbox (91.53012pt too wide) has occurred while \output is active
+Overfull \hbox (154.57793pt too wide) has occurred while \output is active
 \TU/lmr/m/n/10 14 \TU/lmr/m/sl/10 CHAPTER 2.  IMPACTO DE LAS EMISIONES ANTROPOG
-ENICAS EN LA SALUD Y CLIMA
+ÉNICAS EN LA CALIDAD DEL AIRE Y CLIMA
  []
 
 [14] [15]
-Overfull \hbox (91.53012pt too wide) has occurred while \output is active
+Overfull \hbox (154.57793pt too wide) has occurred while \output is active
 \TU/lmr/m/n/10 16 \TU/lmr/m/sl/10 CHAPTER 2.  IMPACTO DE LAS EMISIONES ANTROPOG
-ENICAS EN LA SALUD Y CLIMA
+ÉNICAS EN LA CALIDAD DEL AIRE Y CLIMA
  []
 
 [16]
@@ -905,15 +905,15 @@ Overfull \hbox (423.5803pt too wide) in paragraph at lines 571--571
 LaTeX Warning: Float too large for page by 24.5112pt on input line 572.
 
 [17]
-Overfull \hbox (91.53012pt too wide) has occurred while \output is active
+Overfull \hbox (154.57793pt too wide) has occurred while \output is active
 \TU/lmr/m/n/10 18 \TU/lmr/m/sl/10 CHAPTER 2.  IMPACTO DE LAS EMISIONES ANTROPOG
-ENICAS EN LA SALUD Y CLIMA
+ÉNICAS EN LA CALIDAD DEL AIRE Y CLIMA
  []
 
 [18] [19]
-Overfull \hbox (91.53012pt too wide) has occurred while \output is active
+Overfull \hbox (154.57793pt too wide) has occurred while \output is active
 \TU/lmr/m/n/10 20 \TU/lmr/m/sl/10 CHAPTER 2.  IMPACTO DE LAS EMISIONES ANTROPOG
-ENICAS EN LA SALUD Y CLIMA
+ÉNICAS EN LA CALIDAD DEL AIRE Y CLIMA
  []
 
 [20]
@@ -924,34 +924,109 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 621.
 [21]
-Overfull \hbox (91.53012pt too wide) has occurred while \output is active
+Overfull \hbox (154.57793pt too wide) has occurred while \output is active
 \TU/lmr/m/n/10 22 \TU/lmr/m/sl/10 CHAPTER 2.  IMPACTO DE LAS EMISIONES ANTROPOG
-ENICAS EN LA SALUD Y CLIMA
+ÉNICAS EN LA CALIDAD DEL AIRE Y CLIMA
  []
 
 [22]
+File: figs/800px-Synthetic_aerosol_distribution_in_number_area_and_volume_space
+.png Graphic file (type bmp)
+<figs/800px-Synthetic_aerosol_distribution_in_number_area_and_volume_space.png>
+
+
+Overfull \hbox (62.03586pt too wide) in paragraph at lines 713--713
+[][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 35.93723pt on input line 714.
+
+File: figs/chile1.png Graphic file (type bmp)
+<figs/chile1.png>
+
+Overfull \hbox (786.75237pt too wide) in paragraph at lines 721--721
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 721--721
+[]\TU/lmr/m/n/10 Figure 2.8: []MP2.5 ug/m3 em Lautaro, Chile
+ []
+
+
+LaTeX Warning: Float too large for page by 36.53563pt on input line 722.
+
+File: figs/hotan.png Graphic file (type bmp)
+<figs/hotan.png>
+
+Overfull \hbox (534.84897pt too wide) in paragraph at lines 727--727
+[][] 
+ []
+
+File: figs/brazil.png Graphic file (type bmp)
+<figs/brazil.png>
+
+Overfull \hbox (188.02359pt too wide) in paragraph at lines 735--735
+[][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 24.54887pt on input line 736.
+
+
+Overfull \hbox (6.75pt too wide) in paragraph at lines 742--742
+[]\TU/lmtt/m/n/10 ## Ingrese a https://worldview.earthdata.nasa.gov/ y busque a
+erosol[] 
+ []
+
+
 Overfull \hbox (66.74231pt too wide) has occurred while \output is active
 \TU/lmr/m/sl/10 2.3.  COMO SE PRODUCEN LAS ALTAS CONCENTRACIONES DE CONTAMINANT
 ES \TU/lmr/m/n/10 23
  []
 
 [23]
-Overfull \hbox (91.53012pt too wide) has occurred while \output is active
+Overfull \hbox (154.57793pt too wide) has occurred while \output is active
 \TU/lmr/m/n/10 24 \TU/lmr/m/sl/10 CHAPTER 2.  IMPACTO DE LAS EMISIONES ANTROPOG
-ENICAS EN LA SALUD Y CLIMA
+ÉNICAS EN LA CALIDAD DEL AIRE Y CLIMA
  []
 
-[24
+[24]
+Overfull \hbox (6.45233pt too wide) has occurred while \output is active
+\TU/lmr/m/sl/10 2.6.  EFECTOS DE LA CONTAMINACION ATMOSFERICA EN LA SALUD \TU/l
+mr/m/n/10 25
+ []
+
+[25]
+Overfull \hbox (154.57793pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 26 \TU/lmr/m/sl/10 CHAPTER 2.  IMPACTO DE LAS EMISIONES ANTROPOG
+ÉNICAS EN LA CALIDAD DEL AIRE Y CLIMA
+ []
+
+[26]
+Overfull \hbox (6.45233pt too wide) has occurred while \output is active
+\TU/lmr/m/sl/10 2.6.  EFECTOS DE LA CONTAMINACION ATMOSFERICA EN LA SALUD \TU/l
+mr/m/n/10 27
+ []
+
+[27]
+Overfull \hbox (154.57793pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 28 \TU/lmr/m/sl/10 CHAPTER 2.  IMPACTO DE LAS EMISIONES ANTROPOG
+ÉNICAS EN LA CALIDAD DEL AIRE Y CLIMA
+ []
+
+[28
 
 ]
 Chapter 3.
-[25]
+[29]
 Overfull \hbox (215.91125pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 26 \TU/lmr/m/sl/10 CHAPTER 3.  TALLER VECTORES: APLICACIÓN DE SO
+\TU/lmr/m/n/10 30 \TU/lmr/m/sl/10 CHAPTER 3.  TALLER VECTORES: APLICACIÓN DE SO
 FTWARE DE INFORMACIÓN GEOGRÁFICA Y MODELADO
  []
 
-[26
+[30
 
 ]
 Chapter 4.
@@ -960,20 +1035,20 @@ File: figs/cube1.png Graphic file (type bmp)
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[27]
+[31]
 File: figs/cube2.png Graphic file (type bmp)
 <figs/cube2.png>
 
 Overfull \hbox (377.85576pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 28 \TU/lmr/m/sl/10 CHAPTER 4.  TALLER RASTER Y CUBOS DE DATOS VE
+\TU/lmr/m/n/10 32 \TU/lmr/m/sl/10 CHAPTER 4.  TALLER RASTER Y CUBOS DE DATOS VE
 CTORIALES: APLICACIÓN DE SOFTWARE DE INFORMACIÓN GEOGRÁFICA Y MODELADO
  []
 
-[28]
+[32]
 Chapter 5.
-(./bookdown-demo.bbl [29
+(./bookdown-demo.bbl [33
 
-] [30
+] [34
 
 ]
 Underfull \hbox (badness 1742) in paragraph at lines 58--62
@@ -981,8 +1056,8 @@ Underfull \hbox (badness 1742) in paragraph at lines 58--62
 ays, Raster and Vec-
  []
 
-[31]
-Underfull \hbox (badness 1342) in paragraph at lines 102--107
+[35]
+Underfull \hbox (badness 1342) in paragraph at lines 109--114
 \TU/lmr/m/n/10 encyclopedia.  []$[][][][][] [] [] [] [][] [] [][][][][][][][][]
  [] [][][] [] [] [] [][][][][] [] [][][] [] [][][][][] [] [][][][][][][][][][][
 ][] []
@@ -992,25 +1067,25 @@ Underfull \hbox (badness 1342) in paragraph at lines 102--107
 
 Package natbib Warning: There were undefined citations.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 734.
-[32]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 734.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 782.
+[36]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 782.
 (./bookdown-demo.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 734.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 734.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 782.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 782.
 Package rerunfilecheck Info: File `bookdown-demo.out' has not changed.
-(rerunfilecheck)             Checksum: 8BDA275ACDD60445C7C654A551D94955.
+(rerunfilecheck)             Checksum: D49817E7BA06E86E891CB6D56DF5A953.
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 24088 strings out of 492912
- 449835 string characters out of 6134893
- 583366 words of memory out of 5000000
- 27876 multiletter control sequences out of 15000+600000
+ 24112 strings out of 492912
+ 450503 string characters out of 6134893
+ 583857 words of memory out of 5000000
+ 27896 multiletter control sequences out of 15000+600000
  557109 words of font info for 71 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 45i,8n,54p,810b,450s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 45i,8n,54p,810b,451s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on bookdown-demo.pdf (32 pages).
+Output written on bookdown-demo.pdf (36 pages).

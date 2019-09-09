@@ -1,4 +1,4 @@
-# Impacto de las emisiones antropogenicas en la salud y clima
+# Impacto de las emisiones antropogénicas en la calidad del aire y clima
 
 La contaminacion es una amenaza a la salud global que causo 9 millones de muertes en 2015, 16% de las muertes [@landrigan2018lancet]. Ademas, existe consenso cientifico de la existencia y relacion con la actividad humana sobre el cambio climatico [@cook2016consensus]. Tanto la contaminacion atmosferica como los gases de efecto invernadero, conocidos tambien como forzantes climaticos de vida corta y larga son causados por compuestos quimicos liberados en la atmosfera, las llamadas emisiones. Por lo tanto, es importante realziar y entender la caracterizacion espacial y temporal de las emisiones, asi como sus efectos en la salud y en el clima.
 
@@ -31,7 +31,6 @@ La ciencia de la contaminacion atmosferica, si bien reciente, ha sido desarrolla
 ```{r echo = FALSE, fig.cap="An eruption of Vesuvius seen from Portici, by Joseph Wright (ca. 1774-6), Dominio Publico"}
 knitr::include_graphics(path = "figs/1280px-Joseph_Wright_of_Derby_-_Vesuvius_from_Portici.jpg")
 ```
-
 
 
 
@@ -186,6 +185,49 @@ HSO_3 + O_2 	\rightarrow  SO_3 + HO_2
 SO_3 + H2O + M \rightarrow  H_2SO_4 + M
 (\#eq:11)
 \end{equation}
+
+### Aerosoles
+
+Son particulas suspendidas desde ~0.001 $\mu m$ hasta 100 $\mu m$ (luster molecular a gota). Conocido como material particulado (MP), sus caracerizacion es realizada mayormente en base a su diametro aerodinamico como se muestra en la sigueinte figura [@mpwiki][@brasseur2017modeling]. Existen tres agrupaciones que son:
+
+1. Modo Aiken: nucleos de condensacion nuevos (fresh) que condensan (gas) o coagulan (liquidos). Diametro hasta 100 nm.
+2. Modo acumulacion: Diametro entre 100 y 1000 nm.
+3. Modo coarse: Diametro mayor que 1000 nm.
+
+```{r echo = FALSE, fig.cap="Distribucion normalizada (suma es 1000) de aerosoles por diametro aerodinamico, Dominio Publico"}
+knitr::include_graphics(path = "figs/800px-Synthetic_aerosol_distribution_in_number_area_and_volume_space.png")
+```
+
+Los aersolos son claisficados por numeros, area de superficie y volumen. Normalmente las agencias de medio ambiente miden $MP_{10}$ (diametro menos <= que 10 $\mu m$) y $MP_{2.5}$ (diametro menos <= que 2.5 $\mu m$) en $\mu g \cdot m^{-3}$. A continuacion una figura mostrando material particulado en Chile, Brazil y China.
+
+**Chile ***
+
+```{r echo = FALSE, fig.cap="MP2.5 ug/m3 em Lautaro, Chile (https://sinca.mma.gob.cl/index.php/estacion/index/key/870)"}
+knitr::include_graphics(path = "figs/chile1.png")
+```
+
+
+**China**
+
+```{r echo = FALSE, fig.cap="MP2.5 ug/m3 em Hotan, China (http://pm25.in/hetiandiqu)"}
+knitr::include_graphics(path = "figs/hotan.png")
+```
+
+ingrese aqui: https://aqicn.org/forecast/beijing/
+
+**Osasco, Brasil**
+
+
+```{r echo = FALSE, fig.cap="MP2.5 ug/m3 Osasco, Brasil (https://qualar.cetesb.sp.gov.br)"}
+knitr::include_graphics(path = "figs/brazil.png")
+```
+
+
+[NASA WORLDVIEW](https://worldview.earthdata.nasa.gov/) es un excelente recurso para monitorear aerosoles, incendios y mucho mas.
+
+```{r echo = FALSE}
+message("Ingrese a https://worldview.earthdata.nasa.gov/ y busque aerosol")
+```
 
 
 

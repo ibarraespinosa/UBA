@@ -124,7 +124,7 @@
   \postauthor{\par}
       \predate{\centering\large\emph}
   \postdate{\par}
-    \date{2019-09-08}
+    \date{2019-09-09}
 
 \usepackage{booktabs}
 \usepackage{amsthm}
@@ -415,8 +415,8 @@ Sepal.Length & Sepal.Width & Petal.Length & Petal.Width & Species\\
 
 You can write citations, too. For example, we are using the \textbf{bookdown} package \citep{R-bookdown} in this sample book, which was built on top of R Markdown and \textbf{knitr} \citep{xie2015}.
 
-\hypertarget{impacto-de-las-emisiones-antropogenicas-en-la-salud-y-clima}{%
-\chapter{Impacto de las emisiones antropogenicas en la salud y clima}\label{impacto-de-las-emisiones-antropogenicas-en-la-salud-y-clima}}
+\hypertarget{impacto-de-las-emisiones-antropogenicas-en-la-calidad-del-aire-y-clima}{%
+\chapter{Impacto de las emisiones antropogénicas en la calidad del aire y clima}\label{impacto-de-las-emisiones-antropogenicas-en-la-calidad-del-aire-y-clima}}
 
 La contaminacion es una amenaza a la salud global que causo 9 millones de muertes en 2015, 16\% de las muertes \citep{landrigan2018lancet}. Ademas, existe consenso cientifico de la existencia y relacion con la actividad humana sobre el cambio climatico \citep{cook2016consensus}. Tanto la contaminacion atmosferica como los gases de efecto invernadero, conocidos tambien como forzantes climaticos de vida corta y larga son causados por compuestos quimicos liberados en la atmosfera, las llamadas emisiones. Por lo tanto, es importante realziar y entender la caracterizacion espacial y temporal de las emisiones, asi como sus efectos en la salud y en el clima.
 
@@ -692,6 +692,54 @@ HSO_3 + O_2     \rightarrow  SO_3 + HO_2
 SO_3 + H2O + M \rightarrow  H_2SO_4 + M
 \label{eq:11}
 \end{equation}
+
+\hypertarget{aerosoles}{%
+\subsection{Aerosoles}\label{aerosoles}}
+
+Son particulas suspendidas desde \textasciitilde{}0.001 \(\mu m\) hasta 100 \(\mu m\) (luster molecular a gota). Conocido como material particulado (MP), sus caracerizacion es realizada mayormente en base a su diametro aerodinamico como se muestra en la sigueinte figura \citep{mpwiki}\citep{brasseur2017modeling}. Existen tres agrupaciones que son:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Modo Aiken: nucleos de condensacion nuevos (fresh) que condensan (gas) o coagulan (liquidos). Diametro hasta 100 nm.
+\item
+  Modo acumulacion: Diametro entre 100 y 1000 nm.
+\item
+  Modo coarse: Diametro mayor que 1000 nm.
+\end{enumerate}
+
+\begin{figure}
+\includegraphics[width=11.11in]{figs/800px-Synthetic_aerosol_distribution_in_number_area_and_volume_space} \caption{Distribucion normalizada (suma es 1000) de aerosoles por diametro aerodinamico, Dominio Publico}\label{fig:unnamed-chunk-10}
+\end{figure}
+
+Los aersolos son claisficados por numeros, area de superficie y volumen. Normalmente las agencias de medio ambiente miden \(MP_{10}\) (diametro menos \textless{}= que 10 \(\mu m\)) y \(MP_{2.5}\) (diametro menos \textless{}= que 2.5 \(\mu m\)) en \(\mu g \cdot m^{-3}\). A continuacion una figura mostrando material particulado en Chile, Brazil y China.
+
+\textbf{Chile }*
+
+\begin{figure}
+\includegraphics[width=23.32in]{figs/chile1} \caption{MP2.5 ug/m3 em Lautaro, Chile (https://sinca.mma.gob.cl/index.php/estacion/index/key/870)}\label{fig:unnamed-chunk-11}
+\end{figure}
+
+\textbf{China}
+
+\begin{figure}
+\includegraphics[width=16.57in]{figs/hotan} \caption{MP2.5 ug/m3 em Hotan, China (http://pm25.in/hetiandiqu)}\label{fig:unnamed-chunk-12}
+\end{figure}
+
+ingrese aqui: \url{https://aqicn.org/forecast/beijing/}
+
+\textbf{Osasco, Brasil}
+
+\begin{figure}
+\includegraphics[width=11.31in]{figs/brazil} \caption{MP2.5 ug/m3 Osasco, Brasil (https://qualar.cetesb.sp.gov.br)}\label{fig:unnamed-chunk-13}
+\end{figure}
+
+\href{https://worldview.earthdata.nasa.gov/}{NASA WORLDVIEW} es un excelente recurso para monitorear aerosoles, incendios y mucho mas.
+
+\begin{verbatim}
+## Ingrese a https://worldview.earthdata.nasa.gov/ y busque aerosol
+\end{verbatim}
 
 \hypertarget{como-se-producen-las-altas-concentraciones-de-contaminantes}{%
 \section{Como se producen las altas concentraciones de contaminantes}\label{como-se-producen-las-altas-concentraciones-de-contaminantes}}

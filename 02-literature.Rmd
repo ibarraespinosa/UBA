@@ -5,19 +5,18 @@ La contaminacion es una amenaza a la salud global que causo 9 millones de muerte
 La atmosfera es una delgada capa sobre la tierra, 50% de su masa esta 5.6 km esta compuestos por varios gases [@brasseur2017modeling], cuya composicion es:
 
 
-| Gas     | Razon molar $mol \cdot mol^{-1}$|
-|:--------:|:------------------------------:|
-|Nitrogeno ($N_2$) | 0.78 | 
-|Oxigeno ($O_2$) | 0.21 | 
-|Argon ($A_r$)   | 0.0093 | 
-|Dioxido de carbono ($CO_2$)   | $400 \cdot10^{-6}$ | 
-|Neon ($N_e$)   | $18 \cdot10^{-6}$ | 
-|Ozono ($O_3$)   | $0.01-10 \cdot10^{-6}$ | 
-|Helio ($H_e$)   | $5.2 \cdot10^{-6}$ | 
-|Metano ($CH_4$)   | $1.8 \cdot10^{-6}$ | 
-|Kripton ($K_r$)   | $1.1 \cdot10^{-6}$ | 
-|Hidrogeno ($H_2$)   | $500 \cdot10^{-9}$ | 
-|Oxido nitroso ($N_2O$)   | $330 \cdot10^{-9}$ | 
+| Gas     | Razon molar $mol \cdot mol^{-1}$| Principal fuente y comentarios [@brasseur1999atmospheric]|
+|:--------:|:------------------------------:|:-----------------:|
+|Nitrogeno ($N_2$) | 0.78 | Biologica |
+|Oxigeno ($O_2$) | 0.21 |  Biologica |
+|Argon ($A_r$)   | 0.0093 | Inerte |
+|Dioxido de carbono ($CO_2$)   | $400 \cdot10^{-6}$ | Combustion, oceano, biosfera|
+|Neon ($N_e$)   | $18 \cdot10^{-6}$ | Inerte|
+|Ozono ($O_3$)   | $0.01-10 \cdot10^{-6}$ | Fotoquimico|
+|Helio ($H_e$)   | $5.2 \cdot10^{-6}$ | Inerte|
+|Metano ($CH_4$)   | $1.8 \cdot10^{-6}$ | Biogenico y antropogenico|
+|Hidrogeno ($H_2$)   | $500 \cdot10^{-9}$ | Biogenico, antropogenico y fotoquimico| 
+|Oxido nitroso ($N_2O$)   | $330 \cdot10^{-9}$ | Biogenico y antropogenico|
 
 
 
@@ -95,7 +94,21 @@ Por lo tanto para entender las emisiones necesitamos respnder las siguientes pre
 Los contaminantes atmosfericos suelen ser clasificados como:
 
 - Primarios: emitidos directamente en la atmosfera. Ejemplo: CO.
-- Secundarios: formados en la atmosfera. Ejemplo: O3.
+- Secundarios: formados en la atmosfera. Ejemplo: $O_3$.
+
+Existen muchos contaminantes atmosfericos de interes cientifico como 
+
+- Ozono $O_3$
+- Monoxido de Carbono $CO$
+- Radicales de Oxidos de nitrogeno $NO_X \equiv NO + NO_2$
+- Compuestos organicos volatiles $COV$
+- Radicales de Halogeno
+- Especies de azufre $SO_2$, $SO4$, $H_2SO_4$
+- Aersoles
+
+**Cada contaminante tiene un extenso cuerpo teorico. En esta parte del curso nos referiremos brevemente al $O_3$, aerosoles y especies de azufre, sin embargo, el estudiante puede revisar la bibliografia para se aprofundar.**
+
+### Ozono $O_3$
 
 Respecto del ozono es necesario mencionar que existen dos tipos, el estratosferico (bueno) y y el troposferico (malo),
 como es expicado por @brasseur2017modeling.
@@ -112,13 +125,52 @@ O + O_2 + M -> O_3 + M
 (\#eq:2)
 \end{equation}
 
-El Ozono luego ed fololizado a un atomo de oxigeno y una molecula de oxigeno ante radiacion menor a 1180 nm, liberando energia cinetica [@o3].
+
+El Ozono luego es fotolizado a un atomo de oxigeno y una molecula de oxigeno ante radiacion menor a 1180 nm, liberando energia cinetica [@o3]. 
+
+En el caso del ozono troposfeico, la reaccion comienza quando el [radical hidroxilo](https://en.wikipedia.org/wiki/Hydroxyl_radical) $\cdot OH$ oxida el $CO$ generando el radical $\cdot HOCO$ que es inestable y reacciona rapidamente con $O_2$ generando el [peroxi radical](https://en.wikipedia.org/wiki/Hydroperoxyl) $\cdot HO_2$ y $CO_2$. El peroxi radical reacciona oxida $NO$ generando $NO_2$ y un radical hidroxilo. Luego el $NO_2$ es fotolizado liberando un atomo de oxigeno que reacciona con la molecula de $O_2$ generando $O_3$.
 
 
 \begin{equation}
 O_3 + hv(\lambda < 1180 nm) -> O + O_2 + energia cinetica 
-(\#eq:2)
+(\#eq:3)
 \end{equation}
+
+En el caso del ozono troposferico, los ingredientes principales son radiacion solar, $NO_x$ y compuestos organicos volatiles [@o3wiki]. 
+
+\begin{equation}
+\cdot OH + CO -> \cdot HOCO
+(\#eq:4)
+\end{equation}
+
+
+\begin{equation}
+\cdot HOCO + O_2 -> HO_2\cdot + CO_2
+(\#eq:5)
+\end{equation}
+
+\begin{equation}
+HO_2\cdot + NO -> \cdot OH + NO_2
+(\#eq:6)
+\end{equation}
+
+\begin{equation}
+NO_2 + hv(\lambda < 400nm) -> NO + O
+(\#eq:7)
+\end{equation}
+
+
+\begin{equation}
+O + O_2 -> O_3
+(\#eq:8)
+\end{equation}
+
+Los mecanismos mostrados son un resumen de complejas reacciones en la atmosfera donde muchas otras reacciones y compuestos juegan un rol. 
+
+### Especies de azufre
+
+El es un compuesto que reacciona generando importantes contaminantes como sulfatos y acido sulfurico, importantesen la lluvia aida (deposicion acida). Los combustibles tienen azufre y durante la combustion, el azufre es oxidado generando $SO_2$, diesel tiene mayor cantidad de azufre que gasolina, por lo tanto generando mas $SO_2$. A continuacion una resumen de los mecanismos de generacion de acido sulfurico [@brasseur2017modeling].
+
 
 
 

@@ -422,22 +422,87 @@ La contaminacion es una amenaza a la salud global que causo 9 millones de muerte
 
 La atmosfera es una delgada capa sobre la tierra, 50\% de su masa esta 5.6 km esta compuestos por varios gases \citep{brasseur2017modeling}, cuya composicion es:
 
-\begin{longtable}[]{@{}cc@{}}
+\begin{longtable}[]{@{}ccc@{}}
 \toprule
-Gas & Razon molar \(mol \cdot mol^{-1}\)\tabularnewline
+\begin{minipage}[b]{0.15\columnwidth}\centering
+Gas\strut
+\end{minipage} & \begin{minipage}[b]{0.48\columnwidth}\centering
+Razon molar \(mol \cdot mol^{-1}\)\strut
+\end{minipage} & \begin{minipage}[b]{0.28\columnwidth}\centering
+Principal fuente y comentarios \citep{brasseur1999atmospheric}\strut
+\end{minipage}\tabularnewline
 \midrule
 \endhead
-Nitrogeno (\(N_2\)) & 0.78\tabularnewline
-Oxigeno (\(O_2\)) & 0.21\tabularnewline
-Argon (\(A_r\)) & 0.0093\tabularnewline
-Dioxido de carbono (\(CO_2\)) & \(400 \cdot10^{-6}\)\tabularnewline
-Neon (\(N_e\)) & \(18 \cdot10^{-6}\)\tabularnewline
-Ozono (\(O_3\)) & \(0.01-10 \cdot10^{-6}\)\tabularnewline
-Helio (\(H_e\)) & \(5.2 \cdot10^{-6}\)\tabularnewline
-Metano (\(CH_4\)) & \(1.8 \cdot10^{-6}\)\tabularnewline
-Kripton (\(K_r\)) & \(1.1 \cdot10^{-6}\)\tabularnewline
-Hidrogeno (\(H_2\)) & \(500 \cdot10^{-9}\)\tabularnewline
-Oxido nitroso (\(N_2O\)) & \(330 \cdot10^{-9}\)\tabularnewline
+\begin{minipage}[t]{0.15\columnwidth}\centering
+Nitrogeno (\(N_2\))\strut
+\end{minipage} & \begin{minipage}[t]{0.48\columnwidth}\centering
+0.78\strut
+\end{minipage} & \begin{minipage}[t]{0.28\columnwidth}\centering
+Biologica\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.15\columnwidth}\centering
+Oxigeno (\(O_2\))\strut
+\end{minipage} & \begin{minipage}[t]{0.48\columnwidth}\centering
+0.21\strut
+\end{minipage} & \begin{minipage}[t]{0.28\columnwidth}\centering
+Biologica\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.15\columnwidth}\centering
+Argon (\(A_r\))\strut
+\end{minipage} & \begin{minipage}[t]{0.48\columnwidth}\centering
+0.0093\strut
+\end{minipage} & \begin{minipage}[t]{0.28\columnwidth}\centering
+Inerte\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.15\columnwidth}\centering
+Dioxido de carbono (\(CO_2\))\strut
+\end{minipage} & \begin{minipage}[t]{0.48\columnwidth}\centering
+\(400 \cdot10^{-6}\)\strut
+\end{minipage} & \begin{minipage}[t]{0.28\columnwidth}\centering
+Combustion, oceano, biosfera\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.15\columnwidth}\centering
+Neon (\(N_e\))\strut
+\end{minipage} & \begin{minipage}[t]{0.48\columnwidth}\centering
+\(18 \cdot10^{-6}\)\strut
+\end{minipage} & \begin{minipage}[t]{0.28\columnwidth}\centering
+Inerte\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.15\columnwidth}\centering
+Ozono (\(O_3\))\strut
+\end{minipage} & \begin{minipage}[t]{0.48\columnwidth}\centering
+\(0.01-10 \cdot10^{-6}\)\strut
+\end{minipage} & \begin{minipage}[t]{0.28\columnwidth}\centering
+Fotoquimico\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.15\columnwidth}\centering
+Helio (\(H_e\))\strut
+\end{minipage} & \begin{minipage}[t]{0.48\columnwidth}\centering
+\(5.2 \cdot10^{-6}\)\strut
+\end{minipage} & \begin{minipage}[t]{0.28\columnwidth}\centering
+Inerte\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.15\columnwidth}\centering
+Metano (\(CH_4\))\strut
+\end{minipage} & \begin{minipage}[t]{0.48\columnwidth}\centering
+\(1.8 \cdot10^{-6}\)\strut
+\end{minipage} & \begin{minipage}[t]{0.28\columnwidth}\centering
+Biogenico y antropogenico\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.15\columnwidth}\centering
+Hidrogeno (\(H_2\))\strut
+\end{minipage} & \begin{minipage}[t]{0.48\columnwidth}\centering
+\(500 \cdot10^{-9}\)\strut
+\end{minipage} & \begin{minipage}[t]{0.28\columnwidth}\centering
+Biogenico, antropogenico y fotoquimico\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.15\columnwidth}\centering
+Oxido nitroso (\(N_2O\))\strut
+\end{minipage} & \begin{minipage}[t]{0.48\columnwidth}\centering
+\(330 \cdot10^{-9}\)\strut
+\end{minipage} & \begin{minipage}[t]{0.28\columnwidth}\centering
+Biogenico y antropogenico\strut
+\end{minipage}\tabularnewline
 \bottomrule
 \end{longtable}
 
@@ -527,8 +592,33 @@ Los contaminantes atmosfericos suelen ser clasificados como:
 \item
   Primarios: emitidos directamente en la atmosfera. Ejemplo: CO.
 \item
-  Secundarios: formados en la atmosfera. Ejemplo: O3.
+  Secundarios: formados en la atmosfera. Ejemplo: \(O_3\).
 \end{itemize}
+
+Existen muchos contaminantes atmosfericos de interes cientifico como
+
+\begin{itemize}
+\tightlist
+\item
+  Ozono \(O_3\)
+\item
+  Monoxido de Carbono \(CO\)
+\item
+  Radicales de Oxidos de nitrogeno \(NO_X \equiv NO + NO_2\)
+\item
+  Compuestos organicos volatiles \(COV\)
+\item
+  Radicales de Halogeno
+\item
+  Especies de azufre \(SO_2\), \(SO4\), \(H_2SO_4\)
+\item
+  Aersoles
+\end{itemize}
+
+\textbf{Cada contaminante tiene un extenso cuerpo teorico. En esta parte del curso nos referiremos brevemente al \(O_3\), aerosoles y especies de azufre, sin embargo, el estudiante puede revisar la bibliografia para se aprofundar.}
+
+\hypertarget{ozono-o_3}{%
+\subsection{\texorpdfstring{Ozono \(O_3\)}{Ozono O\_3}}\label{ozono-o_3}}
 
 Respecto del ozono es necesario mencionar que existen dos tipos, el estratosferico (bueno) y y el troposferico (malo),
 como es expicado por \citet{brasseur2017modeling}.
@@ -545,12 +635,48 @@ O + O_2 + M -> O_3 + M
 \label{eq:2}
 \end{equation}
 
-El Ozono luego ed fololizado a un atomo de oxigeno y una molecula de oxigeno ante radiacion menor a 1180 nm, liberando energia cinetica \citep{o3}.
+El Ozono luego es fotolizado a un atomo de oxigeno y una molecula de oxigeno ante radiacion menor a 1180 nm, liberando energia cinetica \citep{o3}.
+
+En el caso del ozono troposfeico, la reaccion comienza quando el \href{https://en.wikipedia.org/wiki/Hydroxyl_radical}{radical hidroxilo} \(\cdot OH\) oxida el \(CO\) generando el radical \(\cdot HOCO\) que es inestable y reacciona rapidamente con \(O_2\) generando el \href{https://en.wikipedia.org/wiki/Hydroperoxyl}{peroxi radical} \(\cdot HO_2\) y \(CO_2\). El peroxi radical reacciona oxida \(NO\) generando \(NO_2\) y un radical hidroxilo. Luego el \(NO_2\) es fotolizado liberando un atomo de oxigeno que reacciona con la molecula de \(O_2\) generando \(O_3\).
 
 \begin{equation}
 O_3 + hv(\lambda < 1180 nm) -> O + O_2 + energia cinetica 
-\label{eq:2}
+\label{eq:3}
 \end{equation}
+
+En el caso del ozono troposferico, los ingredientes principales son radiacion solar, \(NO_x\) y compuestos organicos volatiles \citep{o3wiki}.
+
+\begin{equation}
+\cdot OH + CO -> \cdot HOCO
+\label{eq:4}
+\end{equation}
+
+\begin{equation}
+\cdot HOCO + O_2 -> HO_2\cdot + CO_2
+\label{eq:5}
+\end{equation}
+
+\begin{equation}
+HO_2\cdot + NO -> \cdot OH + NO_2
+\label{eq:6}
+\end{equation}
+
+\begin{equation}
+NO_2 + hv(\lambda < 400nm) -> NO + O
+\label{eq:7}
+\end{equation}
+
+\begin{equation}
+O + O_2 -> O_3
+\label{eq:8}
+\end{equation}
+
+Los mecanismos mostrados son un resumen de complejas reacciones en la atmosfera donde muchas otras reacciones y compuestos juegan un rol.
+
+\hypertarget{especies-de-azufre}{%
+\subsection{Especies de azufre}\label{especies-de-azufre}}
+
+El es un compuesto que reacciona generando importantes contaminantes como sulfatos y acido sulfurico, importantesen la lluvia aida (deposicion acida). Los combustibles tienen azufre y durante la combustion, el azufre es oxidado generando \(SO_2\), diesel tiene mayor cantidad de azufre que gasolina, por lo tanto generando mas \(SO_2\). A continuacion una resumen de los mecanismos de generacion de acido sulfurico \citep{brasseur2017modeling}.
 
 \hypertarget{como-se-producen-las-altas-concentraciones-de-contaminantes}{%
 \section{Como se producen las altas concentraciones de contaminantes}\label{como-se-producen-las-altas-concentraciones-de-contaminantes}}

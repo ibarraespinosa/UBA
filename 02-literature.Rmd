@@ -79,7 +79,7 @@ print("Investique que es, causas, consequencias y poltiica ambiental asociada a 
 
 Las emisiones liberadas a la atmosfera impactan la salud, meteorologia y clima en diferentes escalas como se ve en la sigueinte figura. 
 
-```{r echo = FALSE, fig.cap="Esquema de impacto de emisiones (Ibarra, 2017)"}
+```{r echo = FALSE, fig.cap="Esquema de impacto de emisiones (Ibarra, 2017)", out.width="130%"}
 knitr::include_graphics(path = "figs/esquema.png")
 ```
 
@@ -194,7 +194,7 @@ Son particulas suspendidas desde ~0.001 $\mu m$ hasta 100 $\mu m$ (luster molecu
 2. Modo acumulacion: Diametro entre 100 y 1000 nm.
 3. Modo coarse: Diametro mayor que 1000 nm.
 
-```{r echo = FALSE, fig.cap="Distribucion normalizada (suma es 1000) de aerosoles por diametro aerodinamico, Dominio Publico"}
+```{r echo = FALSE, fig.cap="Distribucion normalizada (suma es 1000) de aerosoles por diametro aerodinamico, Dominio Publico", out.width = "120%"}
 knitr::include_graphics(path = "figs/800px-Synthetic_aerosol_distribution_in_number_area_and_volume_space.png")
 ```
 
@@ -384,12 +384,12 @@ En el ultimo par de años se han publicado nuevos modelos para el calculo de emi
 
 
 
-```{r echo = FALSE, fig.cap="(Ibarra-Espinosa et al., 2018, https://atmoschem.github.io/vein/)"}
+```{r echo = FALSE, fig.cap="(Ibarra-Espinosa et al., 2018, https://atmoschem.github.io/vein/)", out.width="130%"}
 knitr::include_graphics(path = "figs/vein1.png")
 ```
 
 
-```{r echo = FALSE, fig.cap="(Ibarra-Espinosa et al., 2018, https://atmoschem.github.io/vein/)"}
+```{r echo = FALSE, fig.cap="(Ibarra-Espinosa et al., 2018, https://atmoschem.github.io/vein/)", out.width="130%"}
 knitr::include_graphics(path = "figs/vein2.png")
 ```
 

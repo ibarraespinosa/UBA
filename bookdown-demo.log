@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2019/dev/Debian) (preloaded format=xelatex 2019.8.22)  9 SEP 2019 03:39
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2019/dev/Debian) (preloaded format=xelatex 2019.8.22)  9 SEP 2019 03:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -878,12 +878,9 @@ mbiental asociada a CLRTAP"[]
 File: figs/esquema.png Graphic file (type bmp)
 <figs/esquema.png>
 
-Overfull \hbox (423.5803pt too wide) in paragraph at lines 506--506
+Overfull \hbox (103.49338pt too wide) in paragraph at lines 506--506
 [][] 
  []
-
-
-LaTeX Warning: Float too large for page by 24.5112pt on input line 507.
 
 [15]
 Overfull \hbox (154.57793pt too wide) has occurred while \output is active
@@ -1131,7 +1128,7 @@ Overfull \hbox (185.95953pt too wide) in paragraph at lines 840--840
 File: figs/vein1.png Graphic file (type bmp)
 <figs/vein1.png>
 
-Overfull \hbox (301.80582pt too wide) in paragraph at lines 849--849
+Overfull \hbox (103.49466pt too wide) in paragraph at lines 849--849
 [][] 
  []
 
@@ -1175,11 +1172,11 @@ Overfull \hbox (154.57793pt too wide) has occurred while \output is active
 ÉNICAS EN LA CALIDAD DEL AIRE Y CLIMA
  []
 
-[40]
-Chapter 3.
-[41
+[40
 
 ]
+Chapter 3.
+[41]
 Overfull \hbox (215.91125pt too wide) has occurred while \output is active
 \TU/lmr/m/n/10 42 \TU/lmr/m/sl/10 CHAPTER 3.  TALLER VECTORES: APLICACIÓN DE SO
 FTWARE DE INFORMACIÓN GEOGRÁFICA Y MODELADO
@@ -1235,7 +1232,7 @@ Package rerunfilecheck Info: File `bookdown-demo.out' has not changed.
 Here is how much of TeX's memory you used:
  24223 strings out of 492912
  452382 string characters out of 6134893
- 588041 words of memory out of 5000000
+ 587041 words of memory out of 5000000
  27977 multiletter control sequences out of 15000+600000
  557101 words of font info for 70 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191

@@ -230,10 +230,12 @@ message("Ingrese a https://worldview.earthdata.nasa.gov/ y busque aerosol")
 ```
 
 
+## Forzantes climaticos y gases de efecto invernadero
 
-## Como se producen las altas concentraciones de contaminantes
+El efecto invernadero es un fenomeno que e produce naturalmente en la tierra, sin intervencion humana. Por ejemplo, concentraciones biogenicas de CO2 o el vapor de agua. Sin embargo, el termino forzante climatico se refiere de estos compuestos quimicos, sobre la varaibilidad natural, modificando el clima. Tenemos entonces forzantes climaticos de vida corta y larga
 
-## Forzantes climaticos
+Forzantes climaticos de vida corta: Carbono Negro
+Forzantes climaticos de vida larga: CO2
 
 
 ## Emisiones y sus fuentes

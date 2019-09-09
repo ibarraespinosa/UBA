@@ -230,17 +230,175 @@ message("Ingrese a https://worldview.earthdata.nasa.gov/ y busque aerosol")
 ```
 
 
+
 ## Forzantes climaticos y gases de efecto invernadero
 
-El efecto invernadero es un fenomeno que e produce naturalmente en la tierra, sin intervencion humana. Por ejemplo, concentraciones biogenicas de CO2 o el vapor de agua. Sin embargo, el termino forzante climatico se refiere de estos compuestos quimicos, sobre la varaibilidad natural, modificando el clima. Tenemos entonces forzantes climaticos de vida corta y larga
+El efecto invernadero es un fenomeno que e produce naturalmente en la tierra, sin intervencion humana. Por ejemplo, concentraciones biogenicas de CO2 o el vapor de agua. Sin embargo, el termino forzante climatico se refiere de estos compuestos quimicos tienen una incidencia en el clima, pues alteran el cambio en iradiancia neta $W \cdot m^{-2}$.
 
-Forzantes climaticos de vida corta: Carbono Negro
-Forzantes climaticos de vida larga: CO2
+
+El forzante radiativo es utilizado como predictor de cambio en la media global de temperatura. IPCC [@schimel1996radiative] define forzamiento radiativo como:
+
+“The radiative forcing of the surface-troposphere system due to the perturbation in or the introduction of an agent
+(say, a change in greenhouse gas concentrations) is the change in net (down minus up) irradiance (solar plus long-wave; in Wm−2) at the tropopause AFTER allowing for stratospheric temperatures to readjust to radiative equilibrium, but with surface and tropospheric temperatures and state held fixed at the unperturbed values” [@schimel1996radiative]
+
+
+Del sitio web de Copernicus (https://atmosphere.copernicus.eu/climate-forcing:
+
+"Climate forcing measures the imbalance in the Earth’s energy budget caused by a perturbation of the climate system, for example changes in atmospheric composition driven by human activities. **Climate forcing, also known as Radiative Forcing, therefore determines the change in globally-averaged temperature change due to the natural or human-induced changes to the energy budget**. Increases in greenhouse gas concentrations over the industrial era are responsible for a positive climate forcing, causing a gain of energy in the climate system. In contrast, changes in atmospheric aerosol concentrations result in a negative climate forcing leading to a loss of energy. It is the balance between these various climate forcings that drive the change in global temperature." https://atmosphere.copernicus.eu/climate-forcing
+
+
+```{r echo = FALSE, fig.cap="Cambio en la temperatura media debido a forzantes radiativas (https://atmosphere.copernicus.eu/climate-forcing)"}
+knitr::include_graphics(path = "figs/SPM1_figure-final-947x1024.png")
+```
+
+
+
+```{r echo = FALSE, fig.cap="Cambio en la temperatura media debido a forzantes radiativas (https://atmosphere.copernicus.eu/climate-forcing)"}
+knitr::include_graphics(path = "figs/SPM.03-01.png")
+```
+
+Esta figura muestra un resumen de los compuestos y su forzante radiativo (FR) [@stocker2014climate]
+
+```{r echo = FALSE, fig.cap="Forzante radiativo (https://atmosphere.copernicus.eu/climate-forcing)"}
+knitr::include_graphics(path = "figs/ipcc.jpg")
+```
+
+
+### Efectos directos e indirectos de aerosoles
+
+- Directo: Influencia en balance radiativo.
+- Indirecto: Influencia en el climia.
+- Primer efecto indirecto: microfisica de la precipitacion. 
+- Segundo efecto indirecto: Cantidad  de lluvia.
+
+
+
+```{r echo = FALSE, fig.cap="Forzantes indirectos (Robwood, 2019) (https://atmos.uw.edu/~robwood/teaching/591/ATMS_591_Albrecht_1989.pdf)"}
+knitr::include_graphics(path = "figs/fx.png")
+```
+
+### Black Carbon - Carbono negro
+
+Son particulas producto de la combustion incompleta de combustibles con origen antropogenico y biogenico.
+Considerado el segundo gas de efecto invernadero despues de CO2 [@bond2013bounding]. 
+
+
+```{r echo = FALSE, fig.cap="UNEP (https://twitter.com/UNEnvironment/status/1150404638501416961/photo/1"}
+knitr::include_graphics(path = "figs/bc.png")
+```
 
 
 ## Emisiones y sus fuentes
 
-## Efectos de la contaminacion atmosferica en la salud
+Un inventario de emisiones es la compilacion del flujo de masa de contaminantes emitida en un lugar y tiempo determinado.
+
+Son definidos por la ecuacion basica de :
 
 
+\begin{equation}
+E = FE \cdot NA
+(\#eq:12)
+\end{equation}
 
+Donde E es la emision, FE es el factor de emision y NA el nivel de actividad. Por ejemplo, si queremos saber las emisiones de vehiculos, FE esta en **g/km**, NA es la cantidad de vehiculos veces la distancia que recorren **km** en un tiempo determinado, luego E es la masa **g** de contaminantes.
+
+### Tipos
+
+Ya que ya sabemos los contaminantes y su forzamiento radiativo, podemos ver cuales son las fuentes de ellos, desde elpunto de vista de contaminacion atmosferica y clima. Existen varios tipos de fuentes de emisiones:
+
+
+```{r echo = FALSE, fig.cap="Fuentes de emisiones"}
+knitr::include_graphics(path = "figs/fuentes.png")
+```
+
+Pueden tener aplicaciones de gestion y cientificas:
+
+```{r echo = FALSE, fig.cap="Tipos de inventarios (Pules and Helsinga, 2013)"}
+knitr::include_graphics(path = "figs/theart2.png")
+```
+
+Por ejemplo, IPCC entrega guias para que los paises compilen inventarios de emisiones de gases de fecto invernadero:
+
+
+```{r echo = FALSE, fig.cap="Actualizacion en las guias de inventarios de emisiones IPCC (https://www.ipcc-nggip.iges.or.jp/public/2019rf/index.html)"}
+knitr::include_graphics(path = "figs/ipcc2.jpg")
+```
+
+
+Ahora podemos ver como ha sido la serie de emisiones globales de gases de efecto invernadero:
+
+
+```{r echo = FALSE, fig.cap="Serie de emisiones)"}
+knitr::include_graphics(path = "figs/ipcc3.png")
+```
+
+
+```{r echo = FALSE, fig.cap="CO2 y temperatura (http://www.ipcc.ch/report/graphics/))"}
+knitr::include_graphics(path = "figs/ipcc4.png")
+```
+
+### Calidad y criterio
+
+Un inventario de emisiones debe considerar la aseguracion de la calidad. En este sentido, los cientificos buscan errores, puntos debiles. Los tomadores de decisiones (UNFCC-IPCC) buscan consenso.
+Por lo tanto, la calidad para los inventarios cientificos consiste en que las estimaciones tienen que ser confirmadas, calibradas y validadas. Y en el plano politico, un inventario de calidad genera in acuerdo y protocolo que todos deben atacar (VEA CLRTAP)
+
+### Dimensiones
+
+Como **cientificos** necesitamos responder las siguentes preguntas:
+
+- Que: Que contaminante (especifico) es emitido.
+- Como: Cual es el proceso.
+- Cuando: Caracterizacion temporal.
+- Onde: Caracterizacion temporal.
+
+** Mapas interactivos de Inventario de emisiones vehiculares de Sao Paulo (Ibarra 2017)**
+
+- [PM2.5](http://jornal.usp.br/wp-content/uploads/gPM.html)
+- [NOx](http://jornal.usp.br/wp-content/uploads/gNOx.html)
+- [CO](http://jornal.usp.br/wp-content/uploads/gCO.html)
+- [HC](http://jornal.usp.br/wp-content/uploads/gHC.html)
+
+### Categorias llave
+
+En los inventarios de emisiones muchas veces pocas categorias emiten la mayor cantidad de contaminantes. Estas son las **categorias llave** y es en ellas donde debemos invertir la mayor cantidad de esfuerzo y recurso economico.
+
+### Bottom-up y top-down
+
+En las guias de emisiones europeas, -@NtziachristosSamaras2016 muestra la definicion de los enfoques bottom-up y top-down.
+
+```{r echo = FALSE, fig.cap="Bottom up y top-down"}
+knitr::include_graphics(path = "figs/bt.png")
+```
+
+### Ejemplo de factores de emision (real-time GPS)
+
+
+```{r echo = FALSE, fig.cap="(Ibarra-Espinosa et al., 2019 under-review)"}
+knitr::include_graphics(path = "figs/fig4_LDV_CO.png")
+```
+
+
+## Nuevos modelos de emisiones: VEIN
+
+En el ultimo par de años se han publicado nuevos modelos para el calculo de emisiones, como el Vehicular Emissions Inventory model [@gmd] que consiste en una libreria en R
+
+
+![](figs/allcomp.gif)
+
+```{r echo = FALSE, fig.cap="(Ibarra-Espinosa et al., 2018)", ffmpeg.format='gif'}
+```
+
+
+## Nuevos datos, satelites y modelacion inversa
+
+La modelacion inversa esta siendo utilizada para corregir y re estimar emisiones con los nuevos datos de satelite disponibles [@acp-18-5483-2018]:
+
+```{r echo = FALSE, fig.cap="(Kaiser et al., 2018)"}
+knitr::include_graphics(path = "figs/acp.png")
+```
+
+Columna total de NO2 en europa con Sentinel 5P libreria stars [@stars]
+
+```{r echo = FALSE, fig.cap="STARS! Sentinel 5P"}
+knitr::include_graphics(path = "figs/sentinel.png")
+```

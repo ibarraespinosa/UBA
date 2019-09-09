@@ -12,6 +12,7 @@ github-repo: ibarraespinosa/UBA
 description: "Emisiones/Calidad del Aire /sf/stars/raster."
 header-includes:
    - \usepackage{url}
+   - \usepackage{graphicx}
 ---
 
 # Curso de R, contaminacion atmosferica y mas {-}

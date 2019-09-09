@@ -80,3 +80,15 @@ Fuentes:
 
 - [SINCA](https://sinca.mma.gob.cl/)
 - [QUALAR](https://qualar.cetesb.sp.gov.br/qualar/home.do)
+- Claro que existen diferentes datos de salidas de los modelos climaticos.
+
+
+## Algunos exemplos de datos de series de tiempo
+
+Efecto de la contamiancion atmosferica sobre los accidentes cerebros vasculares 
+
+```{r echo = FALSE, fig.cap="Accidentes Cerebro Vasculares Chile (Leiva et al., 2013)"}
+knitr::include_graphics(path = "figs/strokes.png")
+```
+
+

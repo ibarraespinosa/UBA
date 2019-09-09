@@ -1,3 +1,79 @@
-# Taller VECTORES: Aplicación de software de información geográfica y modelado
+# Taller VECTORES: Aplicación de software de información geográfica y modelado (no terminado)
 
-We describe our methods in this chapter.
+**Nota: Existen diferentes recursos para aprender R, sf, stars y raster. Use Google, Baidu o duckduckgo**
+
+- www.github.com/r-spatial/sf
+- www.github.com/r-spatial/stars
+- www.github.com/rspatial/raster
+- https://bookdown.org/
+
+
+## Instalacion
+
+Por favor instale las siguientes librerias en R, copie y peque (cole) en R:
+
+```{r eval = FALSE}
+install.packages(
+  c("sf", "stars", "cptcity", "ggplot2", "raster", "ncdf4", 
+    "RNetCDF", "maps", "data.table", "readxl")
+)
+```
+
+
+Para correr el ejemplo de stars con Sentinel 5P instale la sigueinte libreria (1 Gb)
+
+```{r eval = FALSE}
+install.packages(
+  c("starsdata")
+)
+```
+
+
+Para realmente comenzar es necesario mencionar que R es un lenguaje de programacion estadistico libre (gratis y abierto) orientado a objeto escrito en C, con bindings directos para C++, C y Fortran.
+
+## R desde Excel, libreoffice, archivos de text, etc.
+
+A veces debemos o obtenemos datos en hojas de calculo (Libreoffice Calc o Microsoft Office Excel). Cuando este archivo es pequeño no hay problema, pero la realidad es que cada vez es mas frecuente contar con grandes bases de datos y trabajar con un programa de interface grafica se hace dificil. Una de las razones es que la interfaz grafica consume muchos recursos computacionales, que podrian ser usados para el procesamiento de informacion. Por lo tanto
+
+
+**do (5 min)**
+Abra el archivo Excel
+Vea rapidamente los datos
+Exporte a .csv o.txt
+Abra el archivo usando un editor de texto (bloc de notas)
+
+
+### Usando base
+
+```{r eval = FALSE}
+df <- read.csv("data/china_cities_20190413.csv", h = T, )
+head(df)
+```
+
+
+### Usando data.table (mi favorito junto con sf)
+
+data.table es mas rapido que python, julia y spark
+
+**https://h2oai.github.io/db-benchmark/**
+
+```{r eval = FALSE}
+library(data.table)
+df <- fread("data/china_cities_20190413.csv")
+head(df)
+```
+
+### Usndo readxl
+
+```{r eval = FALSE}
+library(readxl)
+df <- read_xlsx("data/china_cities_20190413.xlsx")
+head(df)
+```
+
+
+## Representacion de objetos espaciales
+
+Nuevo estandard ISO (puntos, areas, lineas, volume, etc)
+
+

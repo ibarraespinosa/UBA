@@ -407,3 +407,4 @@ Columna total de NO2 en europa con Sentinel 5P libreria stars [@stars]
 ```{r echo = FALSE, fig.cap="STARS! Sentinel 5P", out.width="150%"}
 knitr::include_graphics(path = "figs/sentinel.png")
 ```
+

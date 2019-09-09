@@ -1,4 +1,4 @@
-# Taller RASTER Y CUBOS DE DATOS VECTORIALES: Aplicación de software de información geográfica y modelado 
+# Taller RASTER Y CUBOS DE DATOS VECTORIALES: Aplicación de software de información geográfica y modelado  (no terminado)
 
 Amanda Rehbein
 

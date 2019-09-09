@@ -73,6 +73,10 @@ knitr::include_graphics(path = "figs/rosana1.png")
 
 ## Efecto de la temperatura
 
-Puede se utilizada la misma metodologia pero considerando variables meteorologicas en este caso. Un trabajo muy interesante recientemente publicado por el grupo de Paulo Saliva es el efecto de la temperatura en diferentes ciudades del mundo. 
+Puede se utilizada la misma metodologia pero considerando variables meteorologicas en este caso. Un trabajo muy interesante recientemente publicado por el grupo de Paulo Saliva es el efecto de la temperatura en diferentes ciudades del mundo [@GASPARRINI2015369].
 
-[INSERTAR GRAFICO Y CITA]
+
+```{r echo = FALSE, out.height="180%", fig.cap="Riesgo relativo en mortalidad por incremento de 1 ppm de CO (Abrutzky et al., 2013)"}
+knitr::include_graphics(path = "figs/temp1.png")
+```
+

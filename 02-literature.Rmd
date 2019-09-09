@@ -380,12 +380,17 @@ knitr::include_graphics(path = "figs/fig4_LDV_CO.png")
 
 ## Nuevos modelos de emisiones: VEIN
 
-En el ultimo par de años se han publicado nuevos modelos para el calculo de emisiones, como el Vehicular Emissions Inventory model [@gmd] que consiste en una libreria en R
+En el ultimo par de años se han publicado nuevos modelos para el calculo de emisiones, como el Vehicular Emissions Inventory model [@gmd] que consiste en una libreria en R (https://atmoschem.github.io/vein/).
 
 
-![](figs/allcomp.gif)
 
-```{r echo = FALSE, fig.cap="(Ibarra-Espinosa et al., 2018)", ffmpeg.format='gif'}
+```{r echo = FALSE, fig.cap="(Ibarra-Espinosa et al., 2018, https://atmoschem.github.io/vein/)"}
+knitr::include_graphics(path = "figs/vein1.png")
+```
+
+
+```{r echo = FALSE, fig.cap="(Ibarra-Espinosa et al., 2018, https://atmoschem.github.io/vein/)"}
+knitr::include_graphics(path = "figs/vein2.png")
 ```
 
 

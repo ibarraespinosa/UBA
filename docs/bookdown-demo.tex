@@ -756,18 +756,182 @@ Del sitio web de Copernicus (\url{https://atmosphere.copernicus.eu/climate-forci
 ``Climate forcing measures the imbalance in the Earth's energy budget caused by a perturbation of the climate system, for example changes in atmospheric composition driven by human activities. \textbf{Climate forcing, also known as Radiative Forcing, therefore determines the change in globally-averaged temperature change due to the natural or human-induced changes to the energy budget}. Increases in greenhouse gas concentrations over the industrial era are responsible for a positive climate forcing, causing a gain of energy in the climate system. In contrast, changes in atmospheric aerosol concentrations result in a negative climate forcing leading to a loss of energy. It is the balance between these various climate forcings that drive the change in global temperature.'' \url{https://atmosphere.copernicus.eu/climate-forcing}
 
 \begin{figure}
-\includegraphics[width=20.5in]{figs/SPM.03-01} \caption{Cambio en la temperatura media debido a forzantes radiativas (https://atmosphere.copernicus.eu/climate-forcing)}\label{fig:unnamed-chunk-15}
+\includegraphics[width=13.15in]{figs/SPM1_figure-final-947x1024} \caption{Cambio en la temperatura media debido a forzantes radiativas (https://atmosphere.copernicus.eu/climate-forcing)}\label{fig:unnamed-chunk-15}
 \end{figure}
 
 \begin{figure}
-\includegraphics[width=13.15in]{figs/SPM1_figure-final-947x1024} \caption{Cambio en la temperatura media debido a forzantes radiativas (https://atmosphere.copernicus.eu/climate-forcing)}\label{fig:unnamed-chunk-16}
+\includegraphics[width=20.5in]{figs/SPM.03-01} \caption{Cambio en la temperatura media debido a forzantes radiativas (https://atmosphere.copernicus.eu/climate-forcing)}\label{fig:unnamed-chunk-16}
+\end{figure}
+
+Esta figura muestra un resumen de los compuestos y su forzante radiativo (FR) \citep{stocker2014climate}
+
+\begin{figure}
+\centering
+\includegraphics{figs/ipcc.jpg}
+\caption{\label{fig:unnamed-chunk-17}Forzante radiativo (\url{https://atmosphere.copernicus.eu/climate-forcing})}
+\end{figure}
+
+\hypertarget{efectos-directos-e-indirectos-de-aerosoles}{%
+\subsection{Efectos directos e indirectos de aerosoles}\label{efectos-directos-e-indirectos-de-aerosoles}}
+
+\begin{itemize}
+\tightlist
+\item
+  Directo: Influencia en balance radiativo.
+\item
+  Indirecto: Influencia en el climia.
+\item
+  Primer efecto indirecto: microfisica de la precipitacion.
+\item
+  Segundo efecto indirecto: Cantidad de lluvia.
+\end{itemize}
+
+\textbackslash{}begin\{figure\}
+\includegraphics[width=9.88in]{figs/fx} \textbackslash{}caption\{Forzantes indirectos (Robwood, 2019) (\url{https://atmos.uw.edu/~robwood/teaching/591/ATMS_591_Albrecht_1989.pdf})\}\label{fig:unnamed-chunk-18}
+\textbackslash{}end\{figure\}
+
+\hypertarget{black-carbon---carbono-negro}{%
+\subsection{Black Carbon - Carbono negro}\label{black-carbon---carbono-negro}}
+
+Son particulas producto de la combustion incompleta de combustibles con origen antropogenico y biogenico.
+Considerado el segundo gas de efecto invernadero despues de CO2 \citep{bond2013bounding}.
+
+\begin{figure}
+\includegraphics[width=26.67in]{figs/bc} \caption{UNEP (https://twitter.com/UNEnvironment/status/1150404638501416961/photo/1}\label{fig:unnamed-chunk-19}
 \end{figure}
 
 \hypertarget{emisiones-y-sus-fuentes}{%
 \section{Emisiones y sus fuentes}\label{emisiones-y-sus-fuentes}}
 
-\hypertarget{modelacion-de-la-calidad-del-aire}{%
-\section{Modelacion de la calidad del aire}\label{modelacion-de-la-calidad-del-aire}}
+Un inventario de emisiones es la compilacion del flujo de masa de contaminantes emitida en un lugar y tiempo determinado.
+
+Son definidos por la ecuacion basica de :
+
+\begin{equation}
+E = FE \cdot NA
+\label{eq:12}
+\end{equation}
+
+Donde E es la emision, FE es el factor de emision y NA el nivel de actividad. Por ejemplo, si queremos saber las emisiones de vehiculos, FE esta en \textbf{g/km}, NA es la cantidad de vehiculos veces la distancia que recorren \textbf{km} en un tiempo determinado, luego E es la masa \textbf{g} de contaminantes.
+
+\hypertarget{tipos}{%
+\subsection{Tipos}\label{tipos}}
+
+Ya que ya sabemos los contaminantes y su forzamiento radiativo, podemos ver cuales son las fuentes de ellos, desde elpunto de vista de contaminacion atmosferica y clima. Existen varios tipos de fuentes de emisiones:
+
+\begin{figure}
+\includegraphics[width=9.19in]{figs/fuentes} \caption{Fuentes de emisiones}\label{fig:unnamed-chunk-20}
+\end{figure}
+
+Pueden tener aplicaciones de gestion y cientificas:
+
+\begin{figure}
+\includegraphics[width=9.99in]{figs/theart2} \caption{Tipos de inventarios (Pules and Helsinga, 2013)}\label{fig:unnamed-chunk-21}
+\end{figure}
+
+Por ejemplo, IPCC entrega guias para que los paises compilen inventarios de emisiones de gases de fecto invernadero:
+
+\begin{figure}
+\centering
+\includegraphics{figs/ipcc2.jpg}
+\caption{\label{fig:unnamed-chunk-22}Actualizacion en las guias de inventarios de emisiones IPCC (\url{https://www.ipcc-nggip.iges.or.jp/public/2019rf/index.html})}
+\end{figure}
+
+Ahora podemos ver como ha sido la serie de emisiones globales de gases de efecto invernadero:
+
+\begin{figure}
+\includegraphics[width=29.86in]{figs/ipcc3} \caption{Serie de emisiones)}\label{fig:unnamed-chunk-23}
+\end{figure}
+
+\begin{figure}
+\includegraphics[width=9in]{figs/ipcc4} \caption{CO2 y temperatura (http://www.ipcc.ch/report/graphics/))}\label{fig:unnamed-chunk-24}
+\end{figure}
+
+\hypertarget{calidad-y-criterio}{%
+\subsection{Calidad y criterio}\label{calidad-y-criterio}}
+
+Un inventario de emisiones debe considerar la aseguracion de la calidad. En este sentido, los cientificos buscan errores, puntos debiles. Los tomadores de decisiones (UNFCC-IPCC) buscan consenso.
+Por lo tanto, la calidad para los inventarios cientificos consiste en que las estimaciones tienen que ser confirmadas, calibradas y validadas. Y en el plano politico, un inventario de calidad genera in acuerdo y protocolo que todos deben atacar (VEA CLRTAP)
+
+\hypertarget{dimensiones}{%
+\subsection{Dimensiones}\label{dimensiones}}
+
+Como \textbf{cientificos} necesitamos responder las siguentes preguntas:
+
+\begin{itemize}
+\tightlist
+\item
+  Que: Que contaminante (especifico) es emitido.
+\item
+  Como: Cual es el proceso.
+\item
+  Cuando: Caracterizacion temporal.
+\item
+  Onde: Caracterizacion temporal.
+\end{itemize}
+
+** Mapas interactivos de Inventario de emisiones vehiculares de Sao Paulo (Ibarra 2017)**
+
+\begin{itemize}
+\tightlist
+\item
+  \href{http://jornal.usp.br/wp-content/uploads/gPM.html}{PM2.5}
+\item
+  \href{http://jornal.usp.br/wp-content/uploads/gNOx.html}{NOx}
+\item
+  \href{http://jornal.usp.br/wp-content/uploads/gCO.html}{CO}
+\item
+  \href{http://jornal.usp.br/wp-content/uploads/gHC.html}{HC}
+\end{itemize}
+
+\hypertarget{categorias-llave}{%
+\subsection{Categorias llave}\label{categorias-llave}}
+
+En los inventarios de emisiones muchas veces pocas categorias emiten la mayor cantidad de contaminantes. Estas son las \textbf{categorias llave} y es en ellas donde debemos invertir la mayor cantidad de esfuerzo y recurso economico.
+
+\hypertarget{bottom-up-y-top-down}{%
+\subsection{Bottom-up y top-down}\label{bottom-up-y-top-down}}
+
+En las guias de emisiones europeas, \citeyearpar{NtziachristosSamaras2016} muestra la definicion de los enfoques bottom-up y top-down.
+
+\begin{figure}
+\includegraphics[width=11.22in]{figs/bt} \caption{Bottom up y top-down}\label{fig:unnamed-chunk-25}
+\end{figure}
+
+\hypertarget{ejemplo-de-factores-de-emision-real-time-gps}{%
+\subsection{Ejemplo de factores de emision (real-time GPS)}\label{ejemplo-de-factores-de-emision-real-time-gps}}
+
+\begin{figure}
+\includegraphics[width=30.61in]{figs/fig4_LDV_CO} \caption{(Ibarra-Espinosa et al., 2019 under-review)}\label{fig:unnamed-chunk-26}
+\end{figure}
+
+\hypertarget{nuevos-modelos-de-emisiones-vein}{%
+\section{Nuevos modelos de emisiones: VEIN}\label{nuevos-modelos-de-emisiones-vein}}
+
+En el ultimo par de años se han publicado nuevos modelos para el calculo de emisiones, como el Vehicular Emissions Inventory model \citep{gmd} que consiste en una libreria en R (\url{https://atmoschem.github.io/vein/}).
+
+\begin{figure}
+\includegraphics[width=12.18in]{figs/vein1} \caption{(Ibarra-Espinosa et al., 2018, https://atmoschem.github.io/vein/)}\label{fig:unnamed-chunk-27}
+\end{figure}
+
+\begin{figure}
+\includegraphics[width=3.85in]{figs/vein2} \caption{(Ibarra-Espinosa et al., 2018, https://atmoschem.github.io/vein/)}\label{fig:unnamed-chunk-28}
+\end{figure}
+
+\hypertarget{nuevos-datos-satelites-y-modelacion-inversa}{%
+\section{Nuevos datos, satelites y modelacion inversa}\label{nuevos-datos-satelites-y-modelacion-inversa}}
+
+La modelacion inversa esta siendo utilizada para corregir y re estimar emisiones con los nuevos datos de satelite disponibles \citep{acp-18-5483-2018}:
+
+\begin{figure}
+\includegraphics[width=8.33in]{figs/acp} \caption{(Kaiser et al., 2018)}\label{fig:unnamed-chunk-29}
+\end{figure}
+
+Columna total de NO2 en europa con Sentinel 5P libreria stars \citep{stars}
+
+\begin{figure}
+\includegraphics[width=11.29in]{figs/sentinel} \caption{STARS! Sentinel 5P}\label{fig:unnamed-chunk-30}
+\end{figure}
 
 \hypertarget{taller-vectores-aplicacion-de-software-de-informacion-geografica-y-modelado}{%
 \chapter{Taller VECTORES: Aplicación de software de información geográfica y modelado}\label{taller-vectores-aplicacion-de-software-de-informacion-geografica-y-modelado}}

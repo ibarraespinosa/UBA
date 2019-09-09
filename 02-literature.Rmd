@@ -209,7 +209,7 @@ knitr::include_graphics(path = "figs/chile1.png")
 
 **China**
 
-```{r echo = FALSE, fig.cap="MP2.5 ug/m3 em Hotan, China (http://pm25.in/hetiandiqu)"}
+```{r echo = FALSE, fig.cap="MP2.5 ug/m3 em Hotan, China (http://pm25.in/hetiandiqu)", out.width="150%"}
 knitr::include_graphics(path = "figs/hotan.png")
 ```
 
@@ -218,7 +218,7 @@ ingrese aqui: https://aqicn.org/forecast/beijing/
 **Osasco, Brasil**
 
 
-```{r echo = FALSE, fig.cap="MP2.5 ug/m3 Osasco, Brasil (https://qualar.cetesb.sp.gov.br)"}
+```{r echo = FALSE, fig.cap="MP2.5 ug/m3 Osasco, Brasil (https://qualar.cetesb.sp.gov.br)", out.width="150%"}
 knitr::include_graphics(path = "figs/brazil.png")
 ```
 
@@ -247,7 +247,7 @@ Del sitio web de Copernicus (https://atmosphere.copernicus.eu/climate-forcing:
 "Climate forcing measures the imbalance in the Earth’s energy budget caused by a perturbation of the climate system, for example changes in atmospheric composition driven by human activities. **Climate forcing, also known as Radiative Forcing, therefore determines the change in globally-averaged temperature change due to the natural or human-induced changes to the energy budget**. Increases in greenhouse gas concentrations over the industrial era are responsible for a positive climate forcing, causing a gain of energy in the climate system. In contrast, changes in atmospheric aerosol concentrations result in a negative climate forcing leading to a loss of energy. It is the balance between these various climate forcings that drive the change in global temperature." https://atmosphere.copernicus.eu/climate-forcing
 
 
-```{r echo = FALSE, fig.cap="Cambio en la temperatura media debido a forzantes radiativas (https://atmosphere.copernicus.eu/climate-forcing)"}
+```{r echo = FALSE, fig.cap="Cambio en la temperatura media debido a forzantes radiativas (https://atmosphere.copernicus.eu/climate-forcing)", out.width="120%"}
 knitr::include_graphics(path = "figs/SPM1_figure-final-947x1024.png")
 ```
 
@@ -273,7 +273,7 @@ knitr::include_graphics(path = "figs/ipcc.jpg")
 
 
 
-```{r echo = FALSE, fig.cap="Forzantes indirectos (Robwood, 2019) (https://atmos.uw.edu/~robwood/teaching/591/ATMS_591_Albrecht_1989.pdf)"}
+```{r echo = FALSE, fig.cap="Forzantes indirectos (Robwood, 2019) (https://atmos.uw.edu/~robwood/teaching/591/ATMS_591_Albrecht_1989.pdf)", out.width="110%"}
 knitr::include_graphics(path = "figs/fx.png")
 ```
 
@@ -283,7 +283,7 @@ Son particulas producto de la combustion incompleta de combustibles con origen a
 Considerado el segundo gas de efecto invernadero despues de CO2 [@bond2013bounding]. 
 
 
-```{r echo = FALSE, fig.cap="UNEP (https://twitter.com/UNEnvironment/status/1150404638501416961/photo/1"}
+```{r echo = FALSE, fig.cap="UNEP (https://twitter.com/UNEnvironment/status/1150404638501416961/photo/1", out.width="90%"}
 knitr::include_graphics(path = "figs/bc.png")
 ```
 
@@ -307,13 +307,13 @@ Donde E es la emision, FE es el factor de emision y NA el nivel de actividad. Po
 Ya que ya sabemos los contaminantes y su forzamiento radiativo, podemos ver cuales son las fuentes de ellos, desde elpunto de vista de contaminacion atmosferica y clima. Existen varios tipos de fuentes de emisiones:
 
 
-```{r echo = FALSE, fig.cap="Fuentes de emisiones"}
+```{r echo = FALSE, fig.cap="Fuentes de emisiones", out.width="130%"}
 knitr::include_graphics(path = "figs/fuentes.png")
 ```
 
 Pueden tener aplicaciones de gestion y cientificas:
 
-```{r echo = FALSE, fig.cap="Tipos de inventarios (Pules and Helsinga, 2013)"}
+```{r echo = FALSE, fig.cap="Tipos de inventarios (Pules and Helsinga, 2013)", out.width="150%"}
 knitr::include_graphics(path = "figs/theart2.png")
 ```
 
@@ -328,12 +328,12 @@ knitr::include_graphics(path = "figs/ipcc2.jpg")
 Ahora podemos ver como ha sido la serie de emisiones globales de gases de efecto invernadero:
 
 
-```{r echo = FALSE, fig.cap="Serie de emisiones)"}
+```{r echo = FALSE, fig.cap="Serie de emisiones)", out.width="120%"}
 knitr::include_graphics(path = "figs/ipcc3.png")
 ```
 
 
-```{r echo = FALSE, fig.cap="CO2 y temperatura (http://www.ipcc.ch/report/graphics/))"}
+```{r echo = FALSE, fig.cap="CO2 y temperatura (http://www.ipcc.ch/report/graphics/))", out.width="150%"}
 knitr::include_graphics(path = "figs/ipcc4.png")
 ```
 
@@ -366,7 +366,7 @@ En los inventarios de emisiones muchas veces pocas categorias emiten la mayor ca
 
 En las guias de emisiones europeas, -@NtziachristosSamaras2016 muestra la definicion de los enfoques bottom-up y top-down.
 
-```{r echo = FALSE, fig.cap="Bottom up y top-down"}
+```{r echo = FALSE, fig.cap="Bottom up y top-down", out.width="120%"}
 knitr::include_graphics(path = "figs/bt.png")
 ```
 
@@ -398,12 +398,12 @@ knitr::include_graphics(path = "figs/vein2.png")
 
 La modelacion inversa esta siendo utilizada para corregir y re estimar emisiones con los nuevos datos de satelite disponibles [@acp-18-5483-2018]:
 
-```{r echo = FALSE, fig.cap="(Kaiser et al., 2018)"}
+```{r echo = FALSE, fig.cap="(Kaiser et al., 2018)", out.width="130%"}
 knitr::include_graphics(path = "figs/acp.png")
 ```
 
 Columna total de NO2 en europa con Sentinel 5P libreria stars [@stars]
 
-```{r echo = FALSE, fig.cap="STARS! Sentinel 5P"}
+```{r echo = FALSE, fig.cap="STARS! Sentinel 5P", out.width="150%"}
 knitr::include_graphics(path = "figs/sentinel.png")
 ```

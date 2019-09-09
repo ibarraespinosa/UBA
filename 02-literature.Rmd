@@ -116,12 +116,12 @@ como es expicado por @brasseur2017modeling.
 El ciclo deo ozono troposferico comienza con la fotolisis de lamolecula de ox[igeno devido a radiacion solar de longitud de onda minimo 242 nm. Posteriormente, un atomo de oxigeno se combina con otra molecula de oxigeno para formar ozono. La molecula M (cuerpo inerte, como $N_2$ o $O_2$)  estabiliza la molecula de $O_3$ recien formada.
 
 \begin{equation}
-O_2 + hv(\lambda < 242 nm) -> O + O 
+O_2 + hv(\lambda < 242 nm) 	\rightarrow O + O 
 (\#eq:1)
 \end{equation}
 
 \begin{equation}
-O + O_2 + M -> O_3 + M 
+O + O_2 + M 	\rightarrow O_3 + M 
 (\#eq:2)
 \end{equation}
 
@@ -132,36 +132,36 @@ En el caso del ozono troposfeico, la reaccion comienza quando el [radical hidrox
 
 
 \begin{equation}
-O_3 + hv(\lambda < 1180 nm) -> O + O_2 + energia cinetica 
+O_3 + hv(\lambda < 1180 nm) 	\rightarrow O + O_2 + energia cinetica 
 (\#eq:3)
 \end{equation}
 
 En el caso del ozono troposferico, los ingredientes principales son radiacion solar, $NO_x$ y compuestos organicos volatiles [@o3wiki]. 
 
 \begin{equation}
-\cdot OH + CO -> \cdot HOCO
+\cdot OH + CO 	\rightarrow \cdot HOCO
 (\#eq:4)
 \end{equation}
 
 
 \begin{equation}
-\cdot HOCO + O_2 -> HO_2\cdot + CO_2
+\cdot HOCO + O_2 	\rightarrow HO_2\cdot + CO_2
 (\#eq:5)
 \end{equation}
 
 \begin{equation}
-HO_2\cdot + NO -> \cdot OH + NO_2
+HO_2\cdot + NO 	\rightarrow \cdot OH + NO_2
 (\#eq:6)
 \end{equation}
 
 \begin{equation}
-NO_2 + hv(\lambda < 400nm) -> NO + O
+NO_2 + hv(\lambda < 400nm) 	\rightarrow NO + O
 (\#eq:7)
 \end{equation}
 
 
 \begin{equation}
-O + O_2 -> O_3
+O + O_2 	\rightarrow O_3
 (\#eq:8)
 \end{equation}
 
@@ -169,8 +169,23 @@ Los mecanismos mostrados son un resumen de complejas reacciones en la atmosfera 
 
 ### Especies de azufre
 
-El es un compuesto que reacciona generando importantes contaminantes como sulfatos y acido sulfurico, importantesen la lluvia aida (deposicion acida). Los combustibles tienen azufre y durante la combustion, el azufre es oxidado generando $SO_2$, diesel tiene mayor cantidad de azufre que gasolina, por lo tanto generando mas $SO_2$. A continuacion una resumen de los mecanismos de generacion de acido sulfurico [@brasseur2017modeling].
+El es un compuesto que reacciona generando importantes contaminantes como sulfatos y acido sulfurico, importantesen la lluvia aida (deposicion acida). Los combustibles tienen azufre y durante la combustion, el azufre es oxidado generando $SO_2$, diesel tiene mayor cantidad de azufre que gasolina, por lo tanto generando mas $SO_2$. Tambien existe el dimetilsulfido (DMS) $(CH3)_2S$, que es biogenico, asi como el carbonilo sulfido (COS), que largo tiempo de vida que permite su transporte a la estratosfera. A continuacion una resumen de los mecanismos de generacion de acido sulfurico [@brasseur2017modeling]. $SO_2$ es oxiado por $OH$
 
+
+\begin{equation}
+SO_2 + OH + M 	\rightarrow HSO_3 + M
+(\#eq:9)
+\end{equation}
+
+\begin{equation}
+HSO_3 + O_2 	\rightarrow  SO_3 + HO_2
+(\#eq:10)
+\end{equation}
+
+\begin{equation}
+SO_3 + H2O + M \rightarrow  H_2SO_4 + M
+(\#eq:11)
+\end{equation}
 
 
 

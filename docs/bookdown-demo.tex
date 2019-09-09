@@ -626,12 +626,12 @@ como es expicado por \citet{brasseur2017modeling}.
 El ciclo deo ozono troposferico comienza con la fotolisis de lamolecula de ox{[}igeno devido a radiacion solar de longitud de onda minimo 242 nm. Posteriormente, un atomo de oxigeno se combina con otra molecula de oxigeno para formar ozono. La molecula M (cuerpo inerte, como \(N_2\) o \(O_2\)) estabiliza la molecula de \(O_3\) recien formada.
 
 \begin{equation}
-O_2 + hv(\lambda < 242 nm) -> O + O 
+O_2 + hv(\lambda < 242 nm)  \rightarrow O + O 
 \label{eq:1}
 \end{equation}
 
 \begin{equation}
-O + O_2 + M -> O_3 + M 
+O + O_2 + M     \rightarrow O_3 + M 
 \label{eq:2}
 \end{equation}
 
@@ -640,34 +640,34 @@ El Ozono luego es fotolizado a un atomo de oxigeno y una molecula de oxigeno ant
 En el caso del ozono troposfeico, la reaccion comienza quando el \href{https://en.wikipedia.org/wiki/Hydroxyl_radical}{radical hidroxilo} \(\cdot OH\) oxida el \(CO\) generando el radical \(\cdot HOCO\) que es inestable y reacciona rapidamente con \(O_2\) generando el \href{https://en.wikipedia.org/wiki/Hydroperoxyl}{peroxi radical} \(\cdot HO_2\) y \(CO_2\). El peroxi radical reacciona oxida \(NO\) generando \(NO_2\) y un radical hidroxilo. Luego el \(NO_2\) es fotolizado liberando un atomo de oxigeno que reacciona con la molecula de \(O_2\) generando \(O_3\).
 
 \begin{equation}
-O_3 + hv(\lambda < 1180 nm) -> O + O_2 + energia cinetica 
+O_3 + hv(\lambda < 1180 nm)     \rightarrow O + O_2 + energia cinetica 
 \label{eq:3}
 \end{equation}
 
 En el caso del ozono troposferico, los ingredientes principales son radiacion solar, \(NO_x\) y compuestos organicos volatiles \citep{o3wiki}.
 
 \begin{equation}
-\cdot OH + CO -> \cdot HOCO
+\cdot OH + CO   \rightarrow \cdot HOCO
 \label{eq:4}
 \end{equation}
 
 \begin{equation}
-\cdot HOCO + O_2 -> HO_2\cdot + CO_2
+\cdot HOCO + O_2    \rightarrow HO_2\cdot + CO_2
 \label{eq:5}
 \end{equation}
 
 \begin{equation}
-HO_2\cdot + NO -> \cdot OH + NO_2
+HO_2\cdot + NO  \rightarrow \cdot OH + NO_2
 \label{eq:6}
 \end{equation}
 
 \begin{equation}
-NO_2 + hv(\lambda < 400nm) -> NO + O
+NO_2 + hv(\lambda < 400nm)  \rightarrow NO + O
 \label{eq:7}
 \end{equation}
 
 \begin{equation}
-O + O_2 -> O_3
+O + O_2     \rightarrow O_3
 \label{eq:8}
 \end{equation}
 
@@ -676,7 +676,22 @@ Los mecanismos mostrados son un resumen de complejas reacciones en la atmosfera 
 \hypertarget{especies-de-azufre}{%
 \subsection{Especies de azufre}\label{especies-de-azufre}}
 
-El es un compuesto que reacciona generando importantes contaminantes como sulfatos y acido sulfurico, importantesen la lluvia aida (deposicion acida). Los combustibles tienen azufre y durante la combustion, el azufre es oxidado generando \(SO_2\), diesel tiene mayor cantidad de azufre que gasolina, por lo tanto generando mas \(SO_2\). A continuacion una resumen de los mecanismos de generacion de acido sulfurico \citep{brasseur2017modeling}.
+El es un compuesto que reacciona generando importantes contaminantes como sulfatos y acido sulfurico, importantesen la lluvia aida (deposicion acida). Los combustibles tienen azufre y durante la combustion, el azufre es oxidado generando \(SO_2\), diesel tiene mayor cantidad de azufre que gasolina, por lo tanto generando mas \(SO_2\). Tambien existe el dimetilsulfido (DMS) \((CH3)_2S\), que es biogenico, asi como el carbonilo sulfido (COS), que largo tiempo de vida que permite su transporte a la estratosfera. A continuacion una resumen de los mecanismos de generacion de acido sulfurico \citep{brasseur2017modeling}. \(SO_2\) es oxiado por \(OH\)
+
+\begin{equation}
+SO_2 + OH + M   \rightarrow HSO_3 + M
+\label{eq:9}
+\end{equation}
+
+\begin{equation}
+HSO_3 + O_2     \rightarrow  SO_3 + HO_2
+\label{eq:10}
+\end{equation}
+
+\begin{equation}
+SO_3 + H2O + M \rightarrow  H_2SO_4 + M
+\label{eq:11}
+\end{equation}
 
 \hypertarget{como-se-producen-las-altas-concentraciones-de-contaminantes}{%
 \section{Como se producen las altas concentraciones de contaminantes}\label{como-se-producen-las-altas-concentraciones-de-contaminantes}}

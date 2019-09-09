@@ -56,12 +56,12 @@ A pesar que durante la fecha, las autoridades no consideraron el efecto de la co
 
 
 
-```{r echo = FALSE, fig.cap="Mortalidad semanal y concentraciones de SO2 en Lobres 1952 (Bell and Davis, 2001)"}
+```{r echo = FALSE, fig.cap="Mortalidad semanal y concentraciones de SO2 en Lobres 1952 (Bell and Davis, 2001)", out.width="120%"}
 knitr::include_graphics(path = "figs/so2lon.png")
 ```
 
 
-```{r echo = FALSE, fig.cap="Mortalidad semanal y concentraciones de SO2 en Lobres 1952 (Bell and Davis, 2001)"}
+```{r echo = FALSE, fig.cap="Mortalidad semanal y concentraciones de SO2 en Lobres 1952 (Bell and Davis, 2001)", out.width="120%"}
 knitr::include_graphics(path = "figs/so2lon2.png")
 ```
 

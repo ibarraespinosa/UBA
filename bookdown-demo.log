@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2019/dev/Debian) (preloaded format=xelatex 2019.8.22)  9 SEP 2019 12:43
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2019/dev/Debian) (preloaded format=xelatex 2019.8.22)  9 SEP 2019 12:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1198,35 +1198,44 @@ Overfull \hbox (154.57793pt too wide) has occurred while \output is active
 ]
 Chapter 3.
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 906.
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 912.
 [41]
+Underfull \vbox (badness 1205) has occurred while \output is active []
+
+
 Overfull \hbox (307.99907pt too wide) has occurred while \output is active
 \TU/lmr/m/n/10 42 \TU/lmr/m/sl/10 CHAPTER 3.  TALLER VECTORES: APLICACIÓN DE SO
 FTWARE DE INFORMACIÓN GEOGRÁFICA Y MODELADO (NO TERMINADO)
  []
 
-[42]
+[42] [43]
+Overfull \hbox (307.99907pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 44 \TU/lmr/m/sl/10 CHAPTER 3.  TALLER VECTORES: APLICACIÓN DE SO
+FTWARE DE INFORMACIÓN GEOGRÁFICA Y MODELADO (NO TERMINADO)
+ []
+
+[44
+
+]
 Chapter 4.
 File: figs/cube1.png Graphic file (type bmp)
 <figs/cube1.png>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[43
-
-]
+[45]
 File: figs/cube2.png Graphic file (type bmp)
 <figs/cube2.png>
 
 Overfull \hbox (469.94357pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 44 \TU/lmr/m/sl/10 CHAPTER 4.  TALLER RASTER Y CUBOS DE DATOS VE
+\TU/lmr/m/n/10 46 \TU/lmr/m/sl/10 CHAPTER 4.  TALLER RASTER Y CUBOS DE DATOS VE
 CTORIALES: APLICACIÓN DE SOFTWARE DE INFORMACIÓN GEOGRÁFICA Y MODELADO (NO TERM
 INADO)
  []
 
-[44]
+[46]
 Chapter 5.
-[45
+[47
 
 ]
 File: bookdown-demo_files/figure-latex/unnamed-chunk-38-1.pdf Graphic file (typ
@@ -1234,25 +1243,25 @@ e pdf)
 <use bookdown-demo_files/figure-latex/unnamed-chunk-38-1.pdf>
 
 Overfull \hbox (160.64905pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 46 \TU/lmr/m/sl/10 CHAPTER 5.  ESTUDIOS DE SERIES DE TIEMPO PARA
- ASOCIAR SALUD Y VARIABLES AMBIENTALES
- []
-
-[46]
-File: figs/rosana1.png Graphic file (type bmp)
-<figs/rosana1.png>
-
-Overfull \hbox (481.77654pt too wide) in paragraph at lines 1060--1060
-[][] 
- []
-
-(./bookdown-demo.bbl [47]
-Overfull \hbox (160.64905pt too wide) has occurred while \output is active
 \TU/lmr/m/n/10 48 \TU/lmr/m/sl/10 CHAPTER 5.  ESTUDIOS DE SERIES DE TIEMPO PARA
  ASOCIAR SALUD Y VARIABLES AMBIENTALES
  []
 
-[48] [49
+[48]
+File: figs/rosana1.png Graphic file (type bmp)
+<figs/rosana1.png>
+
+Overfull \hbox (481.77654pt too wide) in paragraph at lines 1077--1077
+[][] 
+ []
+
+(./bookdown-demo.bbl [49]
+Overfull \hbox (160.64905pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 50 \TU/lmr/m/sl/10 CHAPTER 5.  ESTUDIOS DE SERIES DE TIEMPO PARA
+ ASOCIAR SALUD Y VARIABLES AMBIENTALES
+ []
+
+[50] [51
 
 ]
 Underfull \hbox (badness 1742) in paragraph at lines 97--101
@@ -1260,7 +1269,7 @@ Underfull \hbox (badness 1742) in paragraph at lines 97--101
 ays, Raster and Vec-
  []
 
-[50]
+[52]
 Underfull \hbox (badness 1342) in paragraph at lines 162--167
 \TU/lmr/m/n/10 encyclopedia.  []$[][][][][] [] [] [] [][] [] [][][][][][][][][]
  [] [][][] [] [] [] [][][][][] [] [][][] [] [][][][][] [] [][][][][][][][][][][
@@ -1268,12 +1277,12 @@ Underfull \hbox (badness 1342) in paragraph at lines 162--167
  []
 
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1073.
-[51]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1073.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1090.
+[53]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1090.
 (./bookdown-demo.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1073.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1073.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1090.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1090.
 
 Package rerunfilecheck Info: File `bookdown-demo.out' has not changed.
 (rerunfilecheck)             Checksum: 4C114CE3EA31F94391384D01C3DC4C73.
@@ -1290,4 +1299,4 @@ Here is how much of TeX's memory you used:
  1348 hyphenation exceptions out of 8191
  45i,7n,56p,882b,475s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on bookdown-demo.pdf (51 pages).
+Output written on bookdown-demo.pdf (53 pages).

@@ -894,6 +894,12 @@ Columna total de NO2 en europa con Sentinel 5P libreria stars \citep{stars}
   www.github.com/rspatial/raster
 \item
   \url{https://bookdown.org/}
+\item
+  \url{https://geocompr.robinlovelace.net/}
+\item
+  \url{https://www.datascienceatthecommandline.com/}
+\item
+  \url{https://bookdown.org/rdpeng/rprogdatascience/}
 \end{itemize}
 
 \hypertarget{instalacion}{%
@@ -928,18 +934,29 @@ Para realmente comenzar es necesario mencionar que R es un lenguaje de programac
 A veces debemos o obtenemos datos en hojas de calculo (Libreoffice Calc o Microsoft Office Excel). Cuando este archivo es pequeño no hay problema, pero la realidad es que cada vez es mas frecuente contar con grandes bases de datos y trabajar con un programa de interface grafica se hace dificil. Una de las razones es que la interfaz grafica consume muchos recursos computacionales, que podrian ser usados para el procesamiento de informacion. Por lo tanto
 
 \textbf{do (5 min)}
-Abra el archivo Excel
-Vea rapidamente los datos
-Exporte a .csv o.txt
-Abra el archivo usando un editor de texto (bloc de notas)
+
+\begin{itemize}
+\tightlist
+\item
+  Abra el archivo dados/o3.csv con Excel
+\item
+  Vea rapidamente los datos
+\item
+  Cierre y abrael archivo con un editor de texto (bloc de notas)
+\item
+  Cual es la separacion de las columnas?
+\item
+  Bajando datos de ozono: \url{https://sinca.mma.gob.cl/index.php/estacion/index/key/D13}
+\end{itemize}
 
 \hypertarget{usando-base}{%
 \subsection{Usando base}\label{usando-base}}
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{df <-}\StringTok{ }\KeywordTok{read.csv}\NormalTok{(}\StringTok{"data/china_cities_20190413.csv"}\NormalTok{, }\DataTypeTok{h =}\NormalTok{ T, )}
+\NormalTok{df <-}\StringTok{ }\KeywordTok{read.csv}\NormalTok{(}\StringTok{"dados/o3.csv"}\NormalTok{, }\DataTypeTok{h =}\NormalTok{ T, }\DataTypeTok{sep =} \StringTok{";"}\NormalTok{)}
 \KeywordTok{head}\NormalTok{(df)}
+\KeywordTok{names}\NormalTok{(df) <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\StringTok{"YYMMDD"}\NormalTok{, }\StringTok{"HHMM"}\NormalTok{, }\StringTok{"o3_ppb"}\NormalTok{, }\StringTok{"novalido"}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 

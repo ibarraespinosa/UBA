@@ -210,6 +210,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>www.github.com/r-spatial/stars</li>
 <li>www.github.com/rspatial/raster</li>
 <li><a href="https://bookdown.org/" class="uri">https://bookdown.org/</a></li>
+<li><a href="https://geocompr.robinlovelace.net/" class="uri">https://geocompr.robinlovelace.net/</a></li>
+<li><a href="https://www.datascienceatthecommandline.com/" class="uri">https://www.datascienceatthecommandline.com/</a></li>
+<li><a href="https://bookdown.org/rdpeng/rprogdatascience/" class="uri">https://bookdown.org/rdpeng/rprogdatascience/</a></li>
 </ul>
 <div id="instalacion" class="section level2">
 <h2><span class="header-section-number">3.1</span> Instalacion</h2>
@@ -227,15 +230,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="r-desde-excel-libreoffice-archivos-de-text-etc." class="section level2">
 <h2><span class="header-section-number">3.2</span> R desde Excel, libreoffice, archivos de text, etc.</h2>
 <p>A veces debemos o obtenemos datos en hojas de calculo (Libreoffice Calc o Microsoft Office Excel). Cuando este archivo es pequeño no hay problema, pero la realidad es que cada vez es mas frecuente contar con grandes bases de datos y trabajar con un programa de interface grafica se hace dificil. Una de las razones es que la interfaz grafica consume muchos recursos computacionales, que podrian ser usados para el procesamiento de informacion. Por lo tanto</p>
-<p><strong>do (5 min)</strong>
-Abra el archivo Excel
-Vea rapidamente los datos
-Exporte a .csv o.txt
-Abra el archivo usando un editor de texto (bloc de notas)</p>
+<p><strong>do (5 min)</strong></p>
+<ul>
+<li>Abra el archivo dados/o3.csv con Excel</li>
+<li>Vea rapidamente los datos</li>
+<li>Cierre y abrael archivo con un editor de texto (bloc de notas)</li>
+<li>Cual es la separacion de las columnas?</li>
+<li>Bajando datos de ozono: <a href="https://sinca.mma.gob.cl/index.php/estacion/index/key/D13" class="uri">https://sinca.mma.gob.cl/index.php/estacion/index/key/D13</a></li>
+</ul>
 <div id="usando-base" class="section level3">
 <h3><span class="header-section-number">3.2.1</span> Usando base</h3>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" data-line-number="1">df &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;data/china_cities_20190413.csv&quot;</span>, <span class="dt">h =</span> T, )</a>
-<a class="sourceLine" id="cb7-2" data-line-number="2"><span class="kw">head</span>(df)</a></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" data-line-number="1">df &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;dados/o3.csv&quot;</span>, <span class="dt">h =</span> T, <span class="dt">sep =</span> <span class="st">&quot;;&quot;</span>)</a>
+<a class="sourceLine" id="cb7-2" data-line-number="2"><span class="kw">head</span>(df)</a>
+<a class="sourceLine" id="cb7-3" data-line-number="3"><span class="kw">names</span>(df) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;YYMMDD&quot;</span>, <span class="st">&quot;HHMM&quot;</span>, <span class="st">&quot;o3_ppb&quot;</span>, <span class="st">&quot;novalido&quot;</span>)</a></code></pre></div>
 </div>
 <div id="usando-data.table-mi-favorito-junto-con-sf" class="section level3">
 <h3><span class="header-section-number">3.2.2</span> Usando data.table (mi favorito junto con sf)</h3>

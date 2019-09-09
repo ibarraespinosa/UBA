@@ -6,6 +6,9 @@
 - www.github.com/r-spatial/stars
 - www.github.com/rspatial/raster
 - https://bookdown.org/
+- https://geocompr.robinlovelace.net/
+- https://www.datascienceatthecommandline.com/
+- https://bookdown.org/rdpeng/rprogdatascience/
 
 
 ## Instalacion
@@ -37,17 +40,19 @@ A veces debemos o obtenemos datos en hojas de calculo (Libreoffice Calc o Micros
 
 
 **do (5 min)**
-Abra el archivo Excel
-Vea rapidamente los datos
-Exporte a .csv o.txt
-Abra el archivo usando un editor de texto (bloc de notas)
 
+- Abra el archivo dados/o3.csv con Excel
+- Vea rapidamente los datos
+- Cierre y abrael archivo con un editor de texto (bloc de notas)
+- Cual es la separacion de las columnas?
+- Bajando datos de ozono: https://sinca.mma.gob.cl/index.php/estacion/index/key/D13
 
 ### Usando base
 
 ```{r eval = FALSE}
-df <- read.csv("data/china_cities_20190413.csv", h = T, )
+df <- read.csv("dados/o3.csv", h = T, sep = ";")
 head(df)
+names(df) <- c("YYMMDD", "HHMM", "o3_ppb", "novalido")
 ```
 
 

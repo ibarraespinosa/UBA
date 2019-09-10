@@ -54,6 +54,10 @@ Fuentes:
 - [Enfermedades transmitidas por alimentos](http://www.deis.cl/estadisticas-eta/)
 - [Tuberculosis](http://www.deis.cl/?page_id=3946)
 
+## Epidemiologia
+
+- [Vigilancia Epidemiologica](http://epi.minsal.cl/)
+
 ## [Encuesta de caracterizacion socioeconomica (CASEN)](http://observatorio.ministeriodesarrollosocial.gob.cl/casen-multidimensional/casen/casen_2017.php)
 "La Encuesta de Caracterización Socioeconómica Nacional (Casen) del Ministerio de Desarrollo Social es una encuesta a hogares, de carácter multipropósito, es decir, que abarca diversos temas como educación, trabajo, ingresos, salud, entre otros; además es una encuesta transversal, por lo tanto, incluye a todo el espectro de la población del país."
 

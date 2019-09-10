@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2019/dev/Debian) (preloaded format=xelatex 2019.8.22)  10 SEP 2019 14:22
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2019/dev/Debian) (preloaded format=xelatex 2019.8.22)  10 SEP 2019 14:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -842,15 +842,15 @@ Overfull \hbox (36.59122pt too wide) has occurred while \output is active
 DE SALUD EN CHILE
  []
 
-[8]
+[8] [9]
 File: figs/strokes.png Graphic file (type bmp)
 <figs/strokes.png>
 
-Overfull \hbox (234.70906pt too wide) in paragraph at lines 369--369
+Overfull \hbox (234.70906pt too wide) in paragraph at lines 378--378
 [][] 
  []
 
-[9]
+
 Overfull \hbox (41.59122pt too wide) has occurred while \output is active
 \TU/lmr/m/n/10 10 \TU/lmr/m/sl/10 CHAPTER 1.  SISTEMAS DE INFORMACION CON DATOS
  DE SALUD EN CHILE
@@ -886,19 +886,19 @@ File: figs/Nelson's_Column_during_the_Great_Smog_of_1952.jpg Graphic file (type
 File: figs/so2lon.png Graphic file (type bmp)
 <figs/so2lon.png>
 
-Overfull \hbox (69.00327pt too wide) in paragraph at lines 513--513
+Overfull \hbox (69.00327pt too wide) in paragraph at lines 522--522
 [][] 
  []
 
 File: figs/so2lon2.png Graphic file (type bmp)
 <figs/so2lon2.png>
 
-Overfull \hbox (68.99713pt too wide) in paragraph at lines 517--517
+Overfull \hbox (68.99713pt too wide) in paragraph at lines 526--526
 [][] 
  []
 
 
-Overfull \hbox (117.0pt too wide) in paragraph at lines 531--531
+Overfull \hbox (117.0pt too wide) in paragraph at lines 540--540
 []\TU/lmtt/m/n/10 ## [1] "Investique que es, causas, consequencias y poltiica a
 mbiental asociada a CLRTAP"[] 
  []
@@ -906,7 +906,7 @@ mbiental asociada a CLRTAP"[]
 File: figs/esquema.png Graphic file (type bmp)
 <figs/esquema.png>
 
-Overfull \hbox (103.49338pt too wide) in paragraph at lines 539--539
+Overfull \hbox (103.49338pt too wide) in paragraph at lines 548--548
 [][] 
  []
 
@@ -934,47 +934,47 @@ File: figs/800px-Synthetic_aerosol_distribution_in_number_area_and_volume_space
 <figs/800px-Synthetic_aerosol_distribution_in_number_area_and_volume_space.png>
 
 
-Overfull \hbox (62.03586pt too wide) in paragraph at lines 681--681
+Overfull \hbox (62.03586pt too wide) in paragraph at lines 690--690
 [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 35.93723pt on input line 682.
+LaTeX Warning: Float too large for page by 35.93723pt on input line 691.
 
 File: figs/chile1.png Graphic file (type bmp)
 <figs/chile1.png>
 
-Overfull \hbox (786.75237pt too wide) in paragraph at lines 689--689
+Overfull \hbox (786.75237pt too wide) in paragraph at lines 698--698
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 689--689
+Underfull \hbox (badness 10000) in paragraph at lines 698--698
 []\TU/lmr/m/n/10 Figure 2.8: []MP2.5 ug/m3 em Lautaro, Chile
  []
 
 
-LaTeX Warning: Float too large for page by 36.53563pt on input line 690.
+LaTeX Warning: Float too large for page by 36.53563pt on input line 699.
 
 File: figs/hotan.png Graphic file (type bmp)
 <figs/hotan.png>
 
-Overfull \hbox (172.50215pt too wide) in paragraph at lines 695--695
+Overfull \hbox (172.50215pt too wide) in paragraph at lines 704--704
 [][] 
  []
 
 File: figs/brazil.png Graphic file (type bmp)
 <figs/brazil.png>
 
-Overfull \hbox (172.50618pt too wide) in paragraph at lines 703--703
+Overfull \hbox (172.50618pt too wide) in paragraph at lines 712--712
 [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 8.53584pt on input line 704.
+LaTeX Warning: Float too large for page by 8.53584pt on input line 713.
 
 
-Overfull \hbox (6.75pt too wide) in paragraph at lines 710--710
+Overfull \hbox (6.75pt too wide) in paragraph at lines 719--719
 []\TU/lmtt/m/n/10 ## Ingrese a https://worldview.earthdata.nasa.gov/ y busque a
 erosol[] 
  []
@@ -1013,21 +1013,21 @@ Overfull \hbox (154.57793pt too wide) has occurred while \output is active
 File: figs/SPM1_figure-final-947x1024.png Graphic file (type bmp)
 <figs/SPM1_figure-final-947x1024.png>
 
-Overfull \hbox (68.99411pt too wide) in paragraph at lines 727--727
+Overfull \hbox (68.99411pt too wide) in paragraph at lines 736--736
 [][] 
  []
 
 File: figs/SPM.03-01.png Graphic file (type bmp)
 <figs/SPM.03-01.png>
 
-Overfull \hbox (10.57909pt too wide) in paragraph at lines 731--731
+Overfull \hbox (10.57909pt too wide) in paragraph at lines 740--740
 [][] 
  []
 
 File: figs/ipcc.jpg Graphic file (type bmp)
 <figs/ipcc.jpg>
 
-Underfull \hbox (badness 10000) in paragraph at lines 739--739
+Underfull \hbox (badness 10000) in paragraph at lines 748--748
 []\TU/lmr/m/n/10 Figure 2.13: [][]Forzante radiativo ([]$[][][][][] [] [] [] []
 [][][][][][][][][] [] [][][][][][][][][][] [] [][] []
  []
@@ -1035,12 +1035,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 739--739
 File: figs/fx.png Graphic file (type bmp)
 <figs/fx.png>
 
-Overfull \hbox (98.82907pt too wide) in paragraph at lines 757--760
+Overfull \hbox (98.82907pt too wide) in paragraph at lines 766--769
 []\TU/lmr/m/n/10 \begin{figure} []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 757--760
+Underfull \hbox (badness 10000) in paragraph at lines 766--769
 \TU/lmr/m/n/10 \caption{Forzantes indirectos (Robwood, 2019) ([]$[][][][][] [] 
 [] [] [][][][][] [] [][] [] [][][] []
  []
@@ -1079,7 +1079,7 @@ Overfull \hbox (154.57793pt too wide) has occurred while \output is active
 File: figs/bc.png Graphic file (type bmp)
 <figs/bc.png>
 
-Overfull \hbox (77.06389pt too wide) in paragraph at lines 768--768
+Overfull \hbox (77.06389pt too wide) in paragraph at lines 777--777
 []\TU/lmr/m/n/10 Figure 2.14: []UNEP (https://twitter.com/UNEnvironment/status/
 1150404638501416961/photo/1 
  []
@@ -1097,14 +1097,14 @@ r/m/n/10 31
 File: figs/fuentes.png Graphic file (type bmp)
 <figs/fuentes.png>
 
-Overfull \hbox (103.50632pt too wide) in paragraph at lines 791--791
+Overfull \hbox (103.50632pt too wide) in paragraph at lines 800--800
 [][] 
  []
 
 File: figs/theart2.png Graphic file (type bmp)
 <figs/theart2.png>
 
-Overfull \hbox (172.49554pt too wide) in paragraph at lines 797--797
+Overfull \hbox (172.49554pt too wide) in paragraph at lines 806--806
 [][] 
  []
 
@@ -1120,14 +1120,14 @@ Overfull \hbox (154.57793pt too wide) has occurred while \output is active
 File: figs/ipcc3.png Graphic file (type bmp)
 <figs/ipcc3.png>
 
-Overfull \hbox (69.01746pt too wide) in paragraph at lines 811--811
+Overfull \hbox (69.01746pt too wide) in paragraph at lines 820--820
 [][] 
  []
 
 File: figs/ipcc4.png Graphic file (type bmp)
 <figs/ipcc4.png>
 
-Overfull \hbox (172.536pt too wide) in paragraph at lines 815--815
+Overfull \hbox (172.536pt too wide) in paragraph at lines 824--824
 [][] 
  []
 
@@ -1141,21 +1141,21 @@ Overfull \hbox (154.57793pt too wide) has occurred while \output is active
 File: figs/bt.png Graphic file (type bmp)
 <figs/bt.png>
 
-Overfull \hbox (69.00348pt too wide) in paragraph at lines 866--866
+Overfull \hbox (69.00348pt too wide) in paragraph at lines 875--875
 [][] 
  []
 
 File: figs/fig4_LDV_CO.png Graphic file (type bmp)
 <figs/fig4_LDV_CO.png>
 
-Overfull \hbox (185.95953pt too wide) in paragraph at lines 873--873
+Overfull \hbox (185.95953pt too wide) in paragraph at lines 882--882
 [][] 
  []
 
 File: figs/vein1.png Graphic file (type bmp)
 <figs/vein1.png>
 
-Overfull \hbox (103.49466pt too wide) in paragraph at lines 882--882
+Overfull \hbox (103.49466pt too wide) in paragraph at lines 891--891
 [][] 
  []
 
@@ -1164,14 +1164,14 @@ File: figs/vein2.png Graphic file (type bmp)
 File: figs/acp.png Graphic file (type bmp)
 <figs/acp.png>
 
-Overfull \hbox (103.51598pt too wide) in paragraph at lines 895--895
+Overfull \hbox (103.51598pt too wide) in paragraph at lines 904--904
 [][] 
  []
 
 File: figs/sentinel.png Graphic file (type bmp)
 <figs/sentinel.png>
 
-Overfull \hbox (172.54146pt too wide) in paragraph at lines 901--901
+Overfull \hbox (172.54146pt too wide) in paragraph at lines 910--910
 [][] 
  []
 
@@ -1204,7 +1204,7 @@ Overfull \hbox (154.57793pt too wide) has occurred while \output is active
 ]
 Chapter 3.
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 934.
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 943.
 [43]
 Underfull \vbox (badness 1205) has occurred while \output is active []
 
@@ -1257,19 +1257,19 @@ Overfull \hbox (160.64905pt too wide) has occurred while \output is active
 File: figs/rosana1.png Graphic file (type bmp)
 <figs/rosana1.png>
 
-Overfull \hbox (481.77654pt too wide) in paragraph at lines 1099--1099
+Overfull \hbox (481.77654pt too wide) in paragraph at lines 1108--1108
 [][] 
  []
 
 File: figs/temp1.png Graphic file (type bmp)
 <figs/temp1.png>
 
-Overfull \hbox (1026.0179pt too wide) in paragraph at lines 1108--1108
+Overfull \hbox (1026.0179pt too wide) in paragraph at lines 1117--1117
 [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 213.15956pt on input line 1109.
+LaTeX Warning: Float too large for page by 213.15956pt on input line 1118.
 
 (./bookdown-demo.bbl [51]
 Overfull \hbox (160.64905pt too wide) has occurred while \output is active
@@ -1299,24 +1299,24 @@ Underfull \hbox (badness 1342) in paragraph at lines 172--177
  []
 
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1114.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1123.
 [57]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1114.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1123.
 (./bookdown-demo.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1114.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1114.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1123.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1123.
 
 Package rerunfilecheck Info: File `bookdown-demo.out' has not changed.
-(rerunfilecheck)             Checksum: 4C114CE3EA31F94391384D01C3DC4C73.
+(rerunfilecheck)             Checksum: D8BEC0D04B0067D962E81459CC72D74F.
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 24270 strings out of 492912
- 453545 string characters out of 6134893
- 589286 words of memory out of 5000000
- 28017 multiletter control sequences out of 15000+600000
+ 24271 strings out of 492912
+ 453560 string characters out of 6134893
+ 589397 words of memory out of 5000000
+ 28018 multiletter control sequences out of 15000+600000
  557109 words of font info for 71 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  45i,7n,56p,880b,473s stack positions out of 5000i,500n,10000p,200000b,80000s

@@ -2,6 +2,7 @@
 title: "Seminário Latinoamericano: Instrumentos y metodologias para un observatório de Clima y su impacto en la salud humana "
 author: "Sergio Ibarra-Espinosa, Universidade de São Paulo, sergio.ibarra@usp.br, ibarraespinosa.github.io"
 date: "`r Sys.Date()`"
+
 site: bookdown::bookdown_site
 output: bookdown::gitbook
 documentclass: book

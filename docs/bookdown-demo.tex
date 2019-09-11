@@ -982,8 +982,8 @@ Para correr el ejemplo de stars con Sentinel 5P instale la sigueinte libreria (1
 
 Para realmente comenzar es necesario mencionar que R es un lenguaje de programacion estadistico libre (gratis y abierto) orientado a objeto escrito en C, con bindings directos para C++, C y Fortran.
 
-\hypertarget{r-desde-excel-libreoffice-archivos-de-text-etc.}{%
-\section{R desde Excel, libreoffice, archivos de text, etc.}\label{r-desde-excel-libreoffice-archivos-de-text-etc.}}
+\hypertarget{r-desde-excel-libreoffice-archivos-de-texto-etc.}{%
+\section{R desde Excel, libreoffice, archivos de texto, etc.}\label{r-desde-excel-libreoffice-archivos-de-texto-etc.}}
 
 A veces debemos o obtenemos datos en hojas de calculo (Libreoffice Calc o Microsoft Office Excel). Cuando este archivo es pequeño no hay problema, pero la realidad es que cada vez es mas frecuente contar con grandes bases de datos y trabajar con un programa de interface grafica se hace dificil. Una de las razones es que la interfaz grafica consume muchos recursos computacionales, que podrian ser usados para el procesamiento de informacion. Por lo tanto
 
@@ -1127,7 +1127,7 @@ Otras librerias para leer datos tabulares (planihas - spreadsheets):
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-39-1.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-40-1.pdf}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -1136,7 +1136,7 @@ Otras librerias para leer datos tabulares (planihas - spreadsheets):
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-39-2.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-40-2.pdf}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -1160,50 +1160,282 @@ Otras librerias para leer datos tabulares (planihas - spreadsheets):
 ## Don't know how to automatically pick scale for object of type ts. Defaulting to continuous.
 \end{verbatim}
 
-\begin{verbatim}
-## Warning: Removed 2 rows containing missing values (geom_path).
-\end{verbatim}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-41-1.pdf}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-40-1.pdf}
+\hypertarget{vectores}{%
+\section{Vectores}\label{vectores}}
 
-\hypertarget{representacion-de-objetos-espaciales}{%
-\section{Representacion de objetos espaciales}\label{representacion-de-objetos-espaciales}}
+\href{https://gdal.org/}{GDAL} es la libreria de abstraccion de datos espaciales. Permite leer diferentes tipos de datos de tipo \href{https://gdal.org/drivers/vector/index.html}{vectores} y {[}raster{]}(\url{https://gdal.org/drivers/raster/index.html}. Algunos formatos de vectores:
 
-Nuevo estandard ISO (puntos, areas, lineas, volume, etc) \href{https://en.wikipedia.org/wiki/GeoPackage}{GeoPackage}, creado por la \href{https://www.opengeospatial.org/standards/geopackage}{Open Geospatial Consortium}, es un formato abierto y no propietario de datos espaciales
+\begin{itemize}
+\tightlist
+\item
+  \href{https://gdal.org/drivers/vector/shapefile.html}{ESRI Shapefile}
+\item
+  \href{https://gdal.org/drivers/vector/eeda.html}{Google Earth Engine Data API}
+\item
+  \href{https://gdal.org/drivers/vector/geojson.html}{GeoJSON} para html
+\item
+  \href{https://gdal.org/drivers/vector/gpkg.html}{GeoPackage} que es el nuevo formato estandard para la representacion de datos espaciales. Ver \href{https://en.wikipedia.org/wiki/GeoPackage}{aqui}. Nuevo estandard ISO (puntos, areas, lineas, volume, etc) \href{https://en.wikipedia.org/wiki/GeoPackage}{GeoPackage}, creado por la \href{https://www.opengeospatial.org/standards/geopackage}{Open Geospatial Consortium}, es un formato abierto y no propietario de datos espaciales
+\end{itemize}
+
+\href{https://github.com/r-spatial/sf}{sf} significa Spatial Features y es una libreria con interface para las librerias GDAL, GEOS y PROJ que te premite trabajar con datos espaciales de una forma muy parecida que con una hoja de calculo normal.
+Como sf esta enlazada con GDAL, permite leer todos los formatos de vector de GDAL direcamente en R.
+
+\textbf{Vamos a leer datos de Argentina en formato GeoJSON}
+
+\textbf{\ldots{}}
+
+\textbf{Es demasiado OBVIO que podemos leer datos shapefile .shp, por eso para cambiar un poco vamos a leer GeoJSON}
+
+datos bajados de \href{http://www.ign.gob.ar/NuestrasActividades/InformacionGeoespacial/CapasSIG}{IGN}
 
 \begin{Shaded}
 \begin{Highlighting}[]
 \KeywordTok{library}\NormalTok{(sf)}
-\NormalTok{df <-}\StringTok{ }\KeywordTok{read_sf}\NormalTok{(}\StringTok{"dados/linea_de_limite_FA050.json"}\NormalTok{)}
+\NormalTok{df <-}\StringTok{ }\KeywordTok{read_sf}\NormalTok{(}\StringTok{"dados/provincia.json"}\NormalTok{)}
 \KeywordTok{head}\NormalTok{(df)}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{verbatim}
-## Simple feature collection with 6 features and 5 fields
-## geometry type:  MULTILINESTRING
+## Simple feature collection with 6 features and 8 fields
+## geometry type:  MULTIPOLYGON
 ## dimension:      XYZ
-## bbox:           xmin: -71.16815 ymin: -38.93094 xmax: -58.04786 ymax: -24.26721
+## bbox:           xmin: -71.96569 ymin: -41.10059 xmax: -58.33515 ymax: -29.50042
 ## epsg (SRID):    4326
 ## proj4string:    +proj=longlat +datum=WGS84 +no_defs
-## # A tibble: 6 x 6
-##   entidad objeto      vlp fdc   sag                                geometry
-##     <int> <chr>     <dbl> <chr> <chr>                 <MULTILINESTRING [°]>
-## 1       8 Límite d~    -1 -2    Direc. Grl~ Z ((-65.05344 -31.59102 0, -65~
-## 2       8 Límite d~    -1 -2    IDE Jujuy   Z ((-64.87158 -24.26938 0, -64~
-## 3       8 Límite d~    -1 -2    IDE Corrie~ Z ((-58.07127 -30.42092 0, -58~
-## 4       8 Límite d~    -1 -2    ARBA - Ger~ Z ((-60.51238 -38.93094 0, -60~
-## 5       8 Límite d~    -1 -2    Dirección ~ Z ((-64.92811 -32.4233 0, -64.~
-## 6       8 Límite d~    -1 -2    Direc. Pci~ Z ((-70.68791 -37.33877 0, -70~
+## # A tibble: 6 x 9
+##   entidad objeto fna   gna   nam   in1   fdc   sag  
+##     <int> <chr>  <chr> <chr> <chr> <chr> <chr> <chr>
+## 1       0 Provi~ Ciud~ Ciud~ Ciud~ 02    Geog~ IGN  
+## 2       0 Provi~ Prov~ Prov~ Neuq~ 58    Geog~ IGN  
+## 3       0 Provi~ Prov~ Prov~ La P~ 42    Geog~ IGN  
+## 4       0 Provi~ Prov~ Prov~ Mend~ 50    Geog~ IGN  
+## 5       0 Provi~ Prov~ Prov~ San ~ 74    Geog~ IGN  
+## 6       0 Provi~ Prov~ Prov~ Córd~ 14    Geog~ IGN  
+## # ... with 1 more variable: geometry <MULTIPOLYGON [°]>
 \end{verbatim}
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\KeywordTok{plot}\NormalTok{(df[}\StringTok{"sag"}\NormalTok{])}
+\KeywordTok{names}\NormalTok{(df)}
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-41-1.pdf}
+\begin{verbatim}
+## [1] "entidad"  "objeto"   "fna"      "gna"      "nam"      "in1"     
+## [7] "fdc"      "sag"      "geometry"
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{plot}\NormalTok{(df[}\StringTok{"geometry"}\NormalTok{], }
+     \DataTypeTok{main =} \StringTok{"Provincias de Argentina"}\NormalTok{,}
+     \DataTypeTok{axes =} \OtherTok{TRUE}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-42-1.pdf}
+
+Podemos seleccionar columnas y lineas igual a la forma que lo hicimos anteriormente, y ploteamos estos dados.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{head}\NormalTok{(df)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Simple feature collection with 6 features and 8 fields
+## geometry type:  MULTIPOLYGON
+## dimension:      XYZ
+## bbox:           xmin: -71.96569 ymin: -41.10059 xmax: -58.33515 ymax: -29.50042
+## epsg (SRID):    4326
+## proj4string:    +proj=longlat +datum=WGS84 +no_defs
+## # A tibble: 6 x 9
+##   entidad objeto fna   gna   nam   in1   fdc   sag  
+##     <int> <chr>  <chr> <chr> <chr> <chr> <chr> <chr>
+## 1       0 Provi~ Ciud~ Ciud~ Ciud~ 02    Geog~ IGN  
+## 2       0 Provi~ Prov~ Prov~ Neuq~ 58    Geog~ IGN  
+## 3       0 Provi~ Prov~ Prov~ La P~ 42    Geog~ IGN  
+## 4       0 Provi~ Prov~ Prov~ Mend~ 50    Geog~ IGN  
+## 5       0 Provi~ Prov~ Prov~ San ~ 74    Geog~ IGN  
+## 6       0 Provi~ Prov~ Prov~ Córd~ 14    Geog~ IGN  
+## # ... with 1 more variable: geometry <MULTIPOLYGON [°]>
+\end{verbatim}
+
+Vemos muchos datos, pero vamos a ver los datos unios por departamento. No estoy mostrando aqui pues son 435, pero ya se que vamos a seleccionar ``Departamento Belgrano''
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{unique}\NormalTok{(df}\OperatorTok{$}\NormalTok{fna)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##  [1] "Ciudad Autónoma de Buenos Aires"                                   
+##  [2] "Provincia del Neuquén"                                             
+##  [3] "Provincia de La Pampa"                                             
+##  [4] "Provincia de Mendoza"                                              
+##  [5] "Provincia de San Luis"                                             
+##  [6] "Provincia de Córdoba"                                              
+##  [7] "Provincia de Santa Fe"                                             
+##  [8] "Provincia de Entre Ríos"                                           
+##  [9] "Provincia de San Juan"                                             
+## [10] "Provincia de La Rioja"                                             
+## [11] "Provincia de Catamarca"                                            
+## [12] "Provincia de Tucumán"                                              
+## [13] "Provincia de Jujuy"                                                
+## [14] "Provincia del Chaco"                                               
+## [15] "Provincia de Formosa"                                              
+## [16] "Provincia de Santiago del Estero"                                  
+## [17] "Provincia de Tierra del Fuego, Antártida e Islas del Atlántico Sur"
+## [18] "Provincia de Santa Cruz"                                           
+## [19] "Provincia del Chubut"                                              
+## [20] "Provincia de Río Negro"                                            
+## [21] "Provincia de Buenos Aires"                                         
+## [22] "Provincia de Corrientes"                                           
+## [23] "Provincia de Misiones"                                             
+## [24] "Provincia de Salta"
+\end{verbatim}
+
+La provincia 17 tiene un nombre muy largo, lo cambiamos asi:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{df}\OperatorTok{$}\NormalTok{fna[}\DecValTok{17}\NormalTok{] <-}\StringTok{ "Provincia Antartida"}
+\end{Highlighting}
+\end{Shaded}
+
+De todas maneras, el campo \texttt{fna} tiene muchas veces la pabra ``Provincia'', camos a eliminarla.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{df}\OperatorTok{$}\NormalTok{fna <-}\StringTok{ }\KeywordTok{gsub}\NormalTok{(}\DataTypeTok{pattern =} \StringTok{"Provincia "}\NormalTok{, }\DataTypeTok{replacement =} \StringTok{""}\NormalTok{, }\DataTypeTok{x =}\NormalTok{ df}\OperatorTok{$}\NormalTok{fna)}
+\end{Highlighting}
+\end{Shaded}
+
+La siguiente linea de codigo es muy barbara / da hora / cool / la raja. Corran!
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{library}\NormalTok{(mapview)}
+\KeywordTok{mapview}\NormalTok{(df, }\DataTypeTok{zcol =} \StringTok{"fna"}\NormalTok{, }\DataTypeTok{legend =}\NormalTok{ T, }\DataTypeTok{alpha =} \FloatTok{0.8}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Ahora vamos a seleccionar Buenos Aires}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{plot}\NormalTok{(df[df}\OperatorTok{$}\NormalTok{fna }\OperatorTok{==}\StringTok{ }\KeywordTok{unique}\NormalTok{(df}\OperatorTok{$}\NormalTok{fna)[}\DecValTok{1}\NormalTok{], }\StringTok{"entidad"}\NormalTok{], }
+     \DataTypeTok{axes =}\NormalTok{ T,}
+     \DataTypeTok{main =} \KeywordTok{unique}\NormalTok{(df}\OperatorTok{$}\NormalTok{fna)[}\DecValTok{1}\NormalTok{])}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-48-1.pdf}
+
+Ahora, vamos a extraer los centroids de cada poligono
+
+\textbf{Recuerda, si tienes dudas de alguna funcion, clica ?FUNCION, por ejemplo, ?st\_centroid}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{cent <-}\StringTok{ }\KeywordTok{st_centroid}\NormalTok{(df)}
+\end{Highlighting}
+\end{Shaded}
+
+El warning se debe a que los datos que tenemos estan en latitud y longitud, y por lo visto, tenemos un dato con limites que no son correctos. Me parece que es la Antartida, debido se ve demasiado grande. Vamos a sacarla y ver como da
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{cent <-}\StringTok{ }\KeywordTok{st_centroid}\NormalTok{(df[df}\OperatorTok{$}\NormalTok{fna }\OperatorTok{!=}\StringTok{ "Antartida"}\NormalTok{, ])}
+\end{Highlighting}
+\end{Shaded}
+
+Ahora vemos que tenemos un warning diferente. En este caso, st\_centroid nos avisa que los geograficos son constantes, pero como sabemos, la tierra es un elipsoide, no una esfera perfecta.
+
+\hypertarget{geoprocesamiento}{%
+\section{Geoprocesamiento}\label{geoprocesamiento}}
+
+El geoprocesamiento incluye diferentes tareas como buffers y otros, como se ve en \href{https://qgis.org}{QGIS}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{knitr}\OperatorTok{::}\KeywordTok{include_graphics}\NormalTok{(}\StringTok{"figs/geo.png"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics[width=8.01in,height=1.5\textheight]{figs/geo}
+
+Iremos a calcular el buffer de cada centroid, sin embargo, primeros vamos a proyectar nuestros datos para UTM con un usado codigo llamado EPSG (European Petroleum Survey Group), como muestra este blog \href{https://cafegeodesico.blogspot.com/2011/12/que-son-los-codigos-epsg.html}{cafe geodesico}. Asi cada provincia podria tener un EPSG diferente, para simplificar este curso, utilizaremos el codigo epsg 5346.
+
+Para transformar nuestros datos, tenemos que:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{dft <-}\StringTok{ }\KeywordTok{st_transform}\NormalTok{(cent, }\DecValTok{5346}\NormalTok{)}
+\NormalTok{dft}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Simple feature collection with 23 features and 8 fields
+## geometry type:  POINT
+## dimension:      XY
+## bbox:           xmin: 3879876 ymin: 4569475 xmax: 5331263 ymax: 7419288
+## epsg (SRID):    5346
+## proj4string:    +proj=tmerc +lat_0=-90 +lon_0=-63 +k=1 +x_0=4500000 +y_0=0 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs
+## # A tibble: 23 x 9
+##    entidad objeto fna   gna   nam   in1   fdc   sag  
+##      <int> <chr>  <chr> <chr> <chr> <chr> <chr> <chr>
+##  1       0 Provi~ Ciud~ Ciud~ Ciud~ 02    Geog~ IGN  
+##  2       0 Provi~ del ~ Prov~ Neuq~ 58    Geog~ IGN  
+##  3       0 Provi~ de L~ Prov~ La P~ 42    Geog~ IGN  
+##  4       0 Provi~ de M~ Prov~ Mend~ 50    Geog~ IGN  
+##  5       0 Provi~ de S~ Prov~ San ~ 74    Geog~ IGN  
+##  6       0 Provi~ de C~ Prov~ Córd~ 14    Geog~ IGN  
+##  7       0 Provi~ de S~ Prov~ Sant~ 82    Geog~ IGN  
+##  8       0 Provi~ de E~ Prov~ Entr~ 30    Geog~ IGN  
+##  9       0 Provi~ de S~ Prov~ San ~ 70    Geog~ IGN  
+## 10       0 Provi~ de L~ Prov~ La R~ 46    Geog~ IGN  
+## # ... with 13 more rows, and 1 more variable: geometry <POINT [m]>
+\end{verbatim}
+
+Luego, calculamos el buffer, que puede tener una distancia constante, o una distancia variable:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{dft_pro <-}\StringTok{ }\KeywordTok{st_buffer}\NormalTok{(}\DataTypeTok{x =}\NormalTok{ dft, }\DataTypeTok{dist =} \DecValTok{100000}\NormalTok{) }\CommentTok{# 100 km}
+\KeywordTok{plot}\NormalTok{(dft_pro}\OperatorTok{$}\NormalTok{geometry, }\DataTypeTok{axes =}\NormalTok{ T)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-53-1.pdf}
+
+\textbf{Macanudo /Bacan / barbaro / Chevere / Da Ora / Splendid / Cool!}
+
+Podemos calcular perfectamente un buffer con una distancia variable\ldots{}..
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{dft_pro <-}\StringTok{ }\KeywordTok{st_buffer}\NormalTok{(}\DataTypeTok{x =}\NormalTok{ dft, }
+                     \DataTypeTok{dist =} \KeywordTok{rnorm}\NormalTok{(}\DataTypeTok{n =} \KeywordTok{nrow}\NormalTok{(dft), }\DataTypeTok{mean =} \DecValTok{100000}\NormalTok{, }\DataTypeTok{sd =} \DecValTok{50000}\NormalTok{)) }\CommentTok{# 100 km}
+\KeywordTok{plot}\NormalTok{(dft_pro}\OperatorTok{$}\NormalTok{geometry, }\DataTypeTok{axes =}\NormalTok{ T)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-54-1.pdf}
+
+Con este grafico hemos ploteado un buffer que tiene un comprimento alteatorio pero con una media de 100 km y un desvio padrao de 50 km, para marcar bien las posibilidades\ldots{}.
+
+Honestamente, puedes hacer muuuchas cosas.
+
+lo que mas me ha asombrado / shocked / chocado / con sf, es que el processo de gridding de \href{https://rdrr.io/cran/vein/man/emis_grid.html}{VEIN} en qgis demoraba 10 minutos, pero usando sf rn R, demora \textbf{10 minutos}
+Pero ahora vamos a leer datos meteorologicos y climaticos en grillas (RASTER)
+(next chpater)
 
 \hypertarget{taller-raster-y-cubos-de-datos-vectoriales-aplicacion-de-software-de-informacion-geografica-y-modelado-no-terminado}{%
 \chapter{Taller RASTER Y CUBOS DE DATOS VECTORIALES: Aplicación de software de información geográfica y modelado (no terminado)}\label{taller-raster-y-cubos-de-datos-vectoriales-aplicacion-de-software-de-informacion-geografica-y-modelado-no-terminado}}
@@ -1264,7 +1496,7 @@ f(x) = 1/( (2 \pi) \sigma) e^-((x - \mu)^2/(2 \sigma^2)^0.5 )
 
 Vamos a ver un ejemplo:
 
-\includegraphics[height=1.5\textheight]{bookdown-demo_files/figure-latex/unnamed-chunk-43-1}
+\includegraphics[height=1.5\textheight]{bookdown-demo_files/figure-latex/unnamed-chunk-56-1}
 
 \hypertarget{efecto-de-la-contaminacion}{%
 \section{Efecto de la contaminacion}\label{efecto-de-la-contaminacion}}
@@ -1288,7 +1520,7 @@ RR = exp(\beta_i \cdot \delta X_i)
 Que indica el riesgo relativo dada un cambio en la variable, por ejemplo, si se incrementan las concentraciones de PM10 en 50 ug/m3, el riesgo de mortalidad respiratoria aumenta 7\%. Aplicando este porcentaje sobre la poblacion es posible calcular la mortalidad anual asociada a la contaminacion. Vamos a ver valores reales para Argentina y Chile \citep{rosana}.
 
 \begin{figure}
-\includegraphics[width=11.44in,height=1.8\textheight]{figs/rosana1} \caption{Riesgo relativo en mortalidad por incremento de 1 ppm de CO (Abrutzky et al., 2013)}\label{fig:unnamed-chunk-44}
+\includegraphics[width=11.44in,height=1.8\textheight]{figs/rosana1} \caption{Riesgo relativo en mortalidad por incremento de 1 ppm de CO (Abrutzky et al., 2013)}\label{fig:unnamed-chunk-57}
 \end{figure}
 
 \hypertarget{efecto-de-la-temperatura}{%
@@ -1297,7 +1529,7 @@ Que indica el riesgo relativo dada un cambio en la variable, por ejemplo, si se 
 Puede se utilizada la misma metodologia pero considerando variables meteorologicas en este caso. Un trabajo muy interesante recientemente publicado por el grupo de Paulo Saliva es el efecto de la temperatura en diferentes ciudades del mundo \citep{GASPARRINI2015369}.
 
 \begin{figure}
-\includegraphics[width=18.97in,height=1.8\textheight]{figs/temp1} \caption{Riesgo relativo en mortalidad por incremento de 1 ppm de CO (Abrutzky et al., 2013)}\label{fig:unnamed-chunk-45}
+\includegraphics[width=18.97in,height=1.8\textheight]{figs/temp1} \caption{Riesgo relativo en mortalidad por incremento de 1 ppm de CO (Abrutzky et al., 2013)}\label{fig:unnamed-chunk-58}
 \end{figure}
 
 \bibliography{book.bib,packages.bib}

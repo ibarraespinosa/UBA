@@ -220,9 +220,9 @@ De todas maneras, el campo `fna` tiene muchas veces la pabra "Provincia", camos 
 df$fna <- gsub(pattern = "Provincia ", replacement = "", x = df$fna)
 ```
 
+La siguiente linea de codigo es muy barbara / da hora / cool / la raja. Corran!
 
-
-```{r}
+```{r eval = FALSE}
 library(mapview)
 mapview(df, zcol = "fna", legend = T, alpha = 0.8)
 ```

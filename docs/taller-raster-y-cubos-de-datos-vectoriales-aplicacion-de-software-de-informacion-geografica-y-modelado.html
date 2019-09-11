@@ -208,7 +208,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="taller-raster-y-cubos-de-datos-vectoriales-aplicacion-de-software-de-informacion-geografica-y-modelado" class="section level1">
 <h1><span class="header-section-number">Chapter 4</span> Taller RASTER Y CUBOS DE DATOS VECTORIALES: Aplicación de software de información geográfica y modelado</h1>
-<p>gracias Amanda Rehbein &lt;3</p>
+<p>gracias Amanda Rehbein &lt;3 (<a href="mailto:amanda.rehbein@usp.br" class="email">amanda.rehbein@usp.br</a>)</p>
 <p><a href="https://r-spatial.github.io/stars/">Raster</a> son informacion espaciales en una grilla espacial. En general, la informacion de las frillas tiene una distancia homogenea, Por ejemplo, vea las siguientes figuras:</p>
 <p><img src="figs/cube1.png" /></p>
 <p><img src="figs/cube2.png" /></p>
@@ -230,45 +230,121 @@ Por lo tanto, <code>stars</code> y <code>raster</code> tienen conexiones para le
 <li><a href="https://gdal.org/drivers/raster/xyz.html">XYZ</a></li>
 </ul>
 <p>Vamos meterle manos a la obra, vamos a nadar en el mundo multidimensional de los raster y si no saben nadar aprenderan como los pajaros que aprenden ante la subita e inherente necesidada vital de sobrevivir.</p>
+<p>Antes de abrir los datos con los programas, vamos a ver que vamos tenemos</p>
+<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb43-1" data-line-number="1"><span class="kw">library</span>(ncdf4)</a>
+<a class="sourceLine" id="cb43-2" data-line-number="2"><span class="kw">nc_open</span>(<span class="st">&quot;dados/pr_Amon_HadGEM2-ES_historical_r1i1p1_DJF_1985-2004.nc&quot;</span>)</a></code></pre></div>
+<pre><code>## File dados/pr_Amon_HadGEM2-ES_historical_r1i1p1_DJF_1985-2004.nc (NC_FORMAT_CLASSIC):
+## 
+##      4 variables (excluding dimension variables):
+##         double lon_bnds[bnds,lon]   
+##         double lat_bnds[bnds,lat]   
+##         double time_bnds[bnds,time]   
+##         double pr[lon,lat,time]   
+##             standard_name: precipitation_flux
+##             long_name: Precipitation
+##             units: kg m-2 s-1
+##             _FillValue: 1.00000002004088e+20
+##             missing_value: 1.00000002004088e+20
+##             comment: at surface; includes both liquid and solid phases from all types of clouds (both large-scale and convective)
+##             original_name: mo: m01s05i216
+##             history: 2011-03-22T15:05:23 out-of-bounds adjustments: (-1e-07 &lt;= x &lt; 0.0) =&gt; set to 0.0 2011-03-22T15:05:23Z altered by CMOR: replaced missing value flag (-1.07374e+09) with standard missing value (1e+20).
+##             cell_methods: time: mean
+##             associated_files: baseURL: http://cmip-pcmdi.llnl.gov/CMIP5/dataLocation gridspecFile: gridspec_atmos_fx_HadGEM2-ES_historical_r0i0p0.nc areacella: areacella_fx_HadGEM2-ES_historical_r0i0p0.nc
+## 
+##      4 dimensions:
+##         lon  Size:192
+##             standard_name: longitude
+##             long_name: longitude
+##             units: degrees_east
+##             axis: X
+##             bounds: lon_bnds
+##         bnds  Size:2
+##         lat  Size:145
+##             standard_name: latitude
+##             long_name: latitude
+##             units: degrees_north
+##             axis: Y
+##             bounds: lat_bnds
+##         time  Size:19   *** is unlimited ***
+##             standard_name: time
+##             long_name: time
+##             bounds: time_bnds
+##             units: days since 1859-12-1 00:00:00
+##             calendar: 360_day
+##             axis: T
+## 
+##     30 global attributes:
+##         CDI: Climate Data Interface version ?? (http://mpimet.mpg.de/cdi)
+##         Conventions: CF-1.4
+##         history: Sun Sep 08 00:37:13 2019: cdo selmon,1 tmp_SELTIME_SEASSUM_pr_Amon_HadGEM2-ES_historical_r1i1p1_198412-200511.nc pr_Amon_HadGEM2-ES_historical_r1i1p1_DJF_1986-2004.nc
+## Sun Sep 08 00:36:18 2019: cdo selyear,1986,1987,1988,1989,1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004 tmp_SEASSUM_pr_Amon_HadGEM2-ES_historical_r1i1p1_198412-200511.nc tmp_SELTIME_SEASSUM_pr_Amon_HadGEM2-ES_historical_r1i1p1_198412-200511.nc
+## Sun Sep 08 00:33:38 2019: cdo -b 64 seassum pr_Amon_HadGEM2-ES_historical_r1i1p1_198412-200511.nc tmp_SEASSUM_pr_Amon_HadGEM2-ES_historical_r1i1p1_198412-200511.nc
+## MOHC pp to CMOR/NetCDF convertor (version 1.7.0) 2011-03-22T15:05:17Z CMOR rewrote data to comply with CF standards and CMIP5 requirements.
+##         source: HadGEM2-ES (2009) atmosphere: HadGAM2 (N96L38); ocean: HadGOM2 (lat: 1.0-0.3 lon: 1.0 L40); land-surface/vegetation: MOSES2 and TRIFFID; tropospheric chemistry: UKCA; ocean biogeochemistry: diat-HadOCC
+##         institution: Met Office Hadley Centre, Fitzroy Road, Exeter, Devon, EX1 3PB, UK, (http://www.metoffice.gov.uk)
+##         institute_id: MOHC
+##         experiment_id: historical
+##         model_id: HadGEM2-ES
+##         forcing: GHG, SA, Oz, LU, Sl, Vl, BC, OC, (GHG = CO2, N2O, CH4, CFCs)
+##         parent_experiment_id: piControl
+##         parent_experiment_rip: r1i1p1
+##         branch_time: 0
+##         contact: chris.d.jones@metoffice.gov.uk, michael.sanderson@metoffice.gov.uk
+##         references: Bellouin N. et al, (2007) Improved representation of aerosols for HadGEM2. Meteorological Office Hadley Centre, Technical Note 73, March 2007; Collins W.J.  et al, (2008) Evaluation of the HadGEM2 model. Meteorological Office Hadley Centre, Technical Note 74,; Johns T.C. et al, (2006) The new Hadley Centre climate model HadGEM1: Evaluation of coupled simulations. Journal of Climate, American Meteorological Society, Vol. 19, No. 7, pages 1327-1353.; Martin G.M. et al, (2006) The physical properties of the atmosphere in the new Hadley Centre Global Environmental Model, HadGEM1 - Part 1: Model description and global climatology. Journal of Climate, American Meteorological Society, Vol. 19, No.7, pages 1274-1301.; Ringer M.A. et al, (2006) The physical properties of the atmosphere in the new Hadley Centre Global Environmental Model, HadGEM1 - Part 2: Aspects of variability and regional climate. Journal of Climate, American Meteorological Society, Vol. 19, No. 7, pages 1302-1326.
+##         initialization_method: 1
+##         physics_version: 1
+##         tracking_id: 15cb947c-34d2-4da2-b830-9dd0123d96d3
+##         mo_runid: ajhoh
+##         product: output
+##         experiment: historical
+##         frequency: mon
+##         creation_date: 2011-03-22T19:30:17Z
+##         project_id: CMIP5
+##         table_id: Table Amon (06 January 2011) 085e3f5c098d203b2fd5d296226f41b3
+##         title: HadGEM2-ES model output prepared for CMIP5 historical
+##         parent_experiment: pre-industrial control
+##         modeling_realm: atmos
+##         realization: 1
+##         cmor_version: 2.5.3
+##         CDO: Climate Data Operators version 1.7.2 (http://mpimet.mpg.de/cdo)</code></pre>
 <p><a href="https://www.ecmwf.int/en/forecasts/datasets/reanalysis-datasets/era5">ERA5!</a></p>
-<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb43-1" data-line-number="1"><span class="kw">library</span>(stars)</a>
-<a class="sourceLine" id="cb43-2" data-line-number="2">pcp_era5 &lt;-<span class="st"> </span><span class="kw">read_stars</span>(<span class="st">&quot;dados/pr_Amon_HadGEM2-ES_historical_r1i1p1_DJF_1985-2004.nc&quot;</span>)</a>
-<a class="sourceLine" id="cb43-3" data-line-number="3"><span class="kw">names</span>(pcp_era5)</a>
-<a class="sourceLine" id="cb43-4" data-line-number="4"><span class="kw">str</span>(pcp_era5)</a>
-<a class="sourceLine" id="cb43-5" data-line-number="5"><span class="kw">head</span>(pcp_era5)</a></code></pre></div>
+<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb45-1" data-line-number="1"><span class="kw">library</span>(stars)</a>
+<a class="sourceLine" id="cb45-2" data-line-number="2">pcp_era5 &lt;-<span class="st"> </span><span class="kw">read_stars</span>(<span class="st">&quot;dados/pr_Amon_HadGEM2-ES_historical_r1i1p1_DJF_1985-2004.nc&quot;</span>)</a>
+<a class="sourceLine" id="cb45-3" data-line-number="3"><span class="kw">names</span>(pcp_era5)</a>
+<a class="sourceLine" id="cb45-4" data-line-number="4"><span class="kw">str</span>(pcp_era5)</a>
+<a class="sourceLine" id="cb45-5" data-line-number="5"><span class="kw">head</span>(pcp_era5)</a></code></pre></div>
 <p>brick es como literalmente un ladrillo considerndo usualmente la dimension tempral como un ladrillo.</p>
 <p>como vemos, la funcion <code>str</code> entrega mucha informacion. Esta funcion no es comunmente usada, pero su archivo de documentacion es ?str</p>
 <p><a href="https://www.ecmwf.int/en/forecasts/datasets/reanalysis-datasets/era5">ERA5</a>, investiguen!</p>
 <p>Vamos a plotear estos datos!</p>
-<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb44-1" data-line-number="1"><span class="kw">library</span>(stars)</a></code></pre></div>
+<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb46-1" data-line-number="1"><span class="kw">library</span>(stars)</a></code></pre></div>
 <pre><code>## Loading required package: abind</code></pre>
-<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb46-1" data-line-number="1"><span class="kw">library</span>(cptcity)</a>
-<a class="sourceLine" id="cb46-2" data-line-number="2">pcp_era5 &lt;-<span class="st"> </span><span class="kw">read_stars</span>(<span class="st">&quot;dados/pr_Amon_HadGEM2-ES_historical_r1i1p1_DJF_1985-2004.nc&quot;</span>)</a>
-<a class="sourceLine" id="cb46-3" data-line-number="3"><span class="kw">plot</span>(pcp_era5,</a>
-<a class="sourceLine" id="cb46-4" data-line-number="4">    <span class="dt">col =</span> <span class="kw">lucky</span>(),</a>
-<a class="sourceLine" id="cb46-5" data-line-number="5">     <span class="dt">axes =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
-<pre><code>## Colour gradient: jjg_haxbyish_hx_120_110, number: 4143</code></pre>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-58-1.png" width="672" /></p>
+<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb48-1" data-line-number="1"><span class="kw">library</span>(cptcity)</a>
+<a class="sourceLine" id="cb48-2" data-line-number="2">pcp_era5 &lt;-<span class="st"> </span><span class="kw">read_stars</span>(<span class="st">&quot;dados/pr_Amon_HadGEM2-ES_historical_r1i1p1_DJF_1985-2004.nc&quot;</span>)</a>
+<a class="sourceLine" id="cb48-3" data-line-number="3"><span class="kw">plot</span>(pcp_era5,</a>
+<a class="sourceLine" id="cb48-4" data-line-number="4">    <span class="dt">col =</span> <span class="kw">lucky</span>(),</a>
+<a class="sourceLine" id="cb48-5" data-line-number="5">     <span class="dt">axes =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
+<pre><code>## Colour gradient: ma_fruit_fruit_01, number: 4842</code></pre>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-59-1.png" width="672" /></p>
 <p>Ahora vamos voy a mostrar todo un script para hacer graficos y analizar datos climaticos usando la libreria <code>raster</code></p>
-<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb48-1" data-line-number="1"><span class="co"># ------------------------------------#</span></a>
-<a class="sourceLine" id="cb48-2" data-line-number="2"><span class="co"># Precipitacion y temperatura medias  #</span></a>
-<a class="sourceLine" id="cb48-3" data-line-number="3"><span class="co">#         Verano y invierno           #</span></a>
-<a class="sourceLine" id="cb48-4" data-line-number="4"><span class="co">#       (very simple analysis)        #</span></a>
-<a class="sourceLine" id="cb48-5" data-line-number="5"><span class="co"># ------------------------------------#</span></a>
-<a class="sourceLine" id="cb48-6" data-line-number="6"></a>
-<a class="sourceLine" id="cb48-7" data-line-number="7"><span class="kw">library</span>(raster)</a></code></pre></div>
-<pre><code>## Loading required package: sp</code></pre>
-<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb50-1" data-line-number="1"><span class="kw">library</span>(cptcity)</a>
-<a class="sourceLine" id="cb50-2" data-line-number="2"></a>
-<a class="sourceLine" id="cb50-3" data-line-number="3">path &lt;-<span class="st"> &quot;dados&quot;</span></a>
-<a class="sourceLine" id="cb50-4" data-line-number="4"></a>
-<a class="sourceLine" id="cb50-5" data-line-number="5"><span class="co"># DJF - VERANO: ####</span></a>
+<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb50-1" data-line-number="1"><span class="co"># ------------------------------------#</span></a>
+<a class="sourceLine" id="cb50-2" data-line-number="2"><span class="co"># Precipitacion y temperatura medias  #</span></a>
+<a class="sourceLine" id="cb50-3" data-line-number="3"><span class="co">#         Verano y invierno           #</span></a>
+<a class="sourceLine" id="cb50-4" data-line-number="4"><span class="co">#       (very simple analysis)        #</span></a>
+<a class="sourceLine" id="cb50-5" data-line-number="5"><span class="co"># ------------------------------------#</span></a>
 <a class="sourceLine" id="cb50-6" data-line-number="6"></a>
-<a class="sourceLine" id="cb50-7" data-line-number="7"><span class="co"># Open the precipitation file:</span></a>
-<a class="sourceLine" id="cb50-8" data-line-number="8">pcp_era5 &lt;-<span class="st"> </span><span class="kw">brick</span>(<span class="st">&quot;dados/r_ERA5_pcp_DJF_1985-2004.nc&quot;</span>)</a></code></pre></div>
-<pre><code>## Loading required namespace: ncdf4</code></pre>
-<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb52-1" data-line-number="1"><span class="co"># Print information and metadata:</span></a>
-<a class="sourceLine" id="cb52-2" data-line-number="2">pcp_era5 <span class="co"># This file has 17 layers (years)</span></a></code></pre></div>
+<a class="sourceLine" id="cb50-7" data-line-number="7"><span class="kw">library</span>(raster)</a></code></pre></div>
+<pre><code>## Loading required package: sp</code></pre>
+<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb52-1" data-line-number="1"><span class="kw">library</span>(cptcity)</a>
+<a class="sourceLine" id="cb52-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb52-3" data-line-number="3">path &lt;-<span class="st"> &quot;dados&quot;</span></a>
+<a class="sourceLine" id="cb52-4" data-line-number="4"></a>
+<a class="sourceLine" id="cb52-5" data-line-number="5"><span class="co"># DJF - VERANO: ####</span></a>
+<a class="sourceLine" id="cb52-6" data-line-number="6"></a>
+<a class="sourceLine" id="cb52-7" data-line-number="7"><span class="co"># Open the precipitation file:</span></a>
+<a class="sourceLine" id="cb52-8" data-line-number="8">pcp_era5 &lt;-<span class="st"> </span><span class="kw">brick</span>(<span class="st">&quot;dados/r_ERA5_pcp_DJF_1985-2004.nc&quot;</span>)</a>
+<a class="sourceLine" id="cb52-9" data-line-number="9"><span class="co"># Print information and metadata:</span></a>
+<a class="sourceLine" id="cb52-10" data-line-number="10">pcp_era5 <span class="co"># This file has 17 layers (years)</span></a></code></pre></div>
 <pre><code>## class      : RasterBrick 
 ## dimensions : 145, 192, 27840, 21  (nrow, ncol, ncell, nlayers)
 ## resolution : 1.875, 1.25  (x, y)
@@ -280,18 +356,18 @@ Por lo tanto, <code>stars</code> y <code>raster</code> tienen conexiones para le
 ## varname    : mtpr</code></pre>
 <div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb54-1" data-line-number="1"><span class="co"># Plot the 1st time/year:</span></a>
 <a class="sourceLine" id="cb54-2" data-line-number="2"><span class="kw">plot</span>(pcp_era5[[<span class="dv">1</span>]]<span class="op">*</span><span class="dv">3600</span>)      <span class="co"># *3600 to obtain mm/h</span></a></code></pre></div>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-59-1.png" width="672" /></p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-60-1.png" width="672" /></p>
 <div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb55-1" data-line-number="1"><span class="co"># Calculate the mean:</span></a>
 <a class="sourceLine" id="cb55-2" data-line-number="2">mean_pcp_era &lt;-<span class="st"> </span><span class="kw">mean</span>(pcp_era5<span class="op">*</span><span class="dv">3600</span>)</a>
 <a class="sourceLine" id="cb55-3" data-line-number="3"></a>
 <a class="sourceLine" id="cb55-4" data-line-number="4"><span class="co"># Opening CMIP5 data model: HadGEM2-ES\</span></a>
 <a class="sourceLine" id="cb55-5" data-line-number="5">pcp_historical &lt;-<span class="st"> </span><span class="kw">brick</span>(<span class="st">&quot;dados/pr_Amon_HadGEM2-ES_historical_r1i1p1_DJF_1985-2004.nc&quot;</span>)</a>
 <a class="sourceLine" id="cb55-6" data-line-number="6"><span class="kw">plot</span>(pcp_historical[[<span class="dv">1</span>]]<span class="op">*</span><span class="dv">3600</span>)</a></code></pre></div>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-59-2.png" width="672" /></p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-60-2.png" width="672" /></p>
 <div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb56-1" data-line-number="1">mean_pcp_historical &lt;-<span class="st"> </span><span class="kw">mean</span>(pcp_historical<span class="op">*</span><span class="dv">3600</span>)</a>
 <a class="sourceLine" id="cb56-2" data-line-number="2"><span class="kw">plot</span>(mean_pcp_historical[[<span class="dv">1</span>]]<span class="op">*</span><span class="dv">3600</span>,</a>
 <a class="sourceLine" id="cb56-3" data-line-number="3">     <span class="dt">main =</span> <span class="st">&quot;HadGEM2-ES mean precipitation [mm/h] </span><span class="ch">\n</span><span class="st"> DJF (1985 - 2004)&quot;</span>)</a></code></pre></div>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-59-3.png" width="672" /></p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-60-3.png" width="672" /></p>
 <div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb57-1" data-line-number="1">a &lt;-<span class="st"> </span><span class="kw">spplot</span>(mean_pcp_era, <span class="dt">interpolate =</span> T,</a>
 <a class="sourceLine" id="cb57-2" data-line-number="2">            <span class="dt">main =</span> <span class="st">&quot;Observed Precipitation [mm/h] (ERA5) </span><span class="ch">\n</span><span class="st"> DJF (1985 - 2004)&quot;</span>,</a>
 <a class="sourceLine" id="cb57-3" data-line-number="3">            <span class="dt">at =</span> <span class="kw">seq</span>(<span class="dv">0</span>, <span class="dv">4</span>, <span class="fl">0.1</span>),</a>
@@ -301,7 +377,7 @@ Por lo tanto, <code>stars</code> y <code>raster</code> tienen conexiones para le
 <a class="sourceLine" id="cb57-7" data-line-number="7">            <span class="dt">at =</span> <span class="kw">seq</span>(<span class="dv">0</span>, <span class="dv">4</span>, <span class="fl">0.1</span>),</a>
 <a class="sourceLine" id="cb57-8" data-line-number="8">            <span class="dt">col.regions =</span> <span class="kw">cpt</span>(<span class="st">&quot;ncl_precip2_17lev&quot;</span>))</a>
 <a class="sourceLine" id="cb57-9" data-line-number="9">gridExtra<span class="op">::</span><span class="kw">grid.arrange</span>(a, b, <span class="dt">ncol =</span> <span class="dv">2</span>)</a></code></pre></div>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-59-4.png" width="672" /></p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-60-4.png" width="672" /></p>
 <p>Ahora vamos a ver la temperatura</p>
 <div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb58-1" data-line-number="1"><span class="co"># Temperature ####</span></a>
 <a class="sourceLine" id="cb58-2" data-line-number="2">t2m_era5 &lt;-<span class="st"> </span><span class="kw">brick</span>(<span class="st">&quot;dados/r_ERA5_t2m_DJF_1985-2004.nc&quot;</span>)</a>
@@ -316,12 +392,12 @@ Por lo tanto, <code>stars</code> y <code>raster</code> tienen conexiones para le
 ## Date/time  : 1986-01-01 01:06:28, 2004-01-01 01:06:28 (min, max)
 ## varname    : t2m</code></pre>
 <div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb60-1" data-line-number="1"><span class="kw">plot</span>(t2m_era5[[<span class="dv">1</span>]] <span class="op">-</span><span class="st"> </span><span class="fl">273.15</span>)      <span class="co"># -273.15 to obtain ºC</span></a></code></pre></div>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-60-1.png" width="672" /></p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-61-1.png" width="672" /></p>
 <div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb61-1" data-line-number="1">mean_t2m_era &lt;-<span class="st"> </span><span class="kw">mean</span>(t2m_era5 <span class="fl">-273.15</span>)</a>
 <a class="sourceLine" id="cb61-2" data-line-number="2"></a>
 <a class="sourceLine" id="cb61-3" data-line-number="3">t2m_historical &lt;-<span class="st"> </span><span class="kw">brick</span>(<span class="st">&quot;dados/tas_Amon_HadGEM2-ES_historical_r1i1p1_DJF_1985-2004.nc&quot;</span>)</a>
 <a class="sourceLine" id="cb61-4" data-line-number="4"><span class="kw">plot</span>(t2m_historical[[<span class="dv">1</span>]] <span class="op">-</span><span class="st"> </span><span class="fl">273.15</span>)</a></code></pre></div>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-60-2.png" width="672" /></p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-61-2.png" width="672" /></p>
 <div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb62-1" data-line-number="1">mean_t2m_historical &lt;-<span class="st"> </span><span class="kw">mean</span>(t2m_historical <span class="op">-</span><span class="st"> </span><span class="fl">273.15</span>)</a>
 <a class="sourceLine" id="cb62-2" data-line-number="2"></a>
 <a class="sourceLine" id="cb62-3" data-line-number="3">c &lt;-<span class="st"> </span><span class="kw">spplot</span>(mean_t2m_era,</a>
@@ -333,7 +409,7 @@ Por lo tanto, <code>stars</code> y <code>raster</code> tienen conexiones para le
 <a class="sourceLine" id="cb62-9" data-line-number="9">            <span class="dt">at =</span> <span class="kw">seq</span>(<span class="op">-</span><span class="dv">40</span>, <span class="dv">40</span>, <span class="dv">1</span>),</a>
 <a class="sourceLine" id="cb62-10" data-line-number="10">            <span class="dt">col.regions =</span> <span class="kw">cpt</span>(<span class="st">&quot;ncl_temp_diff_18lev&quot;</span>))</a>
 <a class="sourceLine" id="cb62-11" data-line-number="11">gridExtra<span class="op">::</span><span class="kw">grid.arrange</span>(c, d, <span class="dt">ncol =</span> <span class="dv">2</span>)</a></code></pre></div>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-60-3.png" width="672" /></p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-61-3.png" width="672" /></p>
 <div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb63-1" data-line-number="1"><span class="co"># Calculate the bias (how model is different from the observation):</span></a>
 <a class="sourceLine" id="cb63-2" data-line-number="2">pcp_bias &lt;-<span class="st"> </span>(mean_pcp_historical <span class="op">-</span><span class="st"> </span>mean_pcp_era)</a>
 <a class="sourceLine" id="cb63-3" data-line-number="3">t2m_bias &lt;-<span class="st"> </span>(mean_t2m_historical <span class="op">-</span><span class="st"> </span>mean_t2m_era)</a>
@@ -348,10 +424,10 @@ Por lo tanto, <code>stars</code> y <code>raster</code> tienen conexiones para le
 <a class="sourceLine" id="cb63-12" data-line-number="12">            <span class="dt">at =</span> <span class="kw">seq</span>(<span class="op">-</span><span class="dv">15</span>, <span class="dv">15</span>, <span class="dv">1</span>),</a>
 <a class="sourceLine" id="cb63-13" data-line-number="13">            <span class="dt">col.regions =</span> <span class="kw">cpt</span>(<span class="st">&quot;ncl_temp_diff_18lev&quot;</span>))</a>
 <a class="sourceLine" id="cb63-14" data-line-number="14">gridExtra<span class="op">::</span><span class="kw">grid.arrange</span>(f, g, <span class="dt">ncol =</span> <span class="dv">2</span>)</a></code></pre></div>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-60-4.png" width="672" /></p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-61-4.png" width="672" /></p>
 <div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb64-1" data-line-number="1">gridExtra<span class="op">::</span><span class="kw">grid.arrange</span>(a, b, f,</a>
 <a class="sourceLine" id="cb64-2" data-line-number="2">                        c, d, g,  <span class="dt">ncol =</span> <span class="dv">3</span>)</a></code></pre></div>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-60-5.png" width="672" /></p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-61-5.png" width="672" /></p>
 <div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb65-1" data-line-number="1"><span class="co"># JJA - invierno: ####</span></a>
 <a class="sourceLine" id="cb65-2" data-line-number="2"><span class="co"># Try it by your self.</span></a></code></pre></div>
 

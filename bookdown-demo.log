@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2019/dev/Debian) (preloaded format=xelatex 2019.8.22)  11 SEP 2019 08:42
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2019/dev/Debian) (preloaded format=xelatex 2019.8.22)  11 SEP 2019 08:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1431,28 +1431,121 @@ CTORIALES: APLICACIÓN DE SOFTWARE DE INFORMACIÓN GEOGRÁFICA Y MODELADO
  []
 
 [60]
-File: bookdown-demo_files/figure-latex/unnamed-chunk-58-1.pdf Graphic file (typ
-e pdf)
-<use bookdown-demo_files/figure-latex/unnamed-chunk-58-1.pdf>
+Overfull \hbox (117.0pt too wide) in paragraph at lines 1607--1607
+[]\TU/lmtt/m/n/10 ## File dados/pr_Amon_HadGEM2-ES_historical_r1i1p1_DJF_1985-2
+004.nc (NC_FORMAT_CLASSIC):[] 
+ []
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+
+Overfull \hbox (348.0pt too wide) in paragraph at lines 1607--1607
+[]\TU/lmtt/m/n/10 ##             comment: at surface; includes both liquid and 
+solid phases from all types of clouds (both large-scale and convective)[] 
+ []
+
+
+Overfull \hbox (820.5pt too wide) in paragraph at lines 1607--1607
+[]\TU/lmtt/m/n/10 ##             history: 2011-03-22T15:05:23 out-of-bounds adj
+ustments: (-1e-07 <= x < 0.0) => set to 0.0 2011-03-22T15:05:23Z altered by CMO
+R: replaced missing value flag (-1.07374e+09) with standard missing value (1e+2
+0).[] 
+ []
+
+
+Overfull \hbox (741.75pt too wide) in paragraph at lines 1607--1607
+[]\TU/lmtt/m/n/10 ##             associated_files: baseURL: http://cmip-pcmdi.l
+lnl.gov/CMIP5/dataLocation gridspecFile: gridspec_atmos_fx_HadGEM2-ES_historica
+l_r0i0p0.nc areacella: areacella_fx_HadGEM2-ES_historical_r0i0p0.nc[] 
+ []
 
 [61]
-Overfull \hbox (54.0pt too wide) in paragraph at lines 1594--1594
-[]\TU/lmtt/m/n/10 ## extent     : -0.9375, 359.0625, -90.625, 90.625  (xmin, xm
-ax, ymin, ymax)[] 
+Overfull \hbox (54.0pt too wide) in paragraph at lines 1607--1607
+[]\TU/lmtt/m/n/10 ##         CDI: Climate Data Interface version ?? (http://mpi
+met.mpg.de/cdi)[] 
  []
 
 
-Overfull \hbox (22.5pt too wide) in paragraph at lines 1594--1594
-[]\TU/lmtt/m/n/10 ## crs        : +proj=longlat +datum=WGS84 +ellps=WGS84 +towg
-s84=0,0,0[] 
+Overfull \hbox (631.5pt too wide) in paragraph at lines 1607--1607
+[]\TU/lmtt/m/n/10 ##         history: Sun Sep 08 00:37:13 2019: cdo selmon,1 tm
+p_SELTIME_SEASSUM_pr_Amon_HadGEM2-ES_historical_r1i1p1_198412-200511.nc pr_Amon
+_HadGEM2-ES_historical_r1i1p1_DJF_1986-2004.nc[] 
  []
 
 
-Overfull \hbox (54.0pt too wide) in paragraph at lines 1594--1594
-[]\TU/lmtt/m/n/10 ## source     : /home/sergio/Documents/UBA/dados/r_ERA5_pcp_D
-JF_1985-2004.nc[] 
+Overfull \hbox (1098.75pt too wide) in paragraph at lines 1607--1607
+[]\TU/lmtt/m/n/10 ## Sun Sep 08 00:36:18 2019: cdo selyear,1986,1987,1988,1989,
+1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004 tmp_
+SEASSUM_pr_Amon_HadGEM2-ES_historical_r1i1p1_198412-200511.nc tmp_SELTIME_SEASS
+UM_pr_Amon_HadGEM2-ES_historical_r1i1p1_198412-200511.nc[] 
+ []
+
+
+Overfull \hbox (526.5pt too wide) in paragraph at lines 1607--1607
+[]\TU/lmtt/m/n/10 ## Sun Sep 08 00:33:38 2019: cdo -b 64 seassum pr_Amon_HadGEM
+2-ES_historical_r1i1p1_198412-200511.nc tmp_SEASSUM_pr_Amon_HadGEM2-ES_historic
+al_r1i1p1_198412-200511.nc[] 
+ []
+
+
+Overfull \hbox (400.5pt too wide) in paragraph at lines 1607--1607
+[]\TU/lmtt/m/n/10 ## MOHC pp to CMOR/NetCDF convertor (version 1.7.0) 2011-03-2
+2T15:05:17Z CMOR rewrote data to comply with CF standards and CMIP5 requirement
+s.[] 
+ []
+
+
+Overfull \hbox (810.0pt too wide) in paragraph at lines 1607--1607
+[]\TU/lmtt/m/n/10 ##         source: HadGEM2-ES (2009) atmosphere: HadGAM2 (N96
+L38); ocean: HadGOM2 (lat: 1.0-0.3 lon: 1.0 L40); land-surface/vegetation: MOSE
+S2 and TRIFFID; tropospheric chemistry: UKCA; ocean biogeochemistry: diat-HadOC
+C[] 
+ []
+
+
+Overfull \hbox (290.25pt too wide) in paragraph at lines 1607--1607
+[]\TU/lmtt/m/n/10 ##         institution: Met Office Hadley Centre, Fitzroy Roa
+d, Exeter, Devon, EX1 3PB, UK, (http://www.metoffice.gov.uk)[] 
+ []
+
+
+Overfull \hbox (75.0pt too wide) in paragraph at lines 1607--1607
+[]\TU/lmtt/m/n/10 ##         forcing: GHG, SA, Oz, LU, Sl, Vl, BC, OC, (GHG = C
+O2, N2O, CH4, CFCs)[] 
+ []
+
+
+Overfull \hbox (106.5pt too wide) in paragraph at lines 1607--1607
+[]\TU/lmtt/m/n/10 ##         contact: chris.d.jones@metoffice.gov.uk, michael.s
+anderson@metoffice.gov.uk[] 
+ []
+
+
+Overfull \hbox (4968.0pt too wide) in paragraph at lines 1607--1607
+[]\TU/lmtt/m/n/10 ##         references: Bellouin N. et al, (2007) Improved rep
+resentation of aerosols for HadGEM2. Meteorological Office Hadley Centre, Techn
+ical Note 73, March 2007; Collins W.J.  et al, (2008) Evaluation of the HadGEM2
+ model. Meteorological Office Hadley Centre, Technical Note 74,; Johns T.C. et 
+al, (2006) The new Hadley Centre climate model HadGEM1: Evaluation of coupled s
+imulations. Journal of Climate, American Meteorological Society, Vol. 19, No. 7
+, pages 1327-1353.; Martin G.M. et al, (2006) The physical properties of the at
+mosphere in the new Hadley Centre Global Environmental Model, HadGEM1 - Part 1:
+ Model description and global climatology. Journal of Climate, American Meteoro
+logical Society, Vol. 19, No.7, pages 1274-1301.; Ringer M.A. et al, (2006) The
+ physical properties of the atmosphere in the new Hadley Centre Global Environm
+ental Model, HadGEM1 - Part 2: Aspects of variability and regional climate. Jou
+rnal of Climate, American Meteorological Society, Vol. 19, No. 7, pages 1302-13
+26.[] 
+ []
+
+
+Overfull \hbox (85.5pt too wide) in paragraph at lines 1607--1607
+[]\TU/lmtt/m/n/10 ##         table_id: Table Amon (06 January 2011) 085e3f5c098
+d203b2fd5d296226f41b3[] 
+ []
+
+
+Overfull \hbox (27.75pt too wide) in paragraph at lines 1607--1607
+[]\TU/lmtt/m/n/10 ##         title: HadGEM2-ES model output prepared for CMIP5 
+historical[] 
  []
 
 
@@ -1462,35 +1555,33 @@ CTORIALES: APLICACIÓN DE SOFTWARE DE INFORMACIÓN GEOGRÁFICA Y MODELADO
  []
 
 [62]
-Overfull \hbox (1487.25pt too wide) in paragraph at lines 1594--1594
-[]\TU/lmtt/m/n/10 ## names      : X1984.01.16.12.06.28, X1985.01.01.00.06.28, X
-1986.01.01.01.06.28, X1987.01.01.01.06.28, X1988.01.01.01.06.28, X1989.01.01.01
-.06.28, X1990.01.01.01.06.28, X1991.01.01.01.06.28, X1992.01.01.01.06.28, X1993
-.01.01.01.06.28, X1994.01.01.01.06.28, X1995.01.01.01.06.28, X1996.01.01.01.06.
-28, X1997.01.01.01.06.28, X1998.01.01.01.06.28, ...[] 
- []
-
-
-Overfull \hbox (6.75pt too wide) in paragraph at lines 1594--1594
-[]\TU/lmtt/m/n/10 ## Date/time  : 1984-01-16 12:06:28, 2005-12-01 01:06:28 (min
-, max)[] 
+Overfull \hbox (69.75pt too wide) in paragraph at lines 1607--1607
+[]\TU/lmtt/m/n/10 ##         CDO: Climate Data Operators version 1.7.2 (http://
+mpimet.mpg.de/cdo)[] 
  []
 
 File: bookdown-demo_files/figure-latex/unnamed-chunk-59-1.pdf Graphic file (typ
 e pdf)
 <use bookdown-demo_files/figure-latex/unnamed-chunk-59-1.pdf>
-File: bookdown-demo_files/figure-latex/unnamed-chunk-59-2.pdf Graphic file (typ
-e pdf)
-<use bookdown-demo_files/figure-latex/unnamed-chunk-59-2.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [63]
-File: bookdown-demo_files/figure-latex/unnamed-chunk-59-3.pdf Graphic file (typ
-e pdf)
-<use bookdown-demo_files/figure-latex/unnamed-chunk-59-3.pdf>
+Overfull \hbox (54.0pt too wide) in paragraph at lines 1680--1680
+[]\TU/lmtt/m/n/10 ## extent     : -0.9375, 359.0625, -90.625, 90.625  (xmin, xm
+ax, ymin, ymax)[] 
+ []
 
-Underfull \vbox (badness 1303) detected at line 1640
+
+Overfull \hbox (22.5pt too wide) in paragraph at lines 1680--1680
+[]\TU/lmtt/m/n/10 ## crs        : +proj=longlat +datum=WGS84 +ellps=WGS84 +towg
+s84=0,0,0[] 
+ []
+
+
+Overfull \hbox (54.0pt too wide) in paragraph at lines 1680--1680
+[]\TU/lmtt/m/n/10 ## source     : /home/sergio/Documents/UBA/dados/r_ERA5_pcp_D
+JF_1985-2004.nc[] 
  []
 
 
@@ -1500,52 +1591,37 @@ CTORIALES: APLICACIÓN DE SOFTWARE DE INFORMACIÓN GEOGRÁFICA Y MODELADO
  []
 
 [64]
-File: bookdown-demo_files/figure-latex/unnamed-chunk-59-4.pdf Graphic file (typ
-e pdf)
-<use bookdown-demo_files/figure-latex/unnamed-chunk-59-4.pdf>
-
-Overfull \hbox (54.0pt too wide) in paragraph at lines 1664--1664
-[]\TU/lmtt/m/n/10 ## extent     : -0.9375, 359.0625, -90.625, 90.625  (xmin, xm
-ax, ymin, ymax)[] 
+Overfull \hbox (1487.25pt too wide) in paragraph at lines 1680--1680
+[]\TU/lmtt/m/n/10 ## names      : X1984.01.16.12.06.28, X1985.01.01.00.06.28, X
+1986.01.01.01.06.28, X1987.01.01.01.06.28, X1988.01.01.01.06.28, X1989.01.01.01
+.06.28, X1990.01.01.01.06.28, X1991.01.01.01.06.28, X1992.01.01.01.06.28, X1993
+.01.01.01.06.28, X1994.01.01.01.06.28, X1995.01.01.01.06.28, X1996.01.01.01.06.
+28, X1997.01.01.01.06.28, X1998.01.01.01.06.28, ...[] 
  []
 
 
-Overfull \hbox (22.5pt too wide) in paragraph at lines 1664--1664
-[]\TU/lmtt/m/n/10 ## crs        : +proj=longlat +datum=WGS84 +ellps=WGS84 +towg
-s84=0,0,0[] 
- []
-
-
-Overfull \hbox (54.0pt too wide) in paragraph at lines 1664--1664
-[]\TU/lmtt/m/n/10 ## source     : /home/sergio/Documents/UBA/dados/r_ERA5_t2m_D
-JF_1985-2004.nc[] 
- []
-
-
-Overfull \hbox (1487.25pt too wide) in paragraph at lines 1664--1664
-[]\TU/lmtt/m/n/10 ## names      : X1986.01.01.01.06.28, X1987.01.01.01.06.28, X
-1988.01.01.01.06.28, X1989.01.01.01.06.28, X1990.01.01.01.06.28, X1991.01.01.01
-.06.28, X1992.01.01.01.06.28, X1993.01.01.01.06.28, X1994.01.01.01.06.28, X1995
-.01.01.01.06.28, X1996.01.01.01.06.28, X1997.01.01.01.06.28, X1998.01.01.01.06.
-28, X1999.01.01.01.06.28, X2000.01.01.01.06.28, ...[] 
- []
-
-
-Overfull \hbox (6.75pt too wide) in paragraph at lines 1664--1664
-[]\TU/lmtt/m/n/10 ## Date/time  : 1986-01-01 01:06:28, 2004-01-01 01:06:28 (min
+Overfull \hbox (6.75pt too wide) in paragraph at lines 1680--1680
+[]\TU/lmtt/m/n/10 ## Date/time  : 1984-01-16 12:06:28, 2005-12-01 01:06:28 (min
 , max)[] 
  []
 
 File: bookdown-demo_files/figure-latex/unnamed-chunk-60-1.pdf Graphic file (typ
 e pdf)
 <use bookdown-demo_files/figure-latex/unnamed-chunk-60-1.pdf>
-[65]
 File: bookdown-demo_files/figure-latex/unnamed-chunk-60-2.pdf Graphic file (typ
 e pdf)
 <use bookdown-demo_files/figure-latex/unnamed-chunk-60-2.pdf>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[65]
 File: bookdown-demo_files/figure-latex/unnamed-chunk-60-3.pdf Graphic file (typ
 e pdf)
 <use bookdown-demo_files/figure-latex/unnamed-chunk-60-3.pdf>
+
+Underfull \vbox (badness 1303) detected at line 1726
+ []
+
 
 Overfull \hbox (377.85576pt too wide) has occurred while \output is active
 \TU/lmr/m/n/10 66 \TU/lmr/m/sl/10 CHAPTER 4.  TALLER RASTER Y CUBOS DE DATOS VE
@@ -1556,68 +1632,121 @@ CTORIALES: APLICACIÓN DE SOFTWARE DE INFORMACIÓN GEOGRÁFICA Y MODELADO
 File: bookdown-demo_files/figure-latex/unnamed-chunk-60-4.pdf Graphic file (typ
 e pdf)
 <use bookdown-demo_files/figure-latex/unnamed-chunk-60-4.pdf>
-File: bookdown-demo_files/figure-latex/unnamed-chunk-60-5.pdf Graphic file (typ
+
+Overfull \hbox (54.0pt too wide) in paragraph at lines 1750--1750
+[]\TU/lmtt/m/n/10 ## extent     : -0.9375, 359.0625, -90.625, 90.625  (xmin, xm
+ax, ymin, ymax)[] 
+ []
+
+
+Overfull \hbox (22.5pt too wide) in paragraph at lines 1750--1750
+[]\TU/lmtt/m/n/10 ## crs        : +proj=longlat +datum=WGS84 +ellps=WGS84 +towg
+s84=0,0,0[] 
+ []
+
+
+Overfull \hbox (54.0pt too wide) in paragraph at lines 1750--1750
+[]\TU/lmtt/m/n/10 ## source     : /home/sergio/Documents/UBA/dados/r_ERA5_t2m_D
+JF_1985-2004.nc[] 
+ []
+
+
+Overfull \hbox (1487.25pt too wide) in paragraph at lines 1750--1750
+[]\TU/lmtt/m/n/10 ## names      : X1986.01.01.01.06.28, X1987.01.01.01.06.28, X
+1988.01.01.01.06.28, X1989.01.01.01.06.28, X1990.01.01.01.06.28, X1991.01.01.01
+.06.28, X1992.01.01.01.06.28, X1993.01.01.01.06.28, X1994.01.01.01.06.28, X1995
+.01.01.01.06.28, X1996.01.01.01.06.28, X1997.01.01.01.06.28, X1998.01.01.01.06.
+28, X1999.01.01.01.06.28, X2000.01.01.01.06.28, ...[] 
+ []
+
+
+Overfull \hbox (6.75pt too wide) in paragraph at lines 1750--1750
+[]\TU/lmtt/m/n/10 ## Date/time  : 1986-01-01 01:06:28, 2004-01-01 01:06:28 (min
+, max)[] 
+ []
+
+File: bookdown-demo_files/figure-latex/unnamed-chunk-61-1.pdf Graphic file (typ
 e pdf)
-<use bookdown-demo_files/figure-latex/unnamed-chunk-60-5.pdf>
+<use bookdown-demo_files/figure-latex/unnamed-chunk-61-1.pdf>
 [67]
+File: bookdown-demo_files/figure-latex/unnamed-chunk-61-2.pdf Graphic file (typ
+e pdf)
+<use bookdown-demo_files/figure-latex/unnamed-chunk-61-2.pdf>
+File: bookdown-demo_files/figure-latex/unnamed-chunk-61-3.pdf Graphic file (typ
+e pdf)
+<use bookdown-demo_files/figure-latex/unnamed-chunk-61-3.pdf>
+
 Overfull \hbox (377.85576pt too wide) has occurred while \output is active
 \TU/lmr/m/n/10 68 \TU/lmr/m/sl/10 CHAPTER 4.  TALLER RASTER Y CUBOS DE DATOS VE
 CTORIALES: APLICACIÓN DE SOFTWARE DE INFORMACIÓN GEOGRÁFICA Y MODELADO
  []
 
-[68
+[68]
+File: bookdown-demo_files/figure-latex/unnamed-chunk-61-4.pdf Graphic file (typ
+e pdf)
+<use bookdown-demo_files/figure-latex/unnamed-chunk-61-4.pdf>
+File: bookdown-demo_files/figure-latex/unnamed-chunk-61-5.pdf Graphic file (typ
+e pdf)
+<use bookdown-demo_files/figure-latex/unnamed-chunk-61-5.pdf>
+[69]
+Overfull \hbox (377.85576pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 70 \TU/lmr/m/sl/10 CHAPTER 4.  TALLER RASTER Y CUBOS DE DATOS VE
+CTORIALES: APLICACIÓN DE SOFTWARE DE INFORMACIÓN GEOGRÁFICA Y MODELADO
+ []
+
+[70
 
 ]
 Chapter 5.
-[69]
-File: bookdown-demo_files/figure-latex/unnamed-chunk-61-1.pdf Graphic file (typ
+[71]
+File: bookdown-demo_files/figure-latex/unnamed-chunk-62-1.pdf Graphic file (typ
 e pdf)
-<use bookdown-demo_files/figure-latex/unnamed-chunk-61-1.pdf>
+<use bookdown-demo_files/figure-latex/unnamed-chunk-62-1.pdf>
 
 Overfull \hbox (160.64905pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 70 \TU/lmr/m/sl/10 CHAPTER 5.  ESTUDIOS DE SERIES DE TIEMPO PARA
+\TU/lmr/m/n/10 72 \TU/lmr/m/sl/10 CHAPTER 5.  ESTUDIOS DE SERIES DE TIEMPO PARA
  ASOCIAR SALUD Y VARIABLES AMBIENTALES
  []
 
-[70]
+[72]
 File: figs/rosana1.png Graphic file (type bmp)
 <figs/rosana1.png>
 
-Overfull \hbox (481.77654pt too wide) in paragraph at lines 1810--1810
+Overfull \hbox (481.77654pt too wide) in paragraph at lines 1896--1896
 [][] 
  []
 
 File: figs/temp1.png Graphic file (type bmp)
 <figs/temp1.png>
 
-Overfull \hbox (1026.0179pt too wide) in paragraph at lines 1819--1819
+Overfull \hbox (1026.0179pt too wide) in paragraph at lines 1905--1905
 [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 213.15956pt on input line 1820.
+LaTeX Warning: Float too large for page by 213.15956pt on input line 1906.
 
-(./bookdown-demo.bbl [71]
-Overfull \hbox (160.64905pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 72 \TU/lmr/m/sl/10 CHAPTER 5.  ESTUDIOS DE SERIES DE TIEMPO PARA
- ASOCIAR SALUD Y VARIABLES AMBIENTALES
- []
-
-[72] [73]
+(./bookdown-demo.bbl [73]
 Overfull \hbox (160.64905pt too wide) has occurred while \output is active
 \TU/lmr/m/n/10 74 \TU/lmr/m/sl/10 CHAPTER 5.  ESTUDIOS DE SERIES DE TIEMPO PARA
  ASOCIAR SALUD Y VARIABLES AMBIENTALES
  []
 
-[74
+[74] [75]
+Overfull \hbox (160.64905pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 76 \TU/lmr/m/sl/10 CHAPTER 5.  ESTUDIOS DE SERIES DE TIEMPO PARA
+ ASOCIAR SALUD Y VARIABLES AMBIENTALES
+ []
 
-] [75]
+[76
+
+] [77]
 Underfull \hbox (badness 1742) in paragraph at lines 107--111
 []\TU/lmr/m/n/10 Pebesma, E. (2019).  \TU/lmr/m/it/10 stars: Spatiotemporal Arr
 ays, Raster and Vec-
  []
 
-[76]
+[78]
 Underfull \hbox (badness 1342) in paragraph at lines 172--177
 \TU/lmr/m/n/10 encyclopedia.  []$[][][][][] [] [] [] [][] [] [][][][][][][][][]
  [] [][][] [] [] [] [][][][][] [] [][][] [] [][][][][] [] [][][][][][][][][][][
@@ -1625,12 +1754,12 @@ Underfull \hbox (badness 1342) in paragraph at lines 172--177
  []
 
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1825.
-[77]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1825.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1911.
+[79]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1911.
 (./bookdown-demo.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1825.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1825.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1911.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1911.
 
 Package rerunfilecheck Info: File `bookdown-demo.out' has not changed.
 (rerunfilecheck)             Checksum: 6FA1D99549691DEF5BA5950C1043C7D9.
@@ -1641,10 +1770,10 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  24358 strings out of 492912
  457800 string characters out of 6134893
- 589583 words of memory out of 5000000
+ 590583 words of memory out of 5000000
  28083 multiletter control sequences out of 15000+600000
  557117 words of font info for 72 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 45i,7n,56p,880b,473s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 45i,7n,56p,1032b,473s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on bookdown-demo.pdf (77 pages).
+Output written on bookdown-demo.pdf (79 pages).

@@ -1,6 +1,6 @@
 # Taller RASTER Y CUBOS DE DATOS VECTORIALES: Aplicación de software de información geográfica y modelado
 
-gracias Amanda Rehbein <3
+gracias Amanda Rehbein <3 (amanda.rehbein@usp.br)
 
 [Raster](https://r-spatial.github.io/stars/) son informacion espaciales en una grilla espacial. En general, la informacion de las frillas tiene una distancia homogenea, Por ejemplo, vea las siguientes figuras:
 
@@ -34,6 +34,14 @@ Quiere decir que, tal como GDAL lee vectores, tambien lee [raster]((https://gdal
 
 
 Vamos meterle manos a la obra, vamos a nadar en el mundo multidimensional de los raster y si no saben nadar aprenderan como los pajaros que aprenden ante la subita e inherente necesidada vital de sobrevivir.
+
+Antes de abrir los datos con los programas, vamos a ver que vamos tenemos
+
+```{r}
+library(ncdf4)
+nc_open("dados/pr_Amon_HadGEM2-ES_historical_r1i1p1_DJF_1985-2004.nc")
+```
+
 
 [ERA5!](https://www.ecmwf.int/en/forecasts/datasets/reanalysis-datasets/era5)
 
@@ -115,7 +123,6 @@ gridExtra::grid.arrange(a, b, ncol = 2)
 
 
 Ahora vamos a ver la temperatura
-
 ```{r}
 # Temperature ####
 t2m_era5 <- brick("dados/r_ERA5_t2m_DJF_1985-2004.nc")

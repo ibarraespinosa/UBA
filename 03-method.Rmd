@@ -147,7 +147,7 @@ summary(oni)
 ```{r}
 ?plot
 hist(oni$ONI, 
-     main = "Hitograma ONI")
+     main = "Histograma ONI")
 boxplot(oni$ONI, 
         main = "Boxplot de ONI")
 ?boxplot
@@ -317,7 +317,7 @@ plot(dft_pro1["AREA"], axes = T) # Area em m^2
 ```
 
 
-lo que mas me ha asombrado / shocked / chocado /  con sf, es que el processo de gridding de [VEIN](https://rdrr.io/cran/vein/man/emis_grid.html) en qgis demoraba 10 minutos, pero usando sf rn R, demora **10 minutos**
+lo que mas me ha asombrado / shocked / chocado /  con sf, es que el processo de gridding de [VEIN](https://rdrr.io/cran/vein/man/emis_grid.html) en qgis demoraba 10 minutos, pero usando sf rn R, demora **5.5 segundos**
 
 Pero ahora vamos a leer datos meteorologicos y climaticos en grillas (RASTER)
  (next chpater)

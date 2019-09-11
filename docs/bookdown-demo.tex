@@ -1127,7 +1127,7 @@ Otras librerias para leer datos tabulares (planihas - spreadsheets):
 \begin{Shaded}
 \begin{Highlighting}[]
 \KeywordTok{hist}\NormalTok{(oni}\OperatorTok{$}\NormalTok{ONI, }
-     \DataTypeTok{main =} \StringTok{"Hitograma ONI"}\NormalTok{)}
+     \DataTypeTok{main =} \StringTok{"Histograma ONI"}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 
@@ -1470,7 +1470,7 @@ Vamos a plotear la primera linea
 
 \includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-56-1.pdf}
 
-lo que mas me ha asombrado / shocked / chocado / con sf, es que el processo de gridding de \href{https://rdrr.io/cran/vein/man/emis_grid.html}{VEIN} en qgis demoraba 10 minutos, pero usando sf rn R, demora \textbf{10 minutos}
+lo que mas me ha asombrado / shocked / chocado / con sf, es que el processo de gridding de \href{https://rdrr.io/cran/vein/man/emis_grid.html}{VEIN} en qgis demoraba 10 minutos, pero usando sf rn R, demora \textbf{5.5 segundos}
 
 Pero ahora vamos a leer datos meteorologicos y climaticos en grillas (RASTER)
 (next chpater)
@@ -1638,7 +1638,7 @@ Vamos a plotear estos datos!
 \end{Shaded}
 
 \begin{verbatim}
-## Colour gradient: hult_gr52_hult, number: 3421
+## Colour gradient: cb_seq_BuPu_03, number: 453
 \end{verbatim}
 
 \includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-59-1.pdf}
@@ -1703,11 +1703,11 @@ Ahora vamos voy a mostrar todo un script para hacer graficos y analizar datos cl
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{mean_pcp_historical <-}\StringTok{ }\KeywordTok{mean}\NormalTok{(pcp_historical}\OperatorTok{*}\DecValTok{3600}\NormalTok{)}
+\CommentTok{# calculando a media}
+\NormalTok{mean_pcp_historical <-}\StringTok{ }\KeywordTok{mean}\NormalTok{(pcp_historical)}
 
 \KeywordTok{spplot}\NormalTok{(mean_pcp_era, }\DataTypeTok{interpolate =}\NormalTok{ T,}
             \DataTypeTok{main =} \StringTok{"Observed Precipitation [mm/h] (ERA5) }\CharTok{\textbackslash{}n}\StringTok{ DJF (1985 - 2004)"}\NormalTok{,}
-            \DataTypeTok{at =} \KeywordTok{seq}\NormalTok{(}\DecValTok{0}\NormalTok{, }\DecValTok{4}\NormalTok{, }\FloatTok{0.1}\NormalTok{),}
             \DataTypeTok{col.regions =} \KeywordTok{cpt}\NormalTok{(}\StringTok{"ncl_precip2_17lev"}\NormalTok{))}
 \end{Highlighting}
 \end{Shaded}
@@ -1718,12 +1718,22 @@ Ahora vamos voy a mostrar todo un script para hacer graficos y analizar datos cl
 \begin{Highlighting}[]
 \KeywordTok{spplot}\NormalTok{(mean_pcp_historical,}
             \DataTypeTok{main =} \StringTok{"Simulated precipitation [mm/h] (HadGEM2-ES) }\CharTok{\textbackslash{}n}\StringTok{ DJF (1985 - 2004)"}\NormalTok{,}
-            \DataTypeTok{at =} \KeywordTok{seq}\NormalTok{(}\DecValTok{0}\NormalTok{, }\DecValTok{4}\NormalTok{, }\FloatTok{0.1}\NormalTok{),}
             \DataTypeTok{col.regions =} \KeywordTok{cpt}\NormalTok{(}\StringTok{"ncl_precip2_17lev"}\NormalTok{))}
 \end{Highlighting}
 \end{Shaded}
 
 \includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-60-4.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{spplot}\NormalTok{(mean_pcp_historical }\OperatorTok{-}\StringTok{ }\NormalTok{mean_pcp_era,}
+            \DataTypeTok{main =} \StringTok{"Simulated - Observed precipitation [mm/h] }\CharTok{\textbackslash{}n}\StringTok{ DJF (1985 - 2004)"}\NormalTok{,}
+            \DataTypeTok{col.regions =} \KeywordTok{cpt}\NormalTok{(}\StringTok{"ncl_precip2_17lev"}\NormalTok{, }\DataTypeTok{n =} \KeywordTok{length}\NormalTok{(}\KeywordTok{seq}\NormalTok{(}\OperatorTok{-}\FloatTok{3.4}\NormalTok{, }\FloatTok{3.4}\NormalTok{, }\FloatTok{0.01}\NormalTok{))),}
+       \DataTypeTok{at=} \KeywordTok{seq}\NormalTok{(}\OperatorTok{-}\FloatTok{3.4}\NormalTok{, }\FloatTok{3.4}\NormalTok{, }\FloatTok{0.01}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-60-5.pdf}
 
 Ahora vamos a ver la temperatura
 
@@ -1784,7 +1794,7 @@ Ahora vamos a ver la temperatura
 \KeywordTok{spplot}\NormalTok{(mean_t2m_historical,}
             \DataTypeTok{main =} \StringTok{"Simulated temperature at 2m [ºC] (HadGEM2-ES) }\CharTok{\textbackslash{}n}\StringTok{ DJF (1985 - 2004)"}\NormalTok{,}
             \DataTypeTok{at =} \KeywordTok{seq}\NormalTok{(}\OperatorTok{-}\DecValTok{40}\NormalTok{, }\DecValTok{40}\NormalTok{, }\DecValTok{1}\NormalTok{),}
-            \DataTypeTok{col.regions =} \KeywordTok{cpt}\NormalTok{(}\StringTok{"ncl_temp_diff_18lev"}\NormalTok{))}
+            \DataTypeTok{col.regions =} \KeywordTok{cpt}\NormalTok{(}\StringTok{"arendal_temperature"}\NormalTok{))}
 \end{Highlighting}
 \end{Shaded}
 
@@ -1816,6 +1826,51 @@ Ahora vamos a ver la temperatura
 \end{Shaded}
 
 \includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-61-6.pdf}
+
+Y ahora vamos a ver como plotear datos de satelite de Sentinel 5P
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{library}\NormalTok{(stars)}
+\NormalTok{(}\DataTypeTok{s5p =} \KeywordTok{system.file}\NormalTok{(}\StringTok{"sentinel5p/S5P_NRTI_L2__NO2____20180717T120113_20180717T120613_03932_01_010002_20180717T125231.nc"}\NormalTok{, }\DataTypeTok{package =} \StringTok{"starsdata"}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "/home/sergio/R/x86_64-pc-linux-gnu-library/3.6/starsdata/sentinel5p/S5P_NRTI_L2__NO2____20180717T120113_20180717T120613_03932_01_010002_20180717T125231.nc"
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{nit.c =}\StringTok{ }\KeywordTok{read_stars}\NormalTok{(s5p, }\DataTypeTok{sub =} \StringTok{"//PRODUCT/SUPPORT_DATA/DETAILED_RESULTS/nitrogendioxide_summed_total_column"}\NormalTok{,}
+                   \DataTypeTok{curvilinear =} \KeywordTok{c}\NormalTok{(}\StringTok{"//PRODUCT/longitude"}\NormalTok{, }
+                                   \StringTok{"//PRODUCT/latitude"}\NormalTok{), }
+                   \DataTypeTok{driver =} \OtherTok{NULL}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## //PRODUCT/longitude, 
+## //PRODUCT/latitude, 
+## //PRODUCT/SUPPORT_DATA/DETAILED_RESULTS/nitrogendioxide_summed_total_column,
+\end{verbatim}
+
+Y el plot es
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{plot}\NormalTok{(nit.c, }
+     \DataTypeTok{breaks =} \StringTok{"hclust"}\NormalTok{, }
+     \DataTypeTok{reset =} \OtherTok{FALSE}\NormalTok{, }
+     \DataTypeTok{axes =} \OtherTok{TRUE}\NormalTok{,}
+     \DataTypeTok{logz =} \OtherTok{TRUE}\NormalTok{, }
+     \DataTypeTok{key.length =} \DecValTok{1}\NormalTok{,}
+     \DataTypeTok{col =} \KeywordTok{cpt}\NormalTok{(}\StringTok{"arendal_temperature"}\NormalTok{))}
+\NormalTok{maps}\OperatorTok{::}\KeywordTok{map}\NormalTok{(}\StringTok{'world'}\NormalTok{, }\DataTypeTok{add =} \OtherTok{TRUE}\NormalTok{, }\DataTypeTok{col =} \StringTok{'red'}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-63-1.pdf}
 
 \hypertarget{estudios-de-series-de-tiempo-para-asociar-salud-y-variables-ambientales}{%
 \chapter{Estudios de series de tiempo para asociar salud y variables ambientales}\label{estudios-de-series-de-tiempo-para-asociar-salud-y-variables-ambientales}}
@@ -1863,7 +1918,7 @@ f(x) = 1/( (2 \pi) \sigma) e^-((x - \mu)^2/(2 \sigma^2)^0.5 )
 
 Vamos a ver un ejemplo:
 
-\includegraphics[height=1.5\textheight]{bookdown-demo_files/figure-latex/unnamed-chunk-62-1}
+\includegraphics[height=1.5\textheight]{bookdown-demo_files/figure-latex/unnamed-chunk-64-1}
 
 \hypertarget{efecto-de-la-contaminacion}{%
 \section{Efecto de la contaminacion}\label{efecto-de-la-contaminacion}}
@@ -1887,7 +1942,7 @@ RR = exp(\beta_i \cdot \delta X_i)
 Que indica el riesgo relativo dada un cambio en la variable, por ejemplo, si se incrementan las concentraciones de PM10 en 50 ug/m3, el riesgo de mortalidad respiratoria aumenta 7\%. Aplicando este porcentaje sobre la poblacion es posible calcular la mortalidad anual asociada a la contaminacion. Vamos a ver valores reales para Argentina y Chile \citep{rosana}.
 
 \begin{figure}
-\includegraphics[width=11.44in,height=1.8\textheight]{figs/rosana1} \caption{Riesgo relativo en mortalidad por incremento de 1 ppm de CO (Abrutzky et al., 2013)}\label{fig:unnamed-chunk-63}
+\includegraphics[width=11.44in,height=1.8\textheight]{figs/rosana1} \caption{Riesgo relativo en mortalidad por incremento de 1 ppm de CO (Abrutzky et al., 2013)}\label{fig:unnamed-chunk-65}
 \end{figure}
 
 \hypertarget{efecto-de-la-temperatura}{%
@@ -1896,7 +1951,7 @@ Que indica el riesgo relativo dada un cambio en la variable, por ejemplo, si se 
 Puede se utilizada la misma metodologia pero considerando variables meteorologicas en este caso. Un trabajo muy interesante recientemente publicado por el grupo de Paulo Saliva es el efecto de la temperatura en diferentes ciudades del mundo \citep{GASPARRINI2015369}.
 
 \begin{figure}
-\includegraphics[width=18.97in,height=1.8\textheight]{figs/temp1} \caption{Riesgo relativo en mortalidad por incremento de 1 ppm de CO (Abrutzky et al., 2013)}\label{fig:unnamed-chunk-64}
+\includegraphics[width=18.97in,height=1.8\textheight]{figs/temp1} \caption{Riesgo relativo en mortalidad por incremento de 1 ppm de CO (Abrutzky et al., 2013)}\label{fig:unnamed-chunk-66}
 \end{figure}
 
 \bibliography{book.bib,packages.bib}

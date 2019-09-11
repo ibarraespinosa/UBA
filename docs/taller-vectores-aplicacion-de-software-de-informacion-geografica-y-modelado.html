@@ -329,7 +329,7 @@ Por ejemplo, si tenemos dudas con la funcion <code>aggregate</code>, <code>plot<
 <h3><span class="header-section-number">3.2.5</span> Ploteando datos con base</h3>
 <div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb14-1" data-line-number="1">?plot</a>
 <a class="sourceLine" id="cb14-2" data-line-number="2"><span class="kw">hist</span>(oni<span class="op">$</span>ONI, </a>
-<a class="sourceLine" id="cb14-3" data-line-number="3">     <span class="dt">main =</span> <span class="st">&quot;Hitograma ONI&quot;</span>)</a></code></pre></div>
+<a class="sourceLine" id="cb14-3" data-line-number="3">     <span class="dt">main =</span> <span class="st">&quot;Histograma ONI&quot;</span>)</a></code></pre></div>
 <p><img src="bookdown-demo_files/figure-html/unnamed-chunk-40-1.png" width="672" /></p>
 <div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb15-1" data-line-number="1"><span class="kw">boxplot</span>(oni<span class="op">$</span>ONI, </a>
 <a class="sourceLine" id="cb15-2" data-line-number="2">        <span class="dt">main =</span> <span class="st">&quot;Boxplot de ONI&quot;</span>)</a></code></pre></div>
@@ -500,7 +500,7 @@ Como sf esta enlazada con GDAL, permite leer todos los formatos de vector de GDA
 <div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb42-1" data-line-number="1">dft_pro1 &lt;-<span class="st"> </span>dft_pro[<span class="dv">1</span>, ] <span class="co">#primera linea</span></a>
 <a class="sourceLine" id="cb42-2" data-line-number="2"><span class="kw">plot</span>(dft_pro1[<span class="st">&quot;AREA&quot;</span>], <span class="dt">axes =</span> T) <span class="co"># Area em m^2</span></a></code></pre></div>
 <p><img src="bookdown-demo_files/figure-html/unnamed-chunk-56-1.png" width="672" /></p>
-<p>lo que mas me ha asombrado / shocked / chocado / con sf, es que el processo de gridding de <a href="https://rdrr.io/cran/vein/man/emis_grid.html">VEIN</a> en qgis demoraba 10 minutos, pero usando sf rn R, demora <strong>10 minutos</strong></p>
+<p>lo que mas me ha asombrado / shocked / chocado / con sf, es que el processo de gridding de <a href="https://rdrr.io/cran/vein/man/emis_grid.html">VEIN</a> en qgis demoraba 10 minutos, pero usando sf rn R, demora <strong>5.5 segundos</strong></p>
 <p>Pero ahora vamos a leer datos meteorologicos y climaticos en grillas (RASTER)
 (next chpater)</p>
 

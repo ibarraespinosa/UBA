@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2019/dev/Debian) (preloaded format=xelatex 2019.8.22)  11 SEP 2019 09:03
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2019/dev/Debian) (preloaded format=xelatex 2019.8.22)  11 SEP 2019 09:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1631,25 +1631,29 @@ CTORIALES: APLICACIÓN DE SOFTWARE DE INFORMACIÓN GEOGRÁFICA Y MODELADO
  []
 
 [66]
-Overfull \hbox (54.0pt too wide) in paragraph at lines 1748--1748
+File: bookdown-demo_files/figure-latex/unnamed-chunk-60-5.pdf Graphic file (typ
+e pdf)
+<use bookdown-demo_files/figure-latex/unnamed-chunk-60-5.pdf>
+
+Overfull \hbox (54.0pt too wide) in paragraph at lines 1758--1758
 []\TU/lmtt/m/n/10 ## extent     : -0.9375, 359.0625, -90.625, 90.625  (xmin, xm
 ax, ymin, ymax)[] 
  []
 
-
-Overfull \hbox (22.5pt too wide) in paragraph at lines 1748--1748
+[67]
+Overfull \hbox (22.5pt too wide) in paragraph at lines 1758--1758
 []\TU/lmtt/m/n/10 ## crs        : +proj=longlat +datum=WGS84 +ellps=WGS84 +towg
 s84=0,0,0[] 
  []
 
 
-Overfull \hbox (54.0pt too wide) in paragraph at lines 1748--1748
+Overfull \hbox (54.0pt too wide) in paragraph at lines 1758--1758
 []\TU/lmtt/m/n/10 ## source     : /home/sergio/Documents/UBA/dados/r_ERA5_t2m_D
 JF_1985-2004.nc[] 
  []
 
 
-Overfull \hbox (1487.25pt too wide) in paragraph at lines 1748--1748
+Overfull \hbox (1487.25pt too wide) in paragraph at lines 1758--1758
 []\TU/lmtt/m/n/10 ## names      : X1986.01.01.01.06.28, X1987.01.01.01.06.28, X
 1988.01.01.01.06.28, X1989.01.01.01.06.28, X1990.01.01.01.06.28, X1991.01.01.01
 .06.28, X1992.01.01.01.06.28, X1993.01.01.01.06.28, X1994.01.01.01.06.28, X1995
@@ -1658,7 +1662,7 @@ Overfull \hbox (1487.25pt too wide) in paragraph at lines 1748--1748
  []
 
 
-Overfull \hbox (6.75pt too wide) in paragraph at lines 1748--1748
+Overfull \hbox (6.75pt too wide) in paragraph at lines 1758--1758
 []\TU/lmtt/m/n/10 ## Date/time  : 1986-01-01 01:06:28, 2004-01-01 01:06:28 (min
 , max)[] 
  []
@@ -1666,19 +1670,9 @@ Overfull \hbox (6.75pt too wide) in paragraph at lines 1748--1748
 File: bookdown-demo_files/figure-latex/unnamed-chunk-61-1.pdf Graphic file (typ
 e pdf)
 <use bookdown-demo_files/figure-latex/unnamed-chunk-61-1.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[67]
 File: bookdown-demo_files/figure-latex/unnamed-chunk-61-2.pdf Graphic file (typ
 e pdf)
 <use bookdown-demo_files/figure-latex/unnamed-chunk-61-2.pdf>
-File: bookdown-demo_files/figure-latex/unnamed-chunk-61-3.pdf Graphic file (typ
-e pdf)
-<use bookdown-demo_files/figure-latex/unnamed-chunk-61-3.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
 
 Overfull \hbox (377.85576pt too wide) has occurred while \output is active
 \TU/lmr/m/n/10 68 \TU/lmr/m/sl/10 CHAPTER 4.  TALLER RASTER Y CUBOS DE DATOS VE
@@ -1686,13 +1680,12 @@ CTORIALES: APLICACIÓN DE SOFTWARE DE INFORMACIÓN GEOGRÁFICA Y MODELADO
  []
 
 [68]
+File: bookdown-demo_files/figure-latex/unnamed-chunk-61-3.pdf Graphic file (typ
+e pdf)
+<use bookdown-demo_files/figure-latex/unnamed-chunk-61-3.pdf>
 File: bookdown-demo_files/figure-latex/unnamed-chunk-61-4.pdf Graphic file (typ
 e pdf)
 <use bookdown-demo_files/figure-latex/unnamed-chunk-61-4.pdf>
-
-Underfull \vbox (badness 3386) detected at line 1805
- []
-
 [69]
 File: bookdown-demo_files/figure-latex/unnamed-chunk-61-5.pdf Graphic file (typ
 e pdf)
@@ -1701,64 +1694,92 @@ File: bookdown-demo_files/figure-latex/unnamed-chunk-61-6.pdf Graphic file (typ
 e pdf)
 <use bookdown-demo_files/figure-latex/unnamed-chunk-61-6.pdf>
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 Overfull \hbox (377.85576pt too wide) has occurred while \output is active
 \TU/lmr/m/n/10 70 \TU/lmr/m/sl/10 CHAPTER 4.  TALLER RASTER Y CUBOS DE DATOS VE
 CTORIALES: APLICACIÓN DE SOFTWARE DE INFORMACIÓN GEOGRÁFICA Y MODELADO
  []
 
 [70]
-Chapter 5.
-[71
+Overfull \hbox (510.75pt too wide) in paragraph at lines 1841--1841
+[]\TU/lmtt/m/n/10 ## [1] "/home/sergio/R/x86_64-pc-linux-gnu-library/3.6/starsd
+ata/sentinel5p/S5P_NRTI_L2__NO2____20180717T120113_20180717T120613_03932_01_010
+002_20180717T125231.nc"[] 
+ []
 
-]
-File: bookdown-demo_files/figure-latex/unnamed-chunk-62-1.pdf Graphic file (typ
+
+Overfull \hbox (69.75pt too wide) in paragraph at lines 1856--1856
+[]\TU/lmtt/m/n/10 ## //PRODUCT/SUPPORT_DATA/DETAILED_RESULTS/nitrogendioxide_su
+mmed_total_column,[] 
+ []
+
+File: bookdown-demo_files/figure-latex/unnamed-chunk-63-1.pdf Graphic file (typ
 e pdf)
-<use bookdown-demo_files/figure-latex/unnamed-chunk-62-1.pdf>
+<use bookdown-demo_files/figure-latex/unnamed-chunk-63-1.pdf>
 
-Overfull \hbox (160.64905pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 72 \TU/lmr/m/sl/10 CHAPTER 5.  ESTUDIOS DE SERIES DE TIEMPO PARA
- ASOCIAR SALUD Y VARIABLES AMBIENTALES
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[71]
+Overfull \hbox (377.85576pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 72 \TU/lmr/m/sl/10 CHAPTER 4.  TALLER RASTER Y CUBOS DE DATOS VE
+CTORIALES: APLICACIÓN DE SOFTWARE DE INFORMACIÓN GEOGRÁFICA Y MODELADO
  []
 
 [72]
+Chapter 5.
+[73
+
+]
+File: bookdown-demo_files/figure-latex/unnamed-chunk-64-1.pdf Graphic file (typ
+e pdf)
+<use bookdown-demo_files/figure-latex/unnamed-chunk-64-1.pdf>
+
+Overfull \hbox (160.64905pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 74 \TU/lmr/m/sl/10 CHAPTER 5.  ESTUDIOS DE SERIES DE TIEMPO PARA
+ ASOCIAR SALUD Y VARIABLES AMBIENTALES
+ []
+
+[74]
 File: figs/rosana1.png Graphic file (type bmp)
 <figs/rosana1.png>
 
-Overfull \hbox (481.77654pt too wide) in paragraph at lines 1890--1890
+Overfull \hbox (481.77654pt too wide) in paragraph at lines 1945--1945
 [][] 
  []
 
 File: figs/temp1.png Graphic file (type bmp)
 <figs/temp1.png>
 
-Overfull \hbox (1026.0179pt too wide) in paragraph at lines 1899--1899
+Overfull \hbox (1026.0179pt too wide) in paragraph at lines 1954--1954
 [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 213.15956pt on input line 1900.
+LaTeX Warning: Float too large for page by 213.15956pt on input line 1955.
 
-(./bookdown-demo.bbl [73]
-Overfull \hbox (160.64905pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 74 \TU/lmr/m/sl/10 CHAPTER 5.  ESTUDIOS DE SERIES DE TIEMPO PARA
- ASOCIAR SALUD Y VARIABLES AMBIENTALES
- []
-
-[74] [75]
+(./bookdown-demo.bbl [75]
 Overfull \hbox (160.64905pt too wide) has occurred while \output is active
 \TU/lmr/m/n/10 76 \TU/lmr/m/sl/10 CHAPTER 5.  ESTUDIOS DE SERIES DE TIEMPO PARA
  ASOCIAR SALUD Y VARIABLES AMBIENTALES
  []
 
-[76
+[76] [77]
+Overfull \hbox (160.64905pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 78 \TU/lmr/m/sl/10 CHAPTER 5.  ESTUDIOS DE SERIES DE TIEMPO PARA
+ ASOCIAR SALUD Y VARIABLES AMBIENTALES
+ []
 
-] [77]
+[78
+
+] [79]
 Underfull \hbox (badness 1742) in paragraph at lines 107--111
 []\TU/lmr/m/n/10 Pebesma, E. (2019).  \TU/lmr/m/it/10 stars: Spatiotemporal Arr
 ays, Raster and Vec-
  []
 
-[78]
+[80]
 Underfull \hbox (badness 1342) in paragraph at lines 172--177
 \TU/lmr/m/n/10 encyclopedia.  []$[][][][][] [] [] [] [][] [] [][][][][][][][][]
  [] [][][] [] [] [] [][][][][] [] [][][] [] [][][][][] [] [][][][][][][][][][][
@@ -1766,12 +1787,12 @@ Underfull \hbox (badness 1342) in paragraph at lines 172--177
  []
 
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1905.
-[79]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1905.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1960.
+[81]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1960.
 (./bookdown-demo.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1905.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1905.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1960.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1960.
 
 Package rerunfilecheck Info: File `bookdown-demo.out' has not changed.
 (rerunfilecheck)             Checksum: 6FA1D99549691DEF5BA5950C1043C7D9.
@@ -1780,12 +1801,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 24362 strings out of 492912
- 458016 string characters out of 6134893
+ 24370 strings out of 492912
+ 458448 string characters out of 6134893
  590583 words of memory out of 5000000
- 28086 multiletter control sequences out of 15000+600000
+ 28092 multiletter control sequences out of 15000+600000
  557117 words of font info for 72 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  45i,7n,56p,1032b,473s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on bookdown-demo.pdf (79 pages).
+Output written on bookdown-demo.pdf (81 pages).

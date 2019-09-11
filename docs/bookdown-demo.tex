@@ -1638,7 +1638,7 @@ Vamos a plotear estos datos!
 \end{Shaded}
 
 \begin{verbatim}
-## Colour gradient: es_platinum_es_platinum_13, number: 1675
+## Colour gradient: hult_gr52_hult, number: 3421
 \end{verbatim}
 
 \includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-59-1.pdf}
@@ -1704,8 +1704,11 @@ Ahora vamos voy a mostrar todo un script para hacer graficos y analizar datos cl
 \begin{Shaded}
 \begin{Highlighting}[]
 \NormalTok{mean_pcp_historical <-}\StringTok{ }\KeywordTok{mean}\NormalTok{(pcp_historical}\OperatorTok{*}\DecValTok{3600}\NormalTok{)}
-\KeywordTok{plot}\NormalTok{(mean_pcp_historical[[}\DecValTok{1}\NormalTok{]]}\OperatorTok{*}\DecValTok{3600}\NormalTok{,}
-     \DataTypeTok{main =} \StringTok{"HadGEM2-ES mean precipitation [mm/h] }\CharTok{\textbackslash{}n}\StringTok{ DJF (1985 - 2004)"}\NormalTok{)}
+
+\KeywordTok{spplot}\NormalTok{(mean_pcp_era, }\DataTypeTok{interpolate =}\NormalTok{ T,}
+            \DataTypeTok{main =} \StringTok{"Observed Precipitation [mm/h] (ERA5) }\CharTok{\textbackslash{}n}\StringTok{ DJF (1985 - 2004)"}\NormalTok{,}
+            \DataTypeTok{at =} \KeywordTok{seq}\NormalTok{(}\DecValTok{0}\NormalTok{, }\DecValTok{4}\NormalTok{, }\FloatTok{0.1}\NormalTok{),}
+            \DataTypeTok{col.regions =} \KeywordTok{cpt}\NormalTok{(}\StringTok{"ncl_precip2_17lev"}\NormalTok{))}
 \end{Highlighting}
 \end{Shaded}
 
@@ -1713,15 +1716,10 @@ Ahora vamos voy a mostrar todo un script para hacer graficos y analizar datos cl
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{a <-}\StringTok{ }\KeywordTok{spplot}\NormalTok{(mean_pcp_era, }\DataTypeTok{interpolate =}\NormalTok{ T,}
-            \DataTypeTok{main =} \StringTok{"Observed Precipitation [mm/h] (ERA5) }\CharTok{\textbackslash{}n}\StringTok{ DJF (1985 - 2004)"}\NormalTok{,}
-            \DataTypeTok{at =} \KeywordTok{seq}\NormalTok{(}\DecValTok{0}\NormalTok{, }\DecValTok{4}\NormalTok{, }\FloatTok{0.1}\NormalTok{),}
-            \DataTypeTok{col.regions =} \KeywordTok{cpt}\NormalTok{(}\StringTok{"ncl_precip2_17lev"}\NormalTok{))}
-\NormalTok{b <-}\StringTok{ }\KeywordTok{spplot}\NormalTok{(mean_pcp_historical,}
+\KeywordTok{spplot}\NormalTok{(mean_pcp_historical,}
             \DataTypeTok{main =} \StringTok{"Simulated precipitation [mm/h] (HadGEM2-ES) }\CharTok{\textbackslash{}n}\StringTok{ DJF (1985 - 2004)"}\NormalTok{,}
             \DataTypeTok{at =} \KeywordTok{seq}\NormalTok{(}\DecValTok{0}\NormalTok{, }\DecValTok{4}\NormalTok{, }\FloatTok{0.1}\NormalTok{),}
             \DataTypeTok{col.regions =} \KeywordTok{cpt}\NormalTok{(}\StringTok{"ncl_precip2_17lev"}\NormalTok{))}
-\NormalTok{gridExtra}\OperatorTok{::}\KeywordTok{grid.arrange}\NormalTok{(a, b, }\DataTypeTok{ncol =} \DecValTok{2}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 
@@ -1772,19 +1770,25 @@ Ahora vamos a ver la temperatura
 \begin{Highlighting}[]
 \NormalTok{mean_t2m_historical <-}\StringTok{ }\KeywordTok{mean}\NormalTok{(t2m_historical }\OperatorTok{-}\StringTok{ }\FloatTok{273.15}\NormalTok{)}
 
-\NormalTok{c <-}\StringTok{ }\KeywordTok{spplot}\NormalTok{(mean_t2m_era,}
+\KeywordTok{spplot}\NormalTok{(mean_t2m_era,}
             \DataTypeTok{main =} \StringTok{"Observed temperature at 2m [ºC] (ERA5) }\CharTok{\textbackslash{}n}\StringTok{ DJF (1985 - 2004)"}\NormalTok{,}
             \DataTypeTok{at =} \KeywordTok{seq}\NormalTok{(}\OperatorTok{-}\DecValTok{40}\NormalTok{, }\DecValTok{40}\NormalTok{, }\DecValTok{1}\NormalTok{),}
             \DataTypeTok{col.regions =} \KeywordTok{cpt}\NormalTok{(}\StringTok{"ncl_temp_diff_18lev"}\NormalTok{))}
-\NormalTok{d <-}\StringTok{ }\KeywordTok{spplot}\NormalTok{(mean_t2m_historical,}
-            \DataTypeTok{main =} \StringTok{"Simulated temperature at 2m [ºC] (HadGEM2-ES) }\CharTok{\textbackslash{}n}\StringTok{ DJF (1985 - 2004)"}\NormalTok{,}
-            \DataTypeTok{at =} \KeywordTok{seq}\NormalTok{(}\OperatorTok{-}\DecValTok{40}\NormalTok{, }\DecValTok{40}\NormalTok{, }\DecValTok{1}\NormalTok{),}
-            \DataTypeTok{col.regions =} \KeywordTok{cpt}\NormalTok{(}\StringTok{"ncl_temp_diff_18lev"}\NormalTok{))}
-\NormalTok{gridExtra}\OperatorTok{::}\KeywordTok{grid.arrange}\NormalTok{(c, d, }\DataTypeTok{ncol =} \DecValTok{2}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 
 \includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-61-3.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{spplot}\NormalTok{(mean_t2m_historical,}
+            \DataTypeTok{main =} \StringTok{"Simulated temperature at 2m [ºC] (HadGEM2-ES) }\CharTok{\textbackslash{}n}\StringTok{ DJF (1985 - 2004)"}\NormalTok{,}
+            \DataTypeTok{at =} \KeywordTok{seq}\NormalTok{(}\OperatorTok{-}\DecValTok{40}\NormalTok{, }\DecValTok{40}\NormalTok{, }\DecValTok{1}\NormalTok{),}
+            \DataTypeTok{col.regions =} \KeywordTok{cpt}\NormalTok{(}\StringTok{"ncl_temp_diff_18lev"}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-61-4.pdf}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -1793,24 +1797,10 @@ Ahora vamos a ver la temperatura
 \NormalTok{t2m_bias <-}\StringTok{ }\NormalTok{(mean_t2m_historical }\OperatorTok{-}\StringTok{ }\NormalTok{mean_t2m_era)}
 
 
-\NormalTok{f <-}\StringTok{ }\KeywordTok{spplot}\NormalTok{(pcp_bias,}
+\KeywordTok{spplot}\NormalTok{(pcp_bias,}
             \DataTypeTok{main =} \StringTok{"Precipitation bias [mm/h] }\CharTok{\textbackslash{}n}\StringTok{ DJF (1985 - 2004)"}\NormalTok{,}
             \DataTypeTok{at =} \KeywordTok{seq}\NormalTok{(}\OperatorTok{-}\DecValTok{3}\NormalTok{, }\DecValTok{3}\NormalTok{, }\FloatTok{0.1}\NormalTok{),}
             \DataTypeTok{col.regions =} \KeywordTok{cpt}\NormalTok{(}\StringTok{"ncl_precip_diff_12lev"}\NormalTok{))}
-\NormalTok{g <-}\StringTok{ }\KeywordTok{spplot}\NormalTok{(t2m_bias,}
-            \DataTypeTok{main =} \StringTok{"Temperature bias [ºC] }\CharTok{\textbackslash{}n}\StringTok{ DJF (1985 - 2004)"}\NormalTok{,}
-            \DataTypeTok{at =} \KeywordTok{seq}\NormalTok{(}\OperatorTok{-}\DecValTok{15}\NormalTok{, }\DecValTok{15}\NormalTok{, }\DecValTok{1}\NormalTok{),}
-            \DataTypeTok{col.regions =} \KeywordTok{cpt}\NormalTok{(}\StringTok{"ncl_temp_diff_18lev"}\NormalTok{))}
-\NormalTok{gridExtra}\OperatorTok{::}\KeywordTok{grid.arrange}\NormalTok{(f, g, }\DataTypeTok{ncol =} \DecValTok{2}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-61-4.pdf}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{gridExtra}\OperatorTok{::}\KeywordTok{grid.arrange}\NormalTok{(a, b, f,}
-\NormalTok{                        c, d, g,  }\DataTypeTok{ncol =} \DecValTok{3}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 
@@ -1818,10 +1808,14 @@ Ahora vamos a ver la temperatura
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\CommentTok{# JJA - invierno: ####}
-\CommentTok{# Try it by your self.}
+\KeywordTok{spplot}\NormalTok{(t2m_bias,}
+            \DataTypeTok{main =} \StringTok{"Temperature bias [ºC] }\CharTok{\textbackslash{}n}\StringTok{ DJF (1985 - 2004)"}\NormalTok{,}
+            \DataTypeTok{at =} \KeywordTok{seq}\NormalTok{(}\OperatorTok{-}\DecValTok{15}\NormalTok{, }\DecValTok{15}\NormalTok{, }\DecValTok{1}\NormalTok{),}
+            \DataTypeTok{col.regions =} \KeywordTok{cpt}\NormalTok{(}\StringTok{"ncl_temp_diff_18lev"}\NormalTok{))}
 \end{Highlighting}
 \end{Shaded}
+
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-61-6.pdf}
 
 \hypertarget{estudios-de-series-de-tiempo-para-asociar-salud-y-variables-ambientales}{%
 \chapter{Estudios de series de tiempo para asociar salud y variables ambientales}\label{estudios-de-series-de-tiempo-para-asociar-salud-y-variables-ambientales}}

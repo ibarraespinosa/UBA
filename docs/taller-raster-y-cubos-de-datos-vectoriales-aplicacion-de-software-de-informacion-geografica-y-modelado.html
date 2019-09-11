@@ -324,7 +324,7 @@ Por lo tanto, <code>stars</code> y <code>raster</code> tienen conexiones para le
 <a class="sourceLine" id="cb48-3" data-line-number="3"><span class="kw">plot</span>(pcp_era5,</a>
 <a class="sourceLine" id="cb48-4" data-line-number="4">    <span class="dt">col =</span> <span class="kw">lucky</span>(),</a>
 <a class="sourceLine" id="cb48-5" data-line-number="5">     <span class="dt">axes =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
-<pre><code>## Colour gradient: ma_fruit_fruit_01, number: 4842</code></pre>
+<pre><code>## Colour gradient: nd_red_Primary_1, number: 5599</code></pre>
 <p><img src="bookdown-demo_files/figure-html/unnamed-chunk-59-1.png" width="672" /></p>
 <p>Ahora vamos voy a mostrar todo un script para hacer graficos y analizar datos climaticos usando la libreria <code>raster</code></p>
 <div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb50-1" data-line-number="1"><span class="co"># ------------------------------------#</span></a>
@@ -365,18 +365,16 @@ Por lo tanto, <code>stars</code> y <code>raster</code> tienen conexiones para le
 <a class="sourceLine" id="cb55-6" data-line-number="6"><span class="kw">plot</span>(pcp_historical[[<span class="dv">1</span>]]<span class="op">*</span><span class="dv">3600</span>)</a></code></pre></div>
 <p><img src="bookdown-demo_files/figure-html/unnamed-chunk-60-2.png" width="672" /></p>
 <div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb56-1" data-line-number="1">mean_pcp_historical &lt;-<span class="st"> </span><span class="kw">mean</span>(pcp_historical<span class="op">*</span><span class="dv">3600</span>)</a>
-<a class="sourceLine" id="cb56-2" data-line-number="2"><span class="kw">plot</span>(mean_pcp_historical[[<span class="dv">1</span>]]<span class="op">*</span><span class="dv">3600</span>,</a>
-<a class="sourceLine" id="cb56-3" data-line-number="3">     <span class="dt">main =</span> <span class="st">&quot;HadGEM2-ES mean precipitation [mm/h] </span><span class="ch">\n</span><span class="st"> DJF (1985 - 2004)&quot;</span>)</a></code></pre></div>
+<a class="sourceLine" id="cb56-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb56-3" data-line-number="3"><span class="kw">spplot</span>(mean_pcp_era, <span class="dt">interpolate =</span> T,</a>
+<a class="sourceLine" id="cb56-4" data-line-number="4">            <span class="dt">main =</span> <span class="st">&quot;Observed Precipitation [mm/h] (ERA5) </span><span class="ch">\n</span><span class="st"> DJF (1985 - 2004)&quot;</span>,</a>
+<a class="sourceLine" id="cb56-5" data-line-number="5">            <span class="dt">at =</span> <span class="kw">seq</span>(<span class="dv">0</span>, <span class="dv">4</span>, <span class="fl">0.1</span>),</a>
+<a class="sourceLine" id="cb56-6" data-line-number="6">            <span class="dt">col.regions =</span> <span class="kw">cpt</span>(<span class="st">&quot;ncl_precip2_17lev&quot;</span>))</a></code></pre></div>
 <p><img src="bookdown-demo_files/figure-html/unnamed-chunk-60-3.png" width="672" /></p>
-<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb57-1" data-line-number="1">a &lt;-<span class="st"> </span><span class="kw">spplot</span>(mean_pcp_era, <span class="dt">interpolate =</span> T,</a>
-<a class="sourceLine" id="cb57-2" data-line-number="2">            <span class="dt">main =</span> <span class="st">&quot;Observed Precipitation [mm/h] (ERA5) </span><span class="ch">\n</span><span class="st"> DJF (1985 - 2004)&quot;</span>,</a>
+<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb57-1" data-line-number="1"><span class="kw">spplot</span>(mean_pcp_historical,</a>
+<a class="sourceLine" id="cb57-2" data-line-number="2">            <span class="dt">main =</span> <span class="st">&quot;Simulated precipitation [mm/h] (HadGEM2-ES) </span><span class="ch">\n</span><span class="st"> DJF (1985 - 2004)&quot;</span>,</a>
 <a class="sourceLine" id="cb57-3" data-line-number="3">            <span class="dt">at =</span> <span class="kw">seq</span>(<span class="dv">0</span>, <span class="dv">4</span>, <span class="fl">0.1</span>),</a>
-<a class="sourceLine" id="cb57-4" data-line-number="4">            <span class="dt">col.regions =</span> <span class="kw">cpt</span>(<span class="st">&quot;ncl_precip2_17lev&quot;</span>))</a>
-<a class="sourceLine" id="cb57-5" data-line-number="5">b &lt;-<span class="st"> </span><span class="kw">spplot</span>(mean_pcp_historical,</a>
-<a class="sourceLine" id="cb57-6" data-line-number="6">            <span class="dt">main =</span> <span class="st">&quot;Simulated precipitation [mm/h] (HadGEM2-ES) </span><span class="ch">\n</span><span class="st"> DJF (1985 - 2004)&quot;</span>,</a>
-<a class="sourceLine" id="cb57-7" data-line-number="7">            <span class="dt">at =</span> <span class="kw">seq</span>(<span class="dv">0</span>, <span class="dv">4</span>, <span class="fl">0.1</span>),</a>
-<a class="sourceLine" id="cb57-8" data-line-number="8">            <span class="dt">col.regions =</span> <span class="kw">cpt</span>(<span class="st">&quot;ncl_precip2_17lev&quot;</span>))</a>
-<a class="sourceLine" id="cb57-9" data-line-number="9">gridExtra<span class="op">::</span><span class="kw">grid.arrange</span>(a, b, <span class="dt">ncol =</span> <span class="dv">2</span>)</a></code></pre></div>
+<a class="sourceLine" id="cb57-4" data-line-number="4">            <span class="dt">col.regions =</span> <span class="kw">cpt</span>(<span class="st">&quot;ncl_precip2_17lev&quot;</span>))</a></code></pre></div>
 <p><img src="bookdown-demo_files/figure-html/unnamed-chunk-60-4.png" width="672" /></p>
 <p>Ahora vamos a ver la temperatura</p>
 <div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb58-1" data-line-number="1"><span class="co"># Temperature ####</span></a>
@@ -400,36 +398,31 @@ Por lo tanto, <code>stars</code> y <code>raster</code> tienen conexiones para le
 <p><img src="bookdown-demo_files/figure-html/unnamed-chunk-61-2.png" width="672" /></p>
 <div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb62-1" data-line-number="1">mean_t2m_historical &lt;-<span class="st"> </span><span class="kw">mean</span>(t2m_historical <span class="op">-</span><span class="st"> </span><span class="fl">273.15</span>)</a>
 <a class="sourceLine" id="cb62-2" data-line-number="2"></a>
-<a class="sourceLine" id="cb62-3" data-line-number="3">c &lt;-<span class="st"> </span><span class="kw">spplot</span>(mean_t2m_era,</a>
+<a class="sourceLine" id="cb62-3" data-line-number="3"><span class="kw">spplot</span>(mean_t2m_era,</a>
 <a class="sourceLine" id="cb62-4" data-line-number="4">            <span class="dt">main =</span> <span class="st">&quot;Observed temperature at 2m [ºC] (ERA5) </span><span class="ch">\n</span><span class="st"> DJF (1985 - 2004)&quot;</span>,</a>
 <a class="sourceLine" id="cb62-5" data-line-number="5">            <span class="dt">at =</span> <span class="kw">seq</span>(<span class="op">-</span><span class="dv">40</span>, <span class="dv">40</span>, <span class="dv">1</span>),</a>
-<a class="sourceLine" id="cb62-6" data-line-number="6">            <span class="dt">col.regions =</span> <span class="kw">cpt</span>(<span class="st">&quot;ncl_temp_diff_18lev&quot;</span>))</a>
-<a class="sourceLine" id="cb62-7" data-line-number="7">d &lt;-<span class="st"> </span><span class="kw">spplot</span>(mean_t2m_historical,</a>
-<a class="sourceLine" id="cb62-8" data-line-number="8">            <span class="dt">main =</span> <span class="st">&quot;Simulated temperature at 2m [ºC] (HadGEM2-ES) </span><span class="ch">\n</span><span class="st"> DJF (1985 - 2004)&quot;</span>,</a>
-<a class="sourceLine" id="cb62-9" data-line-number="9">            <span class="dt">at =</span> <span class="kw">seq</span>(<span class="op">-</span><span class="dv">40</span>, <span class="dv">40</span>, <span class="dv">1</span>),</a>
-<a class="sourceLine" id="cb62-10" data-line-number="10">            <span class="dt">col.regions =</span> <span class="kw">cpt</span>(<span class="st">&quot;ncl_temp_diff_18lev&quot;</span>))</a>
-<a class="sourceLine" id="cb62-11" data-line-number="11">gridExtra<span class="op">::</span><span class="kw">grid.arrange</span>(c, d, <span class="dt">ncol =</span> <span class="dv">2</span>)</a></code></pre></div>
+<a class="sourceLine" id="cb62-6" data-line-number="6">            <span class="dt">col.regions =</span> <span class="kw">cpt</span>(<span class="st">&quot;ncl_temp_diff_18lev&quot;</span>))</a></code></pre></div>
 <p><img src="bookdown-demo_files/figure-html/unnamed-chunk-61-3.png" width="672" /></p>
-<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb63-1" data-line-number="1"><span class="co"># Calculate the bias (how model is different from the observation):</span></a>
-<a class="sourceLine" id="cb63-2" data-line-number="2">pcp_bias &lt;-<span class="st"> </span>(mean_pcp_historical <span class="op">-</span><span class="st"> </span>mean_pcp_era)</a>
-<a class="sourceLine" id="cb63-3" data-line-number="3">t2m_bias &lt;-<span class="st"> </span>(mean_t2m_historical <span class="op">-</span><span class="st"> </span>mean_t2m_era)</a>
-<a class="sourceLine" id="cb63-4" data-line-number="4"></a>
-<a class="sourceLine" id="cb63-5" data-line-number="5"></a>
-<a class="sourceLine" id="cb63-6" data-line-number="6">f &lt;-<span class="st"> </span><span class="kw">spplot</span>(pcp_bias,</a>
-<a class="sourceLine" id="cb63-7" data-line-number="7">            <span class="dt">main =</span> <span class="st">&quot;Precipitation bias [mm/h] </span><span class="ch">\n</span><span class="st"> DJF (1985 - 2004)&quot;</span>,</a>
-<a class="sourceLine" id="cb63-8" data-line-number="8">            <span class="dt">at =</span> <span class="kw">seq</span>(<span class="op">-</span><span class="dv">3</span>, <span class="dv">3</span>, <span class="fl">0.1</span>),</a>
-<a class="sourceLine" id="cb63-9" data-line-number="9">            <span class="dt">col.regions =</span> <span class="kw">cpt</span>(<span class="st">&quot;ncl_precip_diff_12lev&quot;</span>))</a>
-<a class="sourceLine" id="cb63-10" data-line-number="10">g &lt;-<span class="st"> </span><span class="kw">spplot</span>(t2m_bias,</a>
-<a class="sourceLine" id="cb63-11" data-line-number="11">            <span class="dt">main =</span> <span class="st">&quot;Temperature bias [ºC] </span><span class="ch">\n</span><span class="st"> DJF (1985 - 2004)&quot;</span>,</a>
-<a class="sourceLine" id="cb63-12" data-line-number="12">            <span class="dt">at =</span> <span class="kw">seq</span>(<span class="op">-</span><span class="dv">15</span>, <span class="dv">15</span>, <span class="dv">1</span>),</a>
-<a class="sourceLine" id="cb63-13" data-line-number="13">            <span class="dt">col.regions =</span> <span class="kw">cpt</span>(<span class="st">&quot;ncl_temp_diff_18lev&quot;</span>))</a>
-<a class="sourceLine" id="cb63-14" data-line-number="14">gridExtra<span class="op">::</span><span class="kw">grid.arrange</span>(f, g, <span class="dt">ncol =</span> <span class="dv">2</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb63-1" data-line-number="1"><span class="kw">spplot</span>(mean_t2m_historical,</a>
+<a class="sourceLine" id="cb63-2" data-line-number="2">            <span class="dt">main =</span> <span class="st">&quot;Simulated temperature at 2m [ºC] (HadGEM2-ES) </span><span class="ch">\n</span><span class="st"> DJF (1985 - 2004)&quot;</span>,</a>
+<a class="sourceLine" id="cb63-3" data-line-number="3">            <span class="dt">at =</span> <span class="kw">seq</span>(<span class="op">-</span><span class="dv">40</span>, <span class="dv">40</span>, <span class="dv">1</span>),</a>
+<a class="sourceLine" id="cb63-4" data-line-number="4">            <span class="dt">col.regions =</span> <span class="kw">cpt</span>(<span class="st">&quot;ncl_temp_diff_18lev&quot;</span>))</a></code></pre></div>
 <p><img src="bookdown-demo_files/figure-html/unnamed-chunk-61-4.png" width="672" /></p>
-<div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb64-1" data-line-number="1">gridExtra<span class="op">::</span><span class="kw">grid.arrange</span>(a, b, f,</a>
-<a class="sourceLine" id="cb64-2" data-line-number="2">                        c, d, g,  <span class="dt">ncol =</span> <span class="dv">3</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb64-1" data-line-number="1"><span class="co"># Calculate the bias (how model is different from the observation):</span></a>
+<a class="sourceLine" id="cb64-2" data-line-number="2">pcp_bias &lt;-<span class="st"> </span>(mean_pcp_historical <span class="op">-</span><span class="st"> </span>mean_pcp_era)</a>
+<a class="sourceLine" id="cb64-3" data-line-number="3">t2m_bias &lt;-<span class="st"> </span>(mean_t2m_historical <span class="op">-</span><span class="st"> </span>mean_t2m_era)</a>
+<a class="sourceLine" id="cb64-4" data-line-number="4"></a>
+<a class="sourceLine" id="cb64-5" data-line-number="5"></a>
+<a class="sourceLine" id="cb64-6" data-line-number="6"><span class="kw">spplot</span>(pcp_bias,</a>
+<a class="sourceLine" id="cb64-7" data-line-number="7">            <span class="dt">main =</span> <span class="st">&quot;Precipitation bias [mm/h] </span><span class="ch">\n</span><span class="st"> DJF (1985 - 2004)&quot;</span>,</a>
+<a class="sourceLine" id="cb64-8" data-line-number="8">            <span class="dt">at =</span> <span class="kw">seq</span>(<span class="op">-</span><span class="dv">3</span>, <span class="dv">3</span>, <span class="fl">0.1</span>),</a>
+<a class="sourceLine" id="cb64-9" data-line-number="9">            <span class="dt">col.regions =</span> <span class="kw">cpt</span>(<span class="st">&quot;ncl_precip_diff_12lev&quot;</span>))</a></code></pre></div>
 <p><img src="bookdown-demo_files/figure-html/unnamed-chunk-61-5.png" width="672" /></p>
-<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb65-1" data-line-number="1"><span class="co"># JJA - invierno: ####</span></a>
-<a class="sourceLine" id="cb65-2" data-line-number="2"><span class="co"># Try it by your self.</span></a></code></pre></div>
+<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb65-1" data-line-number="1"><span class="kw">spplot</span>(t2m_bias,</a>
+<a class="sourceLine" id="cb65-2" data-line-number="2">            <span class="dt">main =</span> <span class="st">&quot;Temperature bias [ºC] </span><span class="ch">\n</span><span class="st"> DJF (1985 - 2004)&quot;</span>,</a>
+<a class="sourceLine" id="cb65-3" data-line-number="3">            <span class="dt">at =</span> <span class="kw">seq</span>(<span class="op">-</span><span class="dv">15</span>, <span class="dv">15</span>, <span class="dv">1</span>),</a>
+<a class="sourceLine" id="cb65-4" data-line-number="4">            <span class="dt">col.regions =</span> <span class="kw">cpt</span>(<span class="st">&quot;ncl_temp_diff_18lev&quot;</span>))</a></code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-61-6.png" width="672" /></p>
 
 </div>
             </section>

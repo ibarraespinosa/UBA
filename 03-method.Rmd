@@ -1,4 +1,5 @@
-# Taller VECTORES: Aplicación de software de información geográfica y modelado (no terminado)
+# Taller VECTORES: Aplicación de software de información geográfica y modelado
+gracias Dra. Patricia Matus
 
 ```{r include=FALSE}
 options(warn=-1)
@@ -295,9 +296,28 @@ plot(dft_pro$geometry, axes = T)
 
 Con este grafico hemos ploteado un buffer que tiene un comprimento alteatorio pero con una media de 100 km y un desvio padrao de 50 km, para marcar bien las posibilidades....
 
+Antes de terminar, vamos plotear el area de cada buffer. Como el diametro fue calculado de forma aleatoria, en cada rodada este numero cambia, entonces:
+
+
+
+```{r}
+dft_pro$AREA <- st_area(dft_pro)
+plot(dft_pro["AREA"], axes = T) # Area em m^2
+```
+
 
 Honestamente, puedes hacer muuuchas cosas.
 
+
+Vamos a plotear la primera linea
+
+```{r}
+dft_pro1 <- dft_pro[1, ] #primera linea
+plot(dft_pro1["AREA"], axes = T) # Area em m^2
+```
+
+
 lo que mas me ha asombrado / shocked / chocado /  con sf, es que el processo de gridding de [VEIN](https://rdrr.io/cran/vein/man/emis_grid.html) en qgis demoraba 10 minutos, pero usando sf rn R, demora **10 minutos**
+
 Pero ahora vamos a leer datos meteorologicos y climaticos en grillas (RASTER)
  (next chpater)

@@ -124,7 +124,7 @@
   \postauthor{\par}
       \predate{\centering\large\emph}
   \postdate{\par}
-    \date{2019-09-10}
+    \date{2019-09-11}
 
 \usepackage{booktabs}
 \usepackage{amsthm}
@@ -912,8 +912,10 @@ Columna total de NO2 en europa con Sentinel 5P libreria stars \citep{stars}
 \includegraphics[width=1.5\linewidth]{figs/sentinel} \caption{STARS! Sentinel 5P}\label{fig:unnamed-chunk-31}
 \end{figure}
 
-\hypertarget{taller-vectores-aplicacion-de-software-de-informacion-geografica-y-modelado-no-terminado}{%
-\chapter{Taller VECTORES: Aplicación de software de información geográfica y modelado (no terminado)}\label{taller-vectores-aplicacion-de-software-de-informacion-geografica-y-modelado-no-terminado}}
+\hypertarget{taller-vectores-aplicacion-de-software-de-informacion-geografica-y-modelado}{%
+\chapter{Taller VECTORES: Aplicación de software de información geográfica y modelado}\label{taller-vectores-aplicacion-de-software-de-informacion-geografica-y-modelado}}
+
+gracias Dra. Patricia Matus
 
 \textbf{Nota: Existen diferentes recursos para aprender R, sf, stars y raster. Use Google, Baidu o duckduckgo}
 
@@ -1113,8 +1115,10 @@ Otras librerias para leer datos tabulares (planihas - spreadsheets):
 ## Help on topic 'plot' was found in the following packages:
 ## 
 ##   Package               Library
-##   graphics              /usr/lib/R/library
 ##   sf                    /home/sergio/R/x86_64-pc-linux-gnu-library/3.6
+##   stars                 /home/sergio/R/x86_64-pc-linux-gnu-library/3.6
+##   raster                /home/sergio/R/x86_64-pc-linux-gnu-library/3.6
+##   graphics              /usr/lib/R/library
 ## 
 ## 
 ## Using the first match ...
@@ -1143,6 +1147,17 @@ Otras librerias para leer datos tabulares (planihas - spreadsheets):
 \NormalTok{?boxplot}
 \end{Highlighting}
 \end{Shaded}
+
+\begin{verbatim}
+## Help on topic 'boxplot' was found in the following packages:
+## 
+##   Package               Library
+##   raster                /home/sergio/R/x86_64-pc-linux-gnu-library/3.6
+##   graphics              /usr/lib/R/library
+## 
+## 
+## Using the first match ...
+\end{verbatim}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -1431,24 +1446,296 @@ Podemos calcular perfectamente un buffer con una distancia variable\ldots{}..
 
 Con este grafico hemos ploteado un buffer que tiene un comprimento alteatorio pero con una media de 100 km y un desvio padrao de 50 km, para marcar bien las posibilidades\ldots{}.
 
+Antes de terminar, vamos plotear el area de cada buffer. Como el diametro fue calculado de forma aleatoria, en cada rodada este numero cambia, entonces:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{dft_pro}\OperatorTok{$}\NormalTok{AREA <-}\StringTok{ }\KeywordTok{st_area}\NormalTok{(dft_pro)}
+\KeywordTok{plot}\NormalTok{(dft_pro[}\StringTok{"AREA"}\NormalTok{], }\DataTypeTok{axes =}\NormalTok{ T) }\CommentTok{# Area em m^2}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-55-1.pdf}
+
 Honestamente, puedes hacer muuuchas cosas.
 
+Vamos a plotear la primera linea
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{dft_pro1 <-}\StringTok{ }\NormalTok{dft_pro[}\DecValTok{1}\NormalTok{, ] }\CommentTok{#primera linea}
+\KeywordTok{plot}\NormalTok{(dft_pro1[}\StringTok{"AREA"}\NormalTok{], }\DataTypeTok{axes =}\NormalTok{ T) }\CommentTok{# Area em m^2}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-56-1.pdf}
+
 lo que mas me ha asombrado / shocked / chocado / con sf, es que el processo de gridding de \href{https://rdrr.io/cran/vein/man/emis_grid.html}{VEIN} en qgis demoraba 10 minutos, pero usando sf rn R, demora \textbf{10 minutos}
+
 Pero ahora vamos a leer datos meteorologicos y climaticos en grillas (RASTER)
 (next chpater)
 
-\hypertarget{taller-raster-y-cubos-de-datos-vectoriales-aplicacion-de-software-de-informacion-geografica-y-modelado-no-terminado}{%
-\chapter{Taller RASTER Y CUBOS DE DATOS VECTORIALES: Aplicación de software de información geográfica y modelado (no terminado)}\label{taller-raster-y-cubos-de-datos-vectoriales-aplicacion-de-software-de-informacion-geografica-y-modelado-no-terminado}}
+\hypertarget{taller-raster-y-cubos-de-datos-vectoriales-aplicacion-de-software-de-informacion-geografica-y-modelado}{%
+\chapter{Taller RASTER Y CUBOS DE DATOS VECTORIALES: Aplicación de software de información geográfica y modelado}\label{taller-raster-y-cubos-de-datos-vectoriales-aplicacion-de-software-de-informacion-geografica-y-modelado}}
 
-Amanda Rehbein
+gracias Amanda Rehbein \textless{}3
 
-Raster son informacion espaciales en una grilla espacial. Por ejemplo, vea las siguientes figuras:
+\href{https://r-spatial.github.io/stars/}{Raster} son informacion espaciales en una grilla espacial. En general, la informacion de las frillas tiene una distancia homogenea, Por ejemplo, vea las siguientes figuras:
 
 \includegraphics{figs/cube1.png}
 
 \includegraphics{figs/cube2.png}
 
-Ejemplos con R
+Por ejemplo, cada banda podria representar un tiempo. Como se ve, estos ne realidad son cubos de datos de varias dimensiones, sin embargo, pueden existir grillas irregulares, como las que osn bien represnetadas con el paquete \href{https://r-spatial.github.io/stars/articles/stars4.html}{stars}
+
+Preparense, porque vamos a avanzar directamente en el fondo del mundo de los datos espacio/temporales grillados raster y stars
+
+\texttt{raster} es una clase y una libreria de R que representa datos en grillas, llamados raster
+\texttt{stasr} es una clase y una libreria de R que representa datos en grillas, llamados tambien rasters.
+Por lo tanto, \texttt{stars} y \texttt{raster} tienen conexiones para leer los datos en formato GDAL raster. Que quiere decir esto????
+
+Quiere decir que, tal como GDAL lee vectores, tambien lee {[}raster{]}((\url{https://gdal.org/drivers/raster/index.html}).: Coomopor ejemplo:
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://gdal.org/drivers/raster/aaigrid.html}{ASCII}
+\item
+  \href{https://gdal.org/drivers/raster/envi.html}{ENVI}
+\item
+  \href{https://gdal.org/drivers/raster/gtiff.html}{GeoTIFF}
+\item
+  \href{https://gdal.org/drivers/raster/palsar.html}{JAXA PALSAR}
+\item
+  \href{https://gdal.org/drivers/raster/netcdf.html}{NetCDF}
+\item
+  \href{https://gdal.org/drivers/raster/pdf.html}{GeoSpatial PDF}
+\item
+  \href{https://gdal.org/drivers/raster/r.html}{R}
+\item
+  \href{https://gdal.org/drivers/raster/rraster.html}{R Raster}
+\item
+  \href{https://gdal.org/drivers/raster/xyz.html}{XYZ}
+\end{itemize}
+
+Vamos meterle manos a la obra, vamos a nadar en el mundo multidimensional de los raster y si no saben nadar aprenderan como los pajaros que aprenden ante la subita e inherente necesidada vital de sobrevivir.
+
+\href{https://www.ecmwf.int/en/forecasts/datasets/reanalysis-datasets/era5}{ERA5!}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{library}\NormalTok{(stars)}
+\NormalTok{pcp_era5 <-}\StringTok{ }\KeywordTok{read_stars}\NormalTok{(}\StringTok{"dados/pr_Amon_HadGEM2-ES_historical_r1i1p1_DJF_1985-2004.nc"}\NormalTok{)}
+\KeywordTok{names}\NormalTok{(pcp_era5)}
+\KeywordTok{str}\NormalTok{(pcp_era5)}
+\KeywordTok{head}\NormalTok{(pcp_era5)}
+\end{Highlighting}
+\end{Shaded}
+
+brick es como literalmente un ladrillo considerndo usualmente la dimension tempral como un ladrillo.
+
+como vemos, la funcion \texttt{str} entrega mucha informacion. Esta funcion no es comunmente usada, pero su archivo de documentacion es ?str
+
+\href{https://www.ecmwf.int/en/forecasts/datasets/reanalysis-datasets/era5}{ERA5}, investiguen!
+
+Vamos a plotear estos datos!
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{library}\NormalTok{(stars)}
+\KeywordTok{library}\NormalTok{(cptcity)}
+\NormalTok{pcp_era5 <-}\StringTok{ }\KeywordTok{read_stars}\NormalTok{(}\StringTok{"dados/pr_Amon_HadGEM2-ES_historical_r1i1p1_DJF_1985-2004.nc"}\NormalTok{)}
+\KeywordTok{plot}\NormalTok{(pcp_era5,}
+    \DataTypeTok{col =} \KeywordTok{lucky}\NormalTok{(),}
+     \DataTypeTok{axes =} \OtherTok{TRUE}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Colour gradient: td_DEM_screen, number: 7058
+\end{verbatim}
+
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-58-1.pdf}
+
+Ahora vamos voy a mostrar todo un script para hacer graficos y analizar datos climaticos usando la libreria \texttt{raster}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# ------------------------------------#}
+\CommentTok{# Precipitacion y temperatura medias  #}
+\CommentTok{#         Verano y invierno           #}
+\CommentTok{#       (very simple analysis)        #}
+\CommentTok{# ------------------------------------#}
+
+\KeywordTok{library}\NormalTok{(raster)}
+\KeywordTok{library}\NormalTok{(cptcity)}
+
+\NormalTok{path <-}\StringTok{ "dados"}
+
+\CommentTok{# DJF - VERANO: ####}
+
+\CommentTok{# Open the precipitation file:}
+\NormalTok{pcp_era5 <-}\StringTok{ }\KeywordTok{brick}\NormalTok{(}\StringTok{"dados/r_ERA5_pcp_DJF_1985-2004.nc"}\NormalTok{)}
+\CommentTok{# Print information and metadata:}
+\NormalTok{pcp_era5 }\CommentTok{# This file has 17 layers (years)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## class      : RasterBrick 
+## dimensions : 145, 192, 27840, 21  (nrow, ncol, ncell, nlayers)
+## resolution : 1.875, 1.25  (x, y)
+## extent     : -0.9375, 359.0625, -90.625, 90.625  (xmin, xmax, ymin, ymax)
+## crs        : +proj=longlat +datum=WGS84 +ellps=WGS84 +towgs84=0,0,0 
+## source     : /home/sergio/Documents/UBA/dados/r_ERA5_pcp_DJF_1985-2004.nc 
+## names      : X1984.01.16.12.06.28, X1985.01.01.00.06.28, X1986.01.01.01.06.28, X1987.01.01.01.06.28, X1988.01.01.01.06.28, X1989.01.01.01.06.28, X1990.01.01.01.06.28, X1991.01.01.01.06.28, X1992.01.01.01.06.28, X1993.01.01.01.06.28, X1994.01.01.01.06.28, X1995.01.01.01.06.28, X1996.01.01.01.06.28, X1997.01.01.01.06.28, X1998.01.01.01.06.28, ... 
+## Date/time  : 1984-01-16 12:06:28, 2005-12-01 01:06:28 (min, max)
+## varname    : mtpr
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Plot the 1st time/year:}
+\KeywordTok{plot}\NormalTok{(pcp_era5[[}\DecValTok{1}\NormalTok{]]}\OperatorTok{*}\DecValTok{3600}\NormalTok{)      }\CommentTok{# *3600 to obtain mm/h}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-59-1.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Calculate the mean:}
+\NormalTok{mean_pcp_era <-}\StringTok{ }\KeywordTok{mean}\NormalTok{(pcp_era5}\OperatorTok{*}\DecValTok{3600}\NormalTok{)}
+
+\CommentTok{# Opening CMIP5 data model: HadGEM2-ES\textbackslash{}}
+\NormalTok{pcp_historical <-}\StringTok{ }\KeywordTok{brick}\NormalTok{(}\StringTok{"dados/pr_Amon_HadGEM2-ES_historical_r1i1p1_DJF_1985-2004.nc"}\NormalTok{)}
+\KeywordTok{plot}\NormalTok{(pcp_historical[[}\DecValTok{1}\NormalTok{]]}\OperatorTok{*}\DecValTok{3600}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-59-2.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{mean_pcp_historical <-}\StringTok{ }\KeywordTok{mean}\NormalTok{(pcp_historical}\OperatorTok{*}\DecValTok{3600}\NormalTok{)}
+\KeywordTok{plot}\NormalTok{(mean_pcp_historical[[}\DecValTok{1}\NormalTok{]]}\OperatorTok{*}\DecValTok{3600}\NormalTok{,}
+     \DataTypeTok{main =} \StringTok{"HadGEM2-ES mean precipitation [mm/h] }\CharTok{\textbackslash{}n}\StringTok{ DJF (1985 - 2004)"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-59-3.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{a <-}\StringTok{ }\KeywordTok{spplot}\NormalTok{(mean_pcp_era, }\DataTypeTok{interpolate =}\NormalTok{ T,}
+            \DataTypeTok{main =} \StringTok{"Observed Precipitation [mm/h] (ERA5) }\CharTok{\textbackslash{}n}\StringTok{ DJF (1985 - 2004)"}\NormalTok{,}
+            \DataTypeTok{at =} \KeywordTok{seq}\NormalTok{(}\DecValTok{0}\NormalTok{, }\DecValTok{4}\NormalTok{, }\FloatTok{0.1}\NormalTok{),}
+            \DataTypeTok{col.regions =} \KeywordTok{cpt}\NormalTok{(}\StringTok{"ncl_precip2_17lev"}\NormalTok{))}
+\NormalTok{b <-}\StringTok{ }\KeywordTok{spplot}\NormalTok{(mean_pcp_historical,}
+            \DataTypeTok{main =} \StringTok{"Simulated precipitation [mm/h] (HadGEM2-ES) }\CharTok{\textbackslash{}n}\StringTok{ DJF (1985 - 2004)"}\NormalTok{,}
+            \DataTypeTok{at =} \KeywordTok{seq}\NormalTok{(}\DecValTok{0}\NormalTok{, }\DecValTok{4}\NormalTok{, }\FloatTok{0.1}\NormalTok{),}
+            \DataTypeTok{col.regions =} \KeywordTok{cpt}\NormalTok{(}\StringTok{"ncl_precip2_17lev"}\NormalTok{))}
+\NormalTok{gridExtra}\OperatorTok{::}\KeywordTok{grid.arrange}\NormalTok{(a, b, }\DataTypeTok{ncol =} \DecValTok{2}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-59-4.pdf}
+
+Ahora vamos a ver la temperatura
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Temperature ####}
+\NormalTok{t2m_era5 <-}\StringTok{ }\KeywordTok{brick}\NormalTok{(}\StringTok{"dados/r_ERA5_t2m_DJF_1985-2004.nc"}\NormalTok{)}
+\NormalTok{t2m_era5}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## class      : RasterBrick 
+## dimensions : 145, 192, 27840, 17  (nrow, ncol, ncell, nlayers)
+## resolution : 1.875, 1.25  (x, y)
+## extent     : -0.9375, 359.0625, -90.625, 90.625  (xmin, xmax, ymin, ymax)
+## crs        : +proj=longlat +datum=WGS84 +ellps=WGS84 +towgs84=0,0,0 
+## source     : /home/sergio/Documents/UBA/dados/r_ERA5_t2m_DJF_1985-2004.nc 
+## names      : X1986.01.01.01.06.28, X1987.01.01.01.06.28, X1988.01.01.01.06.28, X1989.01.01.01.06.28, X1990.01.01.01.06.28, X1991.01.01.01.06.28, X1992.01.01.01.06.28, X1993.01.01.01.06.28, X1994.01.01.01.06.28, X1995.01.01.01.06.28, X1996.01.01.01.06.28, X1997.01.01.01.06.28, X1998.01.01.01.06.28, X1999.01.01.01.06.28, X2000.01.01.01.06.28, ... 
+## Date/time  : 1986-01-01 01:06:28, 2004-01-01 01:06:28 (min, max)
+## varname    : t2m
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{plot}\NormalTok{(t2m_era5[[}\DecValTok{1}\NormalTok{]] }\OperatorTok{-}\StringTok{ }\FloatTok{273.15}\NormalTok{)      }\CommentTok{# -273.15 to obtain ºC}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-60-1.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{mean_t2m_era <-}\StringTok{ }\KeywordTok{mean}\NormalTok{(t2m_era5 }\FloatTok{-273.15}\NormalTok{)}
+
+\NormalTok{t2m_historical <-}\StringTok{ }\KeywordTok{brick}\NormalTok{(}\StringTok{"dados/tas_Amon_HadGEM2-ES_historical_r1i1p1_DJF_1985-2004.nc"}\NormalTok{)}
+\KeywordTok{plot}\NormalTok{(t2m_historical[[}\DecValTok{1}\NormalTok{]] }\OperatorTok{-}\StringTok{ }\FloatTok{273.15}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-60-2.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{mean_t2m_historical <-}\StringTok{ }\KeywordTok{mean}\NormalTok{(t2m_historical }\OperatorTok{-}\StringTok{ }\FloatTok{273.15}\NormalTok{)}
+
+\NormalTok{c <-}\StringTok{ }\KeywordTok{spplot}\NormalTok{(mean_t2m_era,}
+            \DataTypeTok{main =} \StringTok{"Observed temperature at 2m [ºC] (ERA5) }\CharTok{\textbackslash{}n}\StringTok{ DJF (1985 - 2004)"}\NormalTok{,}
+            \DataTypeTok{at =} \KeywordTok{seq}\NormalTok{(}\OperatorTok{-}\DecValTok{40}\NormalTok{, }\DecValTok{40}\NormalTok{, }\DecValTok{1}\NormalTok{),}
+            \DataTypeTok{col.regions =} \KeywordTok{cpt}\NormalTok{(}\StringTok{"ncl_temp_diff_18lev"}\NormalTok{))}
+\NormalTok{d <-}\StringTok{ }\KeywordTok{spplot}\NormalTok{(mean_t2m_historical,}
+            \DataTypeTok{main =} \StringTok{"Simulated temperature at 2m [ºC] (HadGEM2-ES) }\CharTok{\textbackslash{}n}\StringTok{ DJF (1985 - 2004)"}\NormalTok{,}
+            \DataTypeTok{at =} \KeywordTok{seq}\NormalTok{(}\OperatorTok{-}\DecValTok{40}\NormalTok{, }\DecValTok{40}\NormalTok{, }\DecValTok{1}\NormalTok{),}
+            \DataTypeTok{col.regions =} \KeywordTok{cpt}\NormalTok{(}\StringTok{"ncl_temp_diff_18lev"}\NormalTok{))}
+\NormalTok{gridExtra}\OperatorTok{::}\KeywordTok{grid.arrange}\NormalTok{(c, d, }\DataTypeTok{ncol =} \DecValTok{2}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-60-3.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Calculate the bias (how model is different from the observation):}
+\NormalTok{pcp_bias <-}\StringTok{ }\NormalTok{(mean_pcp_historical }\OperatorTok{-}\StringTok{ }\NormalTok{mean_pcp_era)}
+\NormalTok{t2m_bias <-}\StringTok{ }\NormalTok{(mean_t2m_historical }\OperatorTok{-}\StringTok{ }\NormalTok{mean_t2m_era)}
+
+
+\NormalTok{f <-}\StringTok{ }\KeywordTok{spplot}\NormalTok{(pcp_bias,}
+            \DataTypeTok{main =} \StringTok{"Precipitation bias [mm/h] }\CharTok{\textbackslash{}n}\StringTok{ DJF (1985 - 2004)"}\NormalTok{,}
+            \DataTypeTok{at =} \KeywordTok{seq}\NormalTok{(}\OperatorTok{-}\DecValTok{3}\NormalTok{, }\DecValTok{3}\NormalTok{, }\FloatTok{0.1}\NormalTok{),}
+            \DataTypeTok{col.regions =} \KeywordTok{cpt}\NormalTok{(}\StringTok{"ncl_precip_diff_12lev"}\NormalTok{))}
+\NormalTok{g <-}\StringTok{ }\KeywordTok{spplot}\NormalTok{(t2m_bias,}
+            \DataTypeTok{main =} \StringTok{"Temperature bias [ºC] }\CharTok{\textbackslash{}n}\StringTok{ DJF (1985 - 2004)"}\NormalTok{,}
+            \DataTypeTok{at =} \KeywordTok{seq}\NormalTok{(}\OperatorTok{-}\DecValTok{15}\NormalTok{, }\DecValTok{15}\NormalTok{, }\DecValTok{1}\NormalTok{),}
+            \DataTypeTok{col.regions =} \KeywordTok{cpt}\NormalTok{(}\StringTok{"ncl_temp_diff_18lev"}\NormalTok{))}
+\NormalTok{gridExtra}\OperatorTok{::}\KeywordTok{grid.arrange}\NormalTok{(f, g, }\DataTypeTok{ncol =} \DecValTok{2}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-60-4.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{gridExtra}\OperatorTok{::}\KeywordTok{grid.arrange}\NormalTok{(a, b, f,}
+\NormalTok{                        c, d, g,  }\DataTypeTok{ncol =} \DecValTok{3}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-60-5.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# JJA - invierno: ####}
+\CommentTok{# Try it by your self.}
+\end{Highlighting}
+\end{Shaded}
 
 \hypertarget{estudios-de-series-de-tiempo-para-asociar-salud-y-variables-ambientales}{%
 \chapter{Estudios de series de tiempo para asociar salud y variables ambientales}\label{estudios-de-series-de-tiempo-para-asociar-salud-y-variables-ambientales}}
@@ -1496,7 +1783,7 @@ f(x) = 1/( (2 \pi) \sigma) e^-((x - \mu)^2/(2 \sigma^2)^0.5 )
 
 Vamos a ver un ejemplo:
 
-\includegraphics[height=1.5\textheight]{bookdown-demo_files/figure-latex/unnamed-chunk-56-1}
+\includegraphics[height=1.5\textheight]{bookdown-demo_files/figure-latex/unnamed-chunk-61-1}
 
 \hypertarget{efecto-de-la-contaminacion}{%
 \section{Efecto de la contaminacion}\label{efecto-de-la-contaminacion}}
@@ -1520,7 +1807,7 @@ RR = exp(\beta_i \cdot \delta X_i)
 Que indica el riesgo relativo dada un cambio en la variable, por ejemplo, si se incrementan las concentraciones de PM10 en 50 ug/m3, el riesgo de mortalidad respiratoria aumenta 7\%. Aplicando este porcentaje sobre la poblacion es posible calcular la mortalidad anual asociada a la contaminacion. Vamos a ver valores reales para Argentina y Chile \citep{rosana}.
 
 \begin{figure}
-\includegraphics[width=11.44in,height=1.8\textheight]{figs/rosana1} \caption{Riesgo relativo en mortalidad por incremento de 1 ppm de CO (Abrutzky et al., 2013)}\label{fig:unnamed-chunk-57}
+\includegraphics[width=11.44in,height=1.8\textheight]{figs/rosana1} \caption{Riesgo relativo en mortalidad por incremento de 1 ppm de CO (Abrutzky et al., 2013)}\label{fig:unnamed-chunk-62}
 \end{figure}
 
 \hypertarget{efecto-de-la-temperatura}{%
@@ -1529,7 +1816,7 @@ Que indica el riesgo relativo dada un cambio en la variable, por ejemplo, si se 
 Puede se utilizada la misma metodologia pero considerando variables meteorologicas en este caso. Un trabajo muy interesante recientemente publicado por el grupo de Paulo Saliva es el efecto de la temperatura en diferentes ciudades del mundo \citep{GASPARRINI2015369}.
 
 \begin{figure}
-\includegraphics[width=18.97in,height=1.8\textheight]{figs/temp1} \caption{Riesgo relativo en mortalidad por incremento de 1 ppm de CO (Abrutzky et al., 2013)}\label{fig:unnamed-chunk-58}
+\includegraphics[width=18.97in,height=1.8\textheight]{figs/temp1} \caption{Riesgo relativo en mortalidad por incremento de 1 ppm de CO (Abrutzky et al., 2013)}\label{fig:unnamed-chunk-63}
 \end{figure}
 
 \bibliography{book.bib,packages.bib}

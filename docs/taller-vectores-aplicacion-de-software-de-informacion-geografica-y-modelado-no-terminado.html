@@ -490,6 +490,10 @@ Como sf esta enlazada con GDAL, permite leer todos los formatos de vector de GDA
 <a class="sourceLine" id="cb40-3" data-line-number="3"><span class="kw">plot</span>(dft_pro<span class="op">$</span>geometry, <span class="dt">axes =</span> T)</a></code></pre></div>
 <p><img src="bookdown-demo_files/figure-html/unnamed-chunk-54-1.png" width="672" /></p>
 <p>Con este grafico hemos ploteado un buffer que tiene un comprimento alteatorio pero con una media de 100 km y un desvio padrao de 50 km, para marcar bien las posibilidades….</p>
+<p>Antes de terminar, vamos plotear el area de cada buffer. Como el diametro fue calculado de forma aleatoria, en cada rodada este numero cambia, entonces:</p>
+<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb41-1" data-line-number="1">dft_pro<span class="op">$</span>AREA &lt;-<span class="st"> </span><span class="kw">st_area</span>(dft_pro)</a>
+<a class="sourceLine" id="cb41-2" data-line-number="2"><span class="kw">plot</span>(dft_pro[<span class="st">&quot;AREA&quot;</span>], <span class="dt">axes =</span> T) <span class="co"># Area em m^2</span></a></code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-55-1.png" width="672" /></p>
 <p>Honestamente, puedes hacer muuuchas cosas.</p>
 <p>lo que mas me ha asombrado / shocked / chocado / con sf, es que el processo de gridding de <a href="https://rdrr.io/cran/vein/man/emis_grid.html">VEIN</a> en qgis demoraba 10 minutos, pero usando sf rn R, demora <strong>10 minutos</strong>
 Pero ahora vamos a leer datos meteorologicos y climaticos en grillas (RASTER)

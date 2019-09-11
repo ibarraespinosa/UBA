@@ -47,6 +47,20 @@
 
 
 
+<script src="libs/htmlwidgets-1.3/htmlwidgets.js"></script>
+<link href="libs/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
+<script src="libs/leaflet-1.3.1/leaflet.js"></script>
+<link href="libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
+<script src="libs/Proj4Leaflet-1.0.1/proj4-compressed.js"></script>
+<script src="libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+<link href="libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
+<script src="libs/leaflet-binding-2.0.2/leaflet.js"></script>
+<script src="libs/leaflet-providers-1.1.17/leaflet-providers.js"></script>
+<script src="libs/leaflet-providers-plugin-2.0.2/leaflet-providers-plugin.js"></script>
+<link href="libs/HomeButton-0.0.1/home-button.css" rel="stylesheet" />
+<script src="libs/HomeButton-0.0.1/home-button.js"></script>
+<script src="libs/HomeButton-0.0.1/easy-button-src.min.js"></script>
+<link href="libs/PopupTable-0.0.1/popup.css" rel="stylesheet" />
 
 
 <style type="text/css">
@@ -169,12 +183,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="3" data-path="taller-vectores-aplicacion-de-software-de-informacion-geografica-y-modelado-no-terminado.html"><a href="taller-vectores-aplicacion-de-software-de-informacion-geografica-y-modelado-no-terminado.html"><i class="fa fa-check"></i><b>3</b> Taller VECTORES: Aplicación de software de información geográfica y modelado (no terminado)</a><ul>
 <li class="chapter" data-level="3.1" data-path="taller-vectores-aplicacion-de-software-de-informacion-geografica-y-modelado-no-terminado.html"><a href="taller-vectores-aplicacion-de-software-de-informacion-geografica-y-modelado-no-terminado.html#instalacion"><i class="fa fa-check"></i><b>3.1</b> Instalacion</a></li>
-<li class="chapter" data-level="3.2" data-path="taller-vectores-aplicacion-de-software-de-informacion-geografica-y-modelado-no-terminado.html"><a href="taller-vectores-aplicacion-de-software-de-informacion-geografica-y-modelado-no-terminado.html#r-desde-excel-libreoffice-archivos-de-text-etc."><i class="fa fa-check"></i><b>3.2</b> R desde Excel, libreoffice, archivos de text, etc.</a><ul>
-<li class="chapter" data-level="3.2.1" data-path="taller-vectores-aplicacion-de-software-de-informacion-geografica-y-modelado-no-terminado.html"><a href="taller-vectores-aplicacion-de-software-de-informacion-geografica-y-modelado-no-terminado.html#usando-base"><i class="fa fa-check"></i><b>3.2.1</b> Usando base</a></li>
-<li class="chapter" data-level="3.2.2" data-path="taller-vectores-aplicacion-de-software-de-informacion-geografica-y-modelado-no-terminado.html"><a href="taller-vectores-aplicacion-de-software-de-informacion-geografica-y-modelado-no-terminado.html#usando-data.table-mi-favorito-junto-con-sf"><i class="fa fa-check"></i><b>3.2.2</b> Usando data.table (mi favorito junto con sf)</a></li>
-<li class="chapter" data-level="3.2.3" data-path="taller-vectores-aplicacion-de-software-de-informacion-geografica-y-modelado-no-terminado.html"><a href="taller-vectores-aplicacion-de-software-de-informacion-geografica-y-modelado-no-terminado.html#usndo-readxl"><i class="fa fa-check"></i><b>3.2.3</b> Usndo readxl</a></li>
+<li class="chapter" data-level="3.2" data-path="taller-vectores-aplicacion-de-software-de-informacion-geografica-y-modelado-no-terminado.html"><a href="taller-vectores-aplicacion-de-software-de-informacion-geografica-y-modelado-no-terminado.html#r-desde-excel-libreoffice-archivos-de-texto-etc."><i class="fa fa-check"></i><b>3.2</b> R desde Excel, libreoffice, archivos de texto, etc.</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="taller-vectores-aplicacion-de-software-de-informacion-geografica-y-modelado-no-terminado.html"><a href="taller-vectores-aplicacion-de-software-de-informacion-geografica-y-modelado-no-terminado.html#el-nino-y-la-nina"><i class="fa fa-check"></i><b>3.2.1</b> <span>El Niño y la Niña</span></a></li>
+<li class="chapter" data-level="3.2.2" data-path="taller-vectores-aplicacion-de-software-de-informacion-geografica-y-modelado-no-terminado.html"><a href="taller-vectores-aplicacion-de-software-de-informacion-geografica-y-modelado-no-terminado.html#usando-base"><i class="fa fa-check"></i><b>3.2.2</b> Usando base</a></li>
+<li class="chapter" data-level="3.2.3" data-path="taller-vectores-aplicacion-de-software-de-informacion-geografica-y-modelado-no-terminado.html"><a href="taller-vectores-aplicacion-de-software-de-informacion-geografica-y-modelado-no-terminado.html#usando-data.table-mi-favorito-junto-con-sf"><i class="fa fa-check"></i><b>3.2.3</b> Usando data.table (mi favorito junto con sf)</a></li>
+<li class="chapter" data-level="3.2.4" data-path="taller-vectores-aplicacion-de-software-de-informacion-geografica-y-modelado-no-terminado.html"><a href="taller-vectores-aplicacion-de-software-de-informacion-geografica-y-modelado-no-terminado.html#summary"><i class="fa fa-check"></i><b>3.2.4</b> summary</a></li>
+<li class="chapter" data-level="3.2.5" data-path="taller-vectores-aplicacion-de-software-de-informacion-geografica-y-modelado-no-terminado.html"><a href="taller-vectores-aplicacion-de-software-de-informacion-geografica-y-modelado-no-terminado.html#ploteando-datos-con-base"><i class="fa fa-check"></i><b>3.2.5</b> Ploteando datos con base</a></li>
 </ul></li>
-<li class="chapter" data-level="3.3" data-path="taller-vectores-aplicacion-de-software-de-informacion-geografica-y-modelado-no-terminado.html"><a href="taller-vectores-aplicacion-de-software-de-informacion-geografica-y-modelado-no-terminado.html#representacion-de-objetos-espaciales"><i class="fa fa-check"></i><b>3.3</b> Representacion de objetos espaciales</a></li>
+<li class="chapter" data-level="3.3" data-path="taller-vectores-aplicacion-de-software-de-informacion-geografica-y-modelado-no-terminado.html"><a href="taller-vectores-aplicacion-de-software-de-informacion-geografica-y-modelado-no-terminado.html#vectores"><i class="fa fa-check"></i><b>3.3</b> Vectores</a></li>
+<li class="chapter" data-level="3.4" data-path="taller-vectores-aplicacion-de-software-de-informacion-geografica-y-modelado-no-terminado.html"><a href="taller-vectores-aplicacion-de-software-de-informacion-geografica-y-modelado-no-terminado.html#geoprocesamiento"><i class="fa fa-check"></i><b>3.4</b> Geoprocesamiento</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="taller-raster-y-cubos-de-datos-vectoriales-aplicacion-de-software-de-informacion-geografica-y-modelado-no-terminado.html"><a href="taller-raster-y-cubos-de-datos-vectoriales-aplicacion-de-software-de-informacion-geografica-y-modelado-no-terminado.html"><i class="fa fa-check"></i><b>4</b> Taller RASTER Y CUBOS DE DATOS VECTORIALES: Aplicación de software de información geográfica y modelado (no terminado)</a></li>
 <li class="chapter" data-level="5" data-path="estudios-de-series-de-tiempo-para-asociar-salud-y-variables-ambientales.html"><a href="estudios-de-series-de-tiempo-para-asociar-salud-y-variables-ambientales.html"><i class="fa fa-check"></i><b>5</b> Estudios de series de tiempo para asociar salud y variables ambientales</a><ul>
@@ -230,7 +247,7 @@ f(x) = 1/( (2 \pi) \sigma) e^-((x - \mu)^2/(2 \sigma^2)^0.5 )
 \tag{5.1}
 \end{equation}\]</span></p>
 <p>Vamos a ver un ejemplo:</p>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-38-1.png" width="672" height="150%" /></p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-56-1.png" width="672" height="150%" /></p>
 </div>
 <div id="efecto-de-la-contaminacion" class="section level2">
 <h2><span class="header-section-number">5.2</span> Efecto de la contaminacion</h2>
@@ -246,7 +263,7 @@ RR = exp(\beta_i \cdot \delta X_i)
 \tag{5.1}
 \end{equation}\]</span></p>
 <p>Que indica el riesgo relativo dada un cambio en la variable, por ejemplo, si se incrementan las concentraciones de PM10 en 50 ug/m3, el riesgo de mortalidad respiratoria aumenta 7%. Aplicando este porcentaje sobre la poblacion es posible calcular la mortalidad anual asociada a la contaminacion. Vamos a ver valores reales para Argentina y Chile <span class="citation">(Abrutzky et al. <a href="#ref-rosana">2013</a>)</span>.</p>
-<div class="figure"><span id="fig:unnamed-chunk-39"></span>
+<div class="figure"><span id="fig:unnamed-chunk-57"></span>
 <img src="figs/rosana1.png" alt="Riesgo relativo en mortalidad por incremento de 1 ppm de CO (Abrutzky et al., 2013)" width="412" height="180%" />
 <p class="caption">
 Figure 5.1: Riesgo relativo en mortalidad por incremento de 1 ppm de CO (Abrutzky et al., 2013)
@@ -256,7 +273,7 @@ Figure 5.1: Riesgo relativo en mortalidad por incremento de 1 ppm de CO (Abrutzk
 <div id="efecto-de-la-temperatura" class="section level2">
 <h2><span class="header-section-number">5.3</span> Efecto de la temperatura</h2>
 <p>Puede se utilizada la misma metodologia pero considerando variables meteorologicas en este caso. Un trabajo muy interesante recientemente publicado por el grupo de Paulo Saliva es el efecto de la temperatura en diferentes ciudades del mundo <span class="citation">(Gasparrini et al. <a href="#ref-GASPARRINI2015369">2015</a>)</span>.</p>
-<div class="figure"><span id="fig:unnamed-chunk-40"></span>
+<div class="figure"><span id="fig:unnamed-chunk-58"></span>
 <img src="figs/temp1.png" alt="Riesgo relativo en mortalidad por incremento de 1 ppm de CO (Abrutzky et al., 2013)" width="683" height="180%" />
 <p class="caption">
 Figure 5.2: Riesgo relativo en mortalidad por incremento de 1 ppm de CO (Abrutzky et al., 2013)

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2019/dev/Debian) (preloaded format=xelatex 2019.8.22)  10 SEP 2019 14:34
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2019/dev/Debian) (preloaded format=xelatex 2019.8.22)  10 SEP 2019 19:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1204,23 +1204,163 @@ Overfull \hbox (154.57793pt too wide) has occurred while \output is active
 ]
 Chapter 3.
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 945.
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 938.
+
+Underfull \vbox (badness 1033) has occurred while \output is active []
+
 [43]
-Underfull \vbox (badness 1205) has occurred while \output is active []
-
-
 Overfull \hbox (307.99907pt too wide) has occurred while \output is active
 \TU/lmr/m/n/10 44 \TU/lmr/m/sl/10 CHAPTER 3.  TALLER VECTORES: APLICACIÓN DE SO
 FTWARE DE INFORMACIÓN GEOGRÁFICA Y MODELADO (NO TERMINADO)
  []
 
 [44] [45]
+Overfull \hbox (43.5pt too wide) in paragraph at lines 1101--1101
+[]\TU/lmtt/m/n/10 ##  Min.   :1950-01-01   Min.   :1950   Min.   : 1.000   Min.
+   :-2.033333[] 
+ []
+
+
+Overfull \hbox (43.5pt too wide) in paragraph at lines 1101--1101
+[]\TU/lmtt/m/n/10 ##  1st Qu.:1967-05-24   1st Qu.:1967   1st Qu.: 3.000   1st 
+Qu.:-0.536667[] 
+ []
+
+
+Overfull \hbox (43.5pt too wide) in paragraph at lines 1101--1101
+[]\TU/lmtt/m/n/10 ##  Median :1984-10-16   Median :1984   Median : 6.000   Medi
+an :-0.003333[] 
+ []
+
+
+Overfull \hbox (43.5pt too wide) in paragraph at lines 1101--1101
+[]\TU/lmtt/m/n/10 ##  Mean   :1984-10-15   Mean   :1984   Mean   : 6.481   Mean
+   : 0.032758[] 
+ []
+
+
+Overfull \hbox (43.5pt too wide) in paragraph at lines 1101--1101
+[]\TU/lmtt/m/n/10 ##  3rd Qu.:2002-03-08   3rd Qu.:2002   3rd Qu.: 9.000   3rd 
+Qu.: 0.560833[] 
+ []
+
+
+Overfull \hbox (43.5pt too wide) in paragraph at lines 1101--1101
+[]\TU/lmtt/m/n/10 ##  Max.   :2019-08-01   Max.   :2019   Max.   :12.000   Max.
+   : 2.643333[] 
+ []
+
+
+Overfull \hbox (1.5pt too wide) in paragraph at lines 1101--1101
+[]\TU/lmtt/m/n/10 ##                                                       NA[]
+s   :2[] 
+ []
+
+
+Overfull \hbox (38.25pt too wide) in paragraph at lines 1121--1121
+[]\TU/lmtt/m/n/10 ##   sf                    /home/sergio/R/x86_64-pc-linux-gnu
+-library/3.6[] 
+ []
+
+File: bookdown-demo_files/figure-latex/unnamed-chunk-39-1.pdf Graphic file (typ
+e pdf)
+<use bookdown-demo_files/figure-latex/unnamed-chunk-39-1.pdf>
+
 Overfull \hbox (307.99907pt too wide) has occurred while \output is active
 \TU/lmr/m/n/10 46 \TU/lmr/m/sl/10 CHAPTER 3.  TALLER VECTORES: APLICACIÓN DE SO
 FTWARE DE INFORMACIÓN GEOGRÁFICA Y MODELADO (NO TERMINADO)
  []
 
-[46
+[46]
+File: bookdown-demo_files/figure-latex/unnamed-chunk-39-2.pdf Graphic file (typ
+e pdf)
+<use bookdown-demo_files/figure-latex/unnamed-chunk-39-2.pdf>
+
+Underfull \vbox (badness 10000) detected at line 1157
+ []
+
+
+Underfull \vbox (badness 7667) has occurred while \output is active []
+
+[47]
+Overfull \hbox (148.5pt too wide) in paragraph at lines 1161--1161
+[]\TU/lmtt/m/n/10 ## Don[]t know how to automatically pick scale for object of 
+type ts. Defaulting to continuous.[] 
+ []
+
+File: bookdown-demo_files/figure-latex/unnamed-chunk-40-1.pdf Graphic file (typ
+e pdf)
+<use bookdown-demo_files/figure-latex/unnamed-chunk-40-1.pdf>
+
+Overfull \hbox (85.5pt too wide) in paragraph at lines 1198--1198
+[]\TU/lmtt/m/n/10 ## bbox:           xmin: -71.16815 ymin: -38.93094 xmax: -58.
+04786 ymax: -24.26721[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 1198--1198
+[]\TU/lmtt/m/n/10 ##   entidad objeto      vlp fdc   sag                       
+         geometry[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 1198--1198
+[]\TU/lmtt/m/n/10 ##     <int> <chr>     <dbl> <chr> <chr>                 <MUL
+TILINESTRING [°]>[] 
+ []
+
+
+Overfull \hbox (307.99907pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 48 \TU/lmr/m/sl/10 CHAPTER 3.  TALLER VECTORES: APLICACIÓN DE SO
+FTWARE DE INFORMACIÓN GEOGRÁFICA Y MODELADO (NO TERMINADO)
+ []
+
+[48]
+Overfull \hbox (64.5pt too wide) in paragraph at lines 1198--1198
+[]\TU/lmtt/m/n/10 ## 1       8 Límite d~    -1 -2    Direc. Grl~ Z ((-65.05344 
+-31.59102 0, -65~[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 1198--1198
+[]\TU/lmtt/m/n/10 ## 2       8 Límite d~    -1 -2    IDE Jujuy   Z ((-64.87158 
+-24.26938 0, -64~[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 1198--1198
+[]\TU/lmtt/m/n/10 ## 3       8 Límite d~    -1 -2    IDE Corrie~ Z ((-58.07127 
+-30.42092 0, -58~[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 1198--1198
+[]\TU/lmtt/m/n/10 ## 4       8 Límite d~    -1 -2    ARBA - Ger~ Z ((-60.51238 
+-38.93094 0, -60~[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 1198--1198
+[]\TU/lmtt/m/n/10 ## 5       8 Límite d~    -1 -2    Dirección ~ Z ((-64.92811 
+-32.4233 0, -64.~[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 1198--1198
+[]\TU/lmtt/m/n/10 ## 6       8 Límite d~    -1 -2    Direc. Pci~ Z ((-70.68791 
+-37.33877 0, -70~[] 
+ []
+
+File: bookdown-demo_files/figure-latex/unnamed-chunk-41-1.pdf Graphic file (typ
+e pdf)
+<use bookdown-demo_files/figure-latex/unnamed-chunk-41-1.pdf>
+[49]
+Overfull \hbox (307.99907pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 50 \TU/lmr/m/sl/10 CHAPTER 3.  TALLER VECTORES: APLICACIÓN DE SO
+FTWARE DE INFORMACIÓN GEOGRÁFICA Y MODELADO (NO TERMINADO)
+ []
+
+[50
 
 ]
 Chapter 4.
@@ -1229,69 +1369,69 @@ File: figs/cube1.png Graphic file (type bmp)
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[47]
+[51]
 File: figs/cube2.png Graphic file (type bmp)
 <figs/cube2.png>
 
 Overfull \hbox (469.94357pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 48 \TU/lmr/m/sl/10 CHAPTER 4.  TALLER RASTER Y CUBOS DE DATOS VE
+\TU/lmr/m/n/10 52 \TU/lmr/m/sl/10 CHAPTER 4.  TALLER RASTER Y CUBOS DE DATOS VE
 CTORIALES: APLICACIÓN DE SOFTWARE DE INFORMACIÓN GEOGRÁFICA Y MODELADO (NO TERM
 INADO)
  []
 
-[48]
+[52]
 Chapter 5.
-[49
+[53
 
 ]
-File: bookdown-demo_files/figure-latex/unnamed-chunk-38-1.pdf Graphic file (typ
+File: bookdown-demo_files/figure-latex/unnamed-chunk-43-1.pdf Graphic file (typ
 e pdf)
-<use bookdown-demo_files/figure-latex/unnamed-chunk-38-1.pdf>
+<use bookdown-demo_files/figure-latex/unnamed-chunk-43-1.pdf>
 
 Overfull \hbox (160.64905pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 50 \TU/lmr/m/sl/10 CHAPTER 5.  ESTUDIOS DE SERIES DE TIEMPO PARA
+\TU/lmr/m/n/10 54 \TU/lmr/m/sl/10 CHAPTER 5.  ESTUDIOS DE SERIES DE TIEMPO PARA
  ASOCIAR SALUD Y VARIABLES AMBIENTALES
  []
 
-[50]
+[54]
 File: figs/rosana1.png Graphic file (type bmp)
 <figs/rosana1.png>
 
-Overfull \hbox (481.77654pt too wide) in paragraph at lines 1110--1110
+Overfull \hbox (481.77654pt too wide) in paragraph at lines 1291--1291
 [][] 
  []
 
 File: figs/temp1.png Graphic file (type bmp)
 <figs/temp1.png>
 
-Overfull \hbox (1026.0179pt too wide) in paragraph at lines 1119--1119
+Overfull \hbox (1026.0179pt too wide) in paragraph at lines 1300--1300
 [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 213.15956pt on input line 1120.
+LaTeX Warning: Float too large for page by 213.15956pt on input line 1301.
 
-(./bookdown-demo.bbl [51]
+(./bookdown-demo.bbl [55]
 Overfull \hbox (160.64905pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 52 \TU/lmr/m/sl/10 CHAPTER 5.  ESTUDIOS DE SERIES DE TIEMPO PARA
+\TU/lmr/m/n/10 56 \TU/lmr/m/sl/10 CHAPTER 5.  ESTUDIOS DE SERIES DE TIEMPO PARA
  ASOCIAR SALUD Y VARIABLES AMBIENTALES
  []
 
-[52] [53]
+[56] [57]
 Overfull \hbox (160.64905pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 54 \TU/lmr/m/sl/10 CHAPTER 5.  ESTUDIOS DE SERIES DE TIEMPO PARA
+\TU/lmr/m/n/10 58 \TU/lmr/m/sl/10 CHAPTER 5.  ESTUDIOS DE SERIES DE TIEMPO PARA
  ASOCIAR SALUD Y VARIABLES AMBIENTALES
  []
 
-[54
+[58
 
-] [55]
+] [59]
 Underfull \hbox (badness 1742) in paragraph at lines 107--111
 []\TU/lmr/m/n/10 Pebesma, E. (2019).  \TU/lmr/m/it/10 stars: Spatiotemporal Arr
 ays, Raster and Vec-
  []
 
-[56]
+[60]
 Underfull \hbox (badness 1342) in paragraph at lines 172--177
 \TU/lmr/m/n/10 encyclopedia.  []$[][][][][] [] [] [] [][] [] [][][][][][][][][]
  [] [][][] [] [] [] [][][][][] [] [][][] [] [][][][][] [] [][][][][][][][][][][
@@ -1299,12 +1439,12 @@ Underfull \hbox (badness 1342) in paragraph at lines 172--177
  []
 
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1125.
-[57]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1125.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1306.
+[61]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1306.
 (./bookdown-demo.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1125.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1125.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1306.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1306.
 
 Package rerunfilecheck Info: File `bookdown-demo.out' has not changed.
 (rerunfilecheck)             Checksum: D8BEC0D04B0067D962E81459CC72D74F.
@@ -1313,12 +1453,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 24271 strings out of 492912
- 453560 string characters out of 6134893
- 589397 words of memory out of 5000000
- 28018 multiletter control sequences out of 15000+600000
- 557109 words of font info for 71 fonts, out of 8000000 for 9000
+ 24293 strings out of 492912
+ 454539 string characters out of 6134893
+ 589592 words of memory out of 5000000
+ 28034 multiletter control sequences out of 15000+600000
+ 557117 words of font info for 72 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  45i,7n,56p,880b,473s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on bookdown-demo.pdf (57 pages).
+Output written on bookdown-demo.pdf (61 pages).

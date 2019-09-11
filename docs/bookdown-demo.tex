@@ -935,6 +935,27 @@ Columna total de NO2 en europa con Sentinel 5P libreria stars \citep{stars}
   \url{https://bookdown.org/rdpeng/rprogdatascience/}
 \end{itemize}
 
+\textbf{NOTA: SI ALGUNA VEZ TE PIERDES USANDO ALGUNA FUNCION DE R, ESCRIBE \texttt{?FUNCION}}
+Por ejemplo, si tenemos dudas con la funcion \texttt{aggregate}, \texttt{plot}, \texttt{read.csv}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{?aggregate}
+\NormalTok{?plot}
+\NormalTok{?read.csv}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{NOTA: PARA COMENTAR, ESCRIBA \#}
+
+Por ejemplo,
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{?aggregate }\CommentTok{#importante! Esto abre la pagina del manual de la funcion aggregate}
+\end{Highlighting}
+\end{Shaded}
+
 \hypertarget{instalacion}{%
 \section{Instalacion}\label{instalacion}}
 
@@ -966,32 +987,55 @@ Para realmente comenzar es necesario mencionar que R es un lenguaje de programac
 
 A veces debemos o obtenemos datos en hojas de calculo (Libreoffice Calc o Microsoft Office Excel). Cuando este archivo es pequeño no hay problema, pero la realidad es que cada vez es mas frecuente contar con grandes bases de datos y trabajar con un programa de interface grafica se hace dificil. Una de las razones es que la interfaz grafica consume muchos recursos computacionales, que podrian ser usados para el procesamiento de informacion. Por lo tanto
 
-\textbf{do (5 min)}
+\hypertarget{el-nino-y-la-nina}{%
+\subsection{\texorpdfstring{\href{https://www.ncdc.noaa.gov/teleconnections/enso/indicators/sst/}{El Niño y la Niña}}{El Niño y la Niña}}\label{el-nino-y-la-nina}}
 
-\begin{itemize}
-\tightlist
-\item
-  Abra el archivo dados/o3.csv con Excel
-\item
-  Vea rapidamente los datos
-\item
-  Cierre y abrael archivo con un editor de texto (bloc de notas)
-\item
-  Cual es la separacion de las columnas?
-\item
-  Bajando datos de ozono: \url{https://sinca.mma.gob.cl/index.php/estacion/index/key/D13}
-\end{itemize}
+``El Niño (La Niña) is a phenomenon in the equatorial Pacific Ocean characterized by a five consecutive 3-month running mean of sea surface temperature (SST) anomalies in the Niño 3.4 region that is above (below) the threshold of +0.5°C (-0.5°C). This standard of measure is known as the Oceanic Niño Index (ONI).'' \href{https://www.ncdc.noaa.gov/teleconnections/enso/indicators/sst/}{NOAA}
+
+\textbf{Vamos a leer la temperatura de la superficie del mar para calcular el indice ONI}
+
+\textbf{do (5 min)}
+- Abra \url{https://www.ncdc.noaa.gov/teleconnections/nao/data.csv}
+- Como son los datos?
+- Cual es la separacion de las columnas?
 
 \hypertarget{usando-base}{%
 \subsection{Usando base}\label{usando-base}}
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{df <-}\StringTok{ }\KeywordTok{read.csv}\NormalTok{(}\StringTok{"dados/o3.csv"}\NormalTok{, }\DataTypeTok{h =}\NormalTok{ T, }\DataTypeTok{sep =} \StringTok{";"}\NormalTok{)}
-\KeywordTok{head}\NormalTok{(df)}
-\KeywordTok{names}\NormalTok{(df) <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\StringTok{"YYMMDD"}\NormalTok{, }\StringTok{"HHMM"}\NormalTok{, }\StringTok{"o3_ppb"}\NormalTok{, }\StringTok{"novalido"}\NormalTok{)}
+\NormalTok{url <-}\StringTok{ "http://www.cpc.ncep.noaa.gov/products/analysis_monitoring/ensostuff/detrend.nino34.ascii.txt"}
+\CommentTok{# Leyendo datos}
+\NormalTok{oni =}\StringTok{ }\KeywordTok{read.table}\NormalTok{(url, }\DataTypeTok{h =}\NormalTok{ T)}
+\CommentTok{# construyendo la variable de fecha / data}
+\NormalTok{oni}\OperatorTok{$}\NormalTok{Date <-}\StringTok{ }\KeywordTok{as.Date}\NormalTok{(}\KeywordTok{paste0}\NormalTok{(oni}\OperatorTok{$}\NormalTok{YR, }\KeywordTok{ifelse}\NormalTok{(}\KeywordTok{nchar}\NormalTok{(oni}\OperatorTok{$}\NormalTok{MON) }\OperatorTok{<}\StringTok{ }
+\StringTok{                                            }\DecValTok{2}\NormalTok{, }\KeywordTok{paste0}\NormalTok{(}\DecValTok{0}\NormalTok{, oni}\OperatorTok{$}\NormalTok{MON), oni}\OperatorTok{$}\NormalTok{MON), }\StringTok{"01"}\NormalTok{), }\DataTypeTok{format =} \StringTok{"%Y%m%d"}\NormalTok{)}
+\CommentTok{# Extrayendo el año}
+\NormalTok{oni}\OperatorTok{$}\NormalTok{Year <-}\StringTok{ }\KeywordTok{as.integer}\NormalTok{(}\KeywordTok{strftime}\NormalTok{(oni}\OperatorTok{$}\NormalTok{Date, }\StringTok{"%Y"}\NormalTok{))}
+\CommentTok{# Extrayendo el mes}
+\NormalTok{oni}\OperatorTok{$}\NormalTok{Month <-}\StringTok{ }\KeywordTok{as.integer}\NormalTok{(}\KeywordTok{strftime}\NormalTok{(oni}\OperatorTok{$}\NormalTok{Date, }\StringTok{"%m"}\NormalTok{))}
+\CommentTok{# Definiendo la funcion de media movil}
+\NormalTok{ma <-}\StringTok{ }\ControlFlowTok{function}\NormalTok{(x, }\DataTypeTok{n =} \DecValTok{3}\NormalTok{) \{}
+\NormalTok{  stats}\OperatorTok{::}\KeywordTok{filter}\NormalTok{(x, }\KeywordTok{rep}\NormalTok{(}\DecValTok{1}\OperatorTok{/}\NormalTok{n, n), }\DataTypeTok{sides =} \DecValTok{2}\NormalTok{)}
+\NormalTok{\}}
+\CommentTok{# Calculando la media movil}
+\NormalTok{oni}\OperatorTok{$}\NormalTok{ONI <-}\StringTok{ }\KeywordTok{ma}\NormalTok{(oni}\OperatorTok{$}\NormalTok{ANOM, }\DecValTok{3}\NormalTok{)}
+\CommentTok{# Seleccionando las columnas de interes}
+\NormalTok{oni <-}\StringTok{ }\NormalTok{oni[, }\KeywordTok{c}\NormalTok{(}\StringTok{"Date"}\NormalTok{, }\StringTok{"Year"}\NormalTok{, }\StringTok{"Month"}\NormalTok{, }\StringTok{"ONI"}\NormalTok{)]}
+\CommentTok{# mostrando las primeras 6 observaciones de cada columna}
+\KeywordTok{head}\NormalTok{(oni)}
 \end{Highlighting}
 \end{Shaded}
+
+\begin{verbatim}
+##         Date Year Month       ONI
+## 1 1950-01-01 1950     1        NA
+## 2 1950-02-01 1950     2 -1.336667
+## 3 1950-03-01 1950     3 -1.166667
+## 4 1950-04-01 1950     4 -1.183333
+## 5 1950-05-01 1950     5 -1.073333
+## 6 1950-06-01 1950     6 -0.850000
+\end{verbatim}
 
 \hypertarget{usando-data.table-mi-favorito-junto-con-sf}{%
 \subsection{Usando data.table (mi favorito junto con sf)}\label{usando-data.table-mi-favorito-junto-con-sf}}
@@ -1003,26 +1047,163 @@ data.table es mas rapido que python, julia y spark
 \begin{Shaded}
 \begin{Highlighting}[]
 \KeywordTok{library}\NormalTok{(data.table)}
-\NormalTok{df <-}\StringTok{ }\KeywordTok{fread}\NormalTok{(}\StringTok{"data/china_cities_20190413.csv"}\NormalTok{)}
-\KeywordTok{head}\NormalTok{(df)}
+\CommentTok{# Leyendo datos}
+\NormalTok{oni =}\StringTok{ }\KeywordTok{fread}\NormalTok{(url, }\DataTypeTok{h =}\NormalTok{ T)}
+\CommentTok{# construyendo la variable de fecha / data}
+\NormalTok{oni}\OperatorTok{$}\NormalTok{Date <-}\StringTok{ }\KeywordTok{as.Date}\NormalTok{(}\KeywordTok{paste0}\NormalTok{(oni}\OperatorTok{$}\NormalTok{YR, }\KeywordTok{ifelse}\NormalTok{(}\KeywordTok{nchar}\NormalTok{(oni}\OperatorTok{$}\NormalTok{MON) }\OperatorTok{<}\StringTok{ }
+\StringTok{                                            }\DecValTok{2}\NormalTok{, }\KeywordTok{paste0}\NormalTok{(}\DecValTok{0}\NormalTok{, oni}\OperatorTok{$}\NormalTok{MON), oni}\OperatorTok{$}\NormalTok{MON), }\StringTok{"01"}\NormalTok{), }\DataTypeTok{format =} \StringTok{"%Y%m%d"}\NormalTok{)}
+\CommentTok{# Extrayendo el año}
+\NormalTok{oni}\OperatorTok{$}\NormalTok{Year <-}\StringTok{ }\KeywordTok{as.integer}\NormalTok{(}\KeywordTok{strftime}\NormalTok{(oni}\OperatorTok{$}\NormalTok{Date, }\StringTok{"%Y"}\NormalTok{))}
+\CommentTok{# Extrayendo el mes}
+\NormalTok{oni}\OperatorTok{$}\NormalTok{Month <-}\StringTok{ }\KeywordTok{as.integer}\NormalTok{(}\KeywordTok{strftime}\NormalTok{(oni}\OperatorTok{$}\NormalTok{Date, }\StringTok{"%m"}\NormalTok{))}
+\CommentTok{# Definiendo la funcion de media movil}
+\NormalTok{ma <-}\StringTok{ }\ControlFlowTok{function}\NormalTok{(x, }\DataTypeTok{n =} \DecValTok{3}\NormalTok{) \{}
+\NormalTok{  stats}\OperatorTok{::}\KeywordTok{filter}\NormalTok{(x, }\KeywordTok{rep}\NormalTok{(}\DecValTok{1}\OperatorTok{/}\NormalTok{n, n), }\DataTypeTok{sides =} \DecValTok{2}\NormalTok{)}
+\NormalTok{\}}
+\CommentTok{# Calculando la media movil}
+\NormalTok{oni}\OperatorTok{$}\NormalTok{ONI <-}\StringTok{ }\KeywordTok{ma}\NormalTok{(oni}\OperatorTok{$}\NormalTok{ANOM, }\DecValTok{3}\NormalTok{)}
+\CommentTok{# Seleccionando las columnas de interes}
+\NormalTok{oni <-}\StringTok{ }\NormalTok{oni[, }\KeywordTok{c}\NormalTok{(}\StringTok{"Date"}\NormalTok{, }\StringTok{"Year"}\NormalTok{, }\StringTok{"Month"}\NormalTok{, }\StringTok{"ONI"}\NormalTok{)]}
+\CommentTok{# mostrando las primeras 6 observaciones de cada columna}
+\NormalTok{oni}
+\KeywordTok{class}\NormalTok{(oni)}
 \end{Highlighting}
 \end{Shaded}
 
-\hypertarget{usndo-readxl}{%
-\subsection{Usndo readxl}\label{usndo-readxl}}
+Otras librerias para leer datos tabulares (planihas - spreadsheets):
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://readxl.tidyverse.org/}{readxl}
+\item
+  \href{https://readr.tidyverse.org/}{readr}
+\end{itemize}
+
+\hypertarget{summary}{%
+\subsection{summary}\label{summary}}
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\KeywordTok{library}\NormalTok{(readxl)}
-\NormalTok{df <-}\StringTok{ }\KeywordTok{read_xlsx}\NormalTok{(}\StringTok{"data/china_cities_20190413.xlsx"}\NormalTok{)}
-\KeywordTok{head}\NormalTok{(df)}
+\KeywordTok{summary}\NormalTok{(oni)}
 \end{Highlighting}
 \end{Shaded}
+
+\begin{verbatim}
+##       Date                 Year          Month             ONI           
+##  Min.   :1950-01-01   Min.   :1950   Min.   : 1.000   Min.   :-2.033333  
+##  1st Qu.:1967-05-24   1st Qu.:1967   1st Qu.: 3.000   1st Qu.:-0.536667  
+##  Median :1984-10-16   Median :1984   Median : 6.000   Median :-0.003333  
+##  Mean   :1984-10-15   Mean   :1984   Mean   : 6.481   Mean   : 0.032758  
+##  3rd Qu.:2002-03-08   3rd Qu.:2002   3rd Qu.: 9.000   3rd Qu.: 0.560833  
+##  Max.   :2019-08-01   Max.   :2019   Max.   :12.000   Max.   : 2.643333  
+##                                                       NA's   :2
+\end{verbatim}
+
+\hypertarget{ploteando-datos-con-base}{%
+\subsection{Ploteando datos con base}\label{ploteando-datos-con-base}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{?plot}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Help on topic 'plot' was found in the following packages:
+## 
+##   Package               Library
+##   graphics              /usr/lib/R/library
+##   sf                    /home/sergio/R/x86_64-pc-linux-gnu-library/3.6
+## 
+## 
+## Using the first match ...
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{hist}\NormalTok{(oni}\OperatorTok{$}\NormalTok{ONI, }
+     \DataTypeTok{main =} \StringTok{"Hitograma ONI"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-39-1.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{boxplot}\NormalTok{(oni}\OperatorTok{$}\NormalTok{ONI, }
+        \DataTypeTok{main =} \StringTok{"Boxplot de ONI"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-39-2.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{?boxplot}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{library}\NormalTok{(ggplot2)}
+\KeywordTok{library}\NormalTok{(cptcity)}
+\KeywordTok{ggplot}\NormalTok{(oni, }
+       \KeywordTok{aes}\NormalTok{(}\DataTypeTok{x =}\NormalTok{ Date, }\DataTypeTok{y =}\NormalTok{ ONI,}\DataTypeTok{colour =}\NormalTok{ ONI)) }\OperatorTok{+}\StringTok{ }
+\StringTok{  }\KeywordTok{geom_line}\NormalTok{(}\DataTypeTok{size =} \DecValTok{2}\NormalTok{)}\OperatorTok{+}
+\KeywordTok{scale_colour_gradientn}\NormalTok{(}\DataTypeTok{colours =} \KeywordTok{rev}\NormalTok{(}\KeywordTok{cpt}\NormalTok{(}\KeywordTok{find_cpt}\NormalTok{(}\StringTok{"cb_div_RdB"}\NormalTok{)[}\DecValTok{2}\NormalTok{])), }
+                       \DataTypeTok{limit =} \KeywordTok{c}\NormalTok{(}\OperatorTok{-}\FloatTok{2.7}\NormalTok{, }\FloatTok{2.7}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Don't know how to automatically pick scale for object of type ts. Defaulting to continuous.
+\end{verbatim}
+
+\begin{verbatim}
+## Warning: Removed 2 rows containing missing values (geom_path).
+\end{verbatim}
+
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-40-1.pdf}
 
 \hypertarget{representacion-de-objetos-espaciales}{%
 \section{Representacion de objetos espaciales}\label{representacion-de-objetos-espaciales}}
 
-Nuevo estandard ISO (puntos, areas, lineas, volume, etc)
+Nuevo estandard ISO (puntos, areas, lineas, volume, etc) \href{https://en.wikipedia.org/wiki/GeoPackage}{GeoPackage}, creado por la \href{https://www.opengeospatial.org/standards/geopackage}{Open Geospatial Consortium}, es un formato abierto y no propietario de datos espaciales
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{library}\NormalTok{(sf)}
+\NormalTok{df <-}\StringTok{ }\KeywordTok{read_sf}\NormalTok{(}\StringTok{"dados/linea_de_limite_FA050.json"}\NormalTok{)}
+\KeywordTok{head}\NormalTok{(df)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Simple feature collection with 6 features and 5 fields
+## geometry type:  MULTILINESTRING
+## dimension:      XYZ
+## bbox:           xmin: -71.16815 ymin: -38.93094 xmax: -58.04786 ymax: -24.26721
+## epsg (SRID):    4326
+## proj4string:    +proj=longlat +datum=WGS84 +no_defs
+## # A tibble: 6 x 6
+##   entidad objeto      vlp fdc   sag                                geometry
+##     <int> <chr>     <dbl> <chr> <chr>                 <MULTILINESTRING [°]>
+## 1       8 Límite d~    -1 -2    Direc. Grl~ Z ((-65.05344 -31.59102 0, -65~
+## 2       8 Límite d~    -1 -2    IDE Jujuy   Z ((-64.87158 -24.26938 0, -64~
+## 3       8 Límite d~    -1 -2    IDE Corrie~ Z ((-58.07127 -30.42092 0, -58~
+## 4       8 Límite d~    -1 -2    ARBA - Ger~ Z ((-60.51238 -38.93094 0, -60~
+## 5       8 Límite d~    -1 -2    Dirección ~ Z ((-64.92811 -32.4233 0, -64.~
+## 6       8 Límite d~    -1 -2    Direc. Pci~ Z ((-70.68791 -37.33877 0, -70~
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{plot}\NormalTok{(df[}\StringTok{"sag"}\NormalTok{])}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-41-1.pdf}
 
 \hypertarget{taller-raster-y-cubos-de-datos-vectoriales-aplicacion-de-software-de-informacion-geografica-y-modelado-no-terminado}{%
 \chapter{Taller RASTER Y CUBOS DE DATOS VECTORIALES: Aplicación de software de información geográfica y modelado (no terminado)}\label{taller-raster-y-cubos-de-datos-vectoriales-aplicacion-de-software-de-informacion-geografica-y-modelado-no-terminado}}
@@ -1083,7 +1264,7 @@ f(x) = 1/( (2 \pi) \sigma) e^-((x - \mu)^2/(2 \sigma^2)^0.5 )
 
 Vamos a ver un ejemplo:
 
-\includegraphics[height=1.5\textheight]{bookdown-demo_files/figure-latex/unnamed-chunk-38-1}
+\includegraphics[height=1.5\textheight]{bookdown-demo_files/figure-latex/unnamed-chunk-43-1}
 
 \hypertarget{efecto-de-la-contaminacion}{%
 \section{Efecto de la contaminacion}\label{efecto-de-la-contaminacion}}
@@ -1107,7 +1288,7 @@ RR = exp(\beta_i \cdot \delta X_i)
 Que indica el riesgo relativo dada un cambio en la variable, por ejemplo, si se incrementan las concentraciones de PM10 en 50 ug/m3, el riesgo de mortalidad respiratoria aumenta 7\%. Aplicando este porcentaje sobre la poblacion es posible calcular la mortalidad anual asociada a la contaminacion. Vamos a ver valores reales para Argentina y Chile \citep{rosana}.
 
 \begin{figure}
-\includegraphics[width=11.44in,height=1.8\textheight]{figs/rosana1} \caption{Riesgo relativo en mortalidad por incremento de 1 ppm de CO (Abrutzky et al., 2013)}\label{fig:unnamed-chunk-39}
+\includegraphics[width=11.44in,height=1.8\textheight]{figs/rosana1} \caption{Riesgo relativo en mortalidad por incremento de 1 ppm de CO (Abrutzky et al., 2013)}\label{fig:unnamed-chunk-44}
 \end{figure}
 
 \hypertarget{efecto-de-la-temperatura}{%
@@ -1116,7 +1297,7 @@ Que indica el riesgo relativo dada un cambio en la variable, por ejemplo, si se 
 Puede se utilizada la misma metodologia pero considerando variables meteorologicas en este caso. Un trabajo muy interesante recientemente publicado por el grupo de Paulo Saliva es el efecto de la temperatura en diferentes ciudades del mundo \citep{GASPARRINI2015369}.
 
 \begin{figure}
-\includegraphics[width=18.97in,height=1.8\textheight]{figs/temp1} \caption{Riesgo relativo en mortalidad por incremento de 1 ppm de CO (Abrutzky et al., 2013)}\label{fig:unnamed-chunk-40}
+\includegraphics[width=18.97in,height=1.8\textheight]{figs/temp1} \caption{Riesgo relativo en mortalidad por incremento de 1 ppm de CO (Abrutzky et al., 2013)}\label{fig:unnamed-chunk-45}
 \end{figure}
 
 \bibliography{book.bib,packages.bib}
